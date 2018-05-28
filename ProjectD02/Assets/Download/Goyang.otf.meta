@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a9a55742906a2d64fbcc9ec32fc49ab1
+timeCreated: 1526872297
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Goyang
+  fontNames:
+  - Goyang
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

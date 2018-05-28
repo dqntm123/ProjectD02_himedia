@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b741d1330a449eb49bffd931e3a8e43f
+timeCreated: 1527479117
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Otaku Rant
+  fontNames:
+  - Otaku Rant
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

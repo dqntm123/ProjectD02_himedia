@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 5618ba3f5e75d924b94671e62415b399
+timeCreated: 1526871834
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 400
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Haan Baekje B
+  fontNames:
+  - Haan Baekje B
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
