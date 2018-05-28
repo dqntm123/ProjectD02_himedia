@@ -18,8 +18,8 @@ public class Selector : MonoBehaviour {
         {
             //btns[i] = GameObject.Find("Btn" + i);
             num.Add(i, GameObject.Find("Btn" + i));
-            Debug.Log(num.Keys);
-            Debug.Log(num.Values);
+            //Debug.Log(num.Keys);
+            //Debug.Log(num.Values);
         }
 
         //for (int i = 0; i < selcet.Length; i++)
