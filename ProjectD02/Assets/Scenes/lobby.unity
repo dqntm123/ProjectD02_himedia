@@ -865,8 +865,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -886,8 +886,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Smirk
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone9
   mFillCenter: 1
 --- !u!1 &49256471
 GameObject:
@@ -1376,8 +1376,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -1397,8 +1397,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Frown
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone4
   mFillCenter: 1
 --- !u!1 &183665726
 GameObject:
@@ -2898,8 +2898,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -2919,8 +2919,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Laugh
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone5
   mFillCenter: 1
 --- !u!1 &329022496
 GameObject:
@@ -5353,8 +5353,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -5374,8 +5374,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Dead
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone3
   mFillCenter: 1
 --- !u!1 &546322799
 GameObject:
@@ -12075,8 +12075,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -12096,8 +12096,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Skull
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone7
   mFillCenter: 1
 --- !u!1 &1262810698
 GameObject:
@@ -12243,8 +12243,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -12264,8 +12264,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Annoyed
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone2
   mFillCenter: 1
 --- !u!1 &1269691727
 GameObject:
@@ -18381,8 +18381,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -18402,8 +18402,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Smile
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone8
   mFillCenter: 1
 --- !u!1 &2048508237
 GameObject:
@@ -18588,8 +18588,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -18609,8 +18609,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Angry
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone
   mFillCenter: 1
 --- !u!114 &2058400821
 MonoBehaviour:
@@ -19217,8 +19217,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 60
+  mHeight: 60
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -19238,6 +19238,6 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Emoticon - Rambo
+  mAtlas: {fileID: 114660112922042856, guid: 2ce0618a099f7d84bbbbb56848b050c5, type: 2}
+  mSpriteName: Stone6
   mFillCenter: 1
