@@ -1513,7 +1513,7 @@ MonoBehaviour:
   effectClip:
   - {fileID: 8300000, guid: b012ddb8f8ee6474bac1047cea039e02, type: 3}
   - {fileID: 8300000, guid: e2d5cf411a0fad84ca032ed51a8d5238, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 41bf19256f6e86347ac09ebdbb2af96e, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -18,6 +18,7 @@ public class BtnManager : MonoBehaviour {
     {
         MinionBtn();
         udbtn = GameObject.Find("BtnManager").GetComponent<UpDownBtn>();
+        jewelMg = GameObject.Find("JewelBtnManager");
         for (int i = 0; i < btns.Length; i++)
         {
             btns[i] = GameObject.Find("Btn" + i);
@@ -70,7 +71,6 @@ public class BtnManager : MonoBehaviour {
     {
         EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
-        jewelMg.GetComponent<JewelBtnManager>().sibal = false;
         SceneManager.LoadScene(2);
     }
 

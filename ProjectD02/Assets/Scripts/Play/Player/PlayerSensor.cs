@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class PlayerSensor : MonoBehaviour {
 
-    public GameObject meto;
+    public GameObject met;
+    public GameObject meet;
 
 	void Start ()
     {
-		
+		if(gameObject.transform.parent.tag == "Player")
+        {
+            met = gameObject.transform.parent.gameObject;
+        }
+
+        if(gameObject.transform.parent.tag == "Enemy")
+        {
+            meet = gameObject.transform.parent.gameObject;
+        }
 	}
 	
 	void Update ()
@@ -18,9 +27,18 @@ public class PlayerSensor : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Enemy1")
+        if (col.gameObject.tag == "Enemy")
         {
-            meto.GetComponent<UnitController>().lookE.Add(col.gameObject);
+          
+            met.GetComponent<UnitController>().look.Add(col.gameObject);
+            met.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
+              
+        }
+
+        if(col.gameObject.tag == "Player")
+        {
+            meet.GetComponent<UnitController>().look.Add(col.gameObject);
+            meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
         }
     }
 }

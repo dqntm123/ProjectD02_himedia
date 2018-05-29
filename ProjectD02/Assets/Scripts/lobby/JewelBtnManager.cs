@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JewelBtnManager : MonoBehaviour {
 
@@ -30,7 +31,11 @@ public class JewelBtnManager : MonoBehaviour {
     }
     void Start()
     {
-
+        Scene sc = SceneManager.GetActiveScene();
+        if(sc.buildIndex==1)
+        {
+            sibal = false;
+        }
     }
     void Update()
     {

@@ -13,11 +13,11 @@ public class EnemyController : MonoBehaviour {
     public float stateTime = 0;
     public Collider diecol;
     public GameObject sensor;
-   
+
     public float idleStateMaxTime;
     public float attackStateMaxTime;
 
- 
+
 
     public enum ENEMYSTATE
     {
@@ -30,17 +30,17 @@ public class EnemyController : MonoBehaviour {
     }
     public ENEMYSTATE enemystate;
 
-     void Awake()
+    void Awake()
     {
         diecol = GetComponent<Collider>();
     }
 
-    void Start ()
+    void Start()
     {
-       // player = GameObject.Find("Player");
-	}
-	
-	void Update ()
+        // player = GameObject.Find("Player");
+    }
+
+    void Update()
     {
         switch (enemystate)
         {
@@ -67,11 +67,6 @@ public class EnemyController : MonoBehaviour {
             case ENEMYSTATE.MOVE:
                 transform.Translate(-speed * Time.deltaTime, 0, 0);//왼쪽이동
 
-                //if (lookp.Count < 1)
-                //{
-                //    enemystate = ENEMYSTATE.MOVE;
-                //}
-
                 if (lookp.Count > 0)
                 {
                     enemystate = ENEMYSTATE.ATTACK;
@@ -81,16 +76,24 @@ public class EnemyController : MonoBehaviour {
 
             case ENEMYSTATE.ATTACK:
                 stateTime += Time.deltaTime;
-                if(stateTime>attackStateMaxTime)
+
+                //if (lookp[0].GetComponent<UnitController>().unitHP <= 0)
+                //{
+                //    lookp.RemoveAt(0);
+                //    enemystate = ENEMYSTATE.MOVE;
+                //}
+
+                if (stateTime > attackStateMaxTime)
                 {
                     stateTime = 0f;
-                    lookp[0].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.DAMAGE;
+                    //lookp[0].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.DAMAGE;
                     enemystate = ENEMYSTATE.IDLE;
                 }
-               
-               if( lookp[0].GetComponent<UnitController>().unitHP<=0)
+
+
+
+                if (lookp.Count < 1)
                 {
-                    lookp.RemoveAt(0);
                     enemystate = ENEMYSTATE.MOVE;
                 }
 
@@ -101,59 +104,54 @@ public class EnemyController : MonoBehaviour {
 
                 if (enemyHP <= 0)
                 {
+                    enemyHP = 0;
                     enemystate = ENEMYSTATE.DEAD;
                 }
 
-                if (enemyHP >0)
+                if (enemyHP > 0)
                 {
                     enemyHP -= lookp[0].GetComponent<UnitController>().atk;
                     Debug.Log(enemyHP);
-                    enemystate = ENEMYSTATE.IDLE;
+                    enemystate = ENEMYSTATE.ATTACK;
+
+                    if (enemyHP <= 0)
+                    {
+                        enemyHP = 0;
+                        enemystate = ENEMYSTATE.DEAD;
+                    }
                 }
 
-                    break;
+                break;
 
             case ENEMYSTATE.KILL:
 
-                lookp.RemoveAt(0);
+
                 enemystate = ENEMYSTATE.MOVE;
 
                 break;
 
             case ENEMYSTATE.DEAD:
 
+                //for (int i = 0; i < lookp.Count; i++)
+                //{
+                //    lookp[i].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.KILL;
+                //}
+
+                //diecol.enabled = false;
+                //Destroy(sensor);
+                //lookp[0].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.KILL;
                 Destroy(gameObject);//오브젝트를 파괴한다
-                diecol.enabled = false;
-                Destroy(sensor);
-                lookp[0].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.KILL;
-            
-                
-                
 
                 break;
 
         }
     }
-    
+
     void OnTriggerEnter(Collider col)
     {
-        //if(col.gameObject.tag=="Unit1")//만약 태그된게 Unit1이라면
-        //{
-        //    lookp.Add(col.gameObject);
-        //    enemystate = ENEMYSTATE.ATTACK;//enemystate를 DEAD로 바꾼다
-
-        //}
-
-        //if (col.gameObject.tag == "Player")//만약 태그된게 Player라면
-        //{
-        //    enemystate = ENEMYSTATE.ATTACK;//enemystate를 DEAD로 바꾼다
-        //    lookp.Add(col.gameObject);
-        //}
-
         if (col.gameObject.tag == "EnemyGoal")
         {
             gameObject.transform.position = new Vector3(5, -0.2f, -0.3f);
         }
-
     }
 }

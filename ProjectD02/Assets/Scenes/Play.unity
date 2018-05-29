@@ -1714,19 +1714,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.4
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1740,6 +1740,18 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
@@ -1801,11 +1813,6 @@ Prefab:
     - target: {fileID: 1179676698961624, guid: e40a865f0317b36498d4b1726a7bbf4a, type: 2}
       propertyPath: m_Name
       value: BeefManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 114257900278406802, guid: e40a865f0317b36498d4b1726a7bbf4a,
-        type: 2}
-      propertyPath: beefMax
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e40a865f0317b36498d4b1726a7bbf4a, type: 2}
@@ -2783,11 +2790,6 @@ Prefab:
       propertyPath: manaGauge
       value: 
       objectReference: {fileID: 350711742}
-    - target: {fileID: 114816694989807804, guid: 0a28c5268eee86a4e89c1ca967ecd286,
-        type: 2}
-      propertyPath: manaMax
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a28c5268eee86a4e89c1ca967ecd286, type: 2}
   m_IsPrefabParent: 0
@@ -2864,8 +2866,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 0.93103456, b: 0, a: 1}
   mPivot: 4
-  mWidth: 58
-  mHeight: 58
+  mWidth: 40
+  mHeight: 40
   mDepth: 14
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
@@ -2886,7 +2888,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Checkmark
+  mSpriteName: arrow_0
   mFillCenter: 1
 --- !u!1 &1695134955
 GameObject:

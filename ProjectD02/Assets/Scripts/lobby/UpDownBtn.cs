@@ -21,7 +21,7 @@ public class UpDownBtn : MonoBehaviour {
     }
     public void UpBtn()
     {
-        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[2];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         for (int i = 0; i < LevelManager.instanCe.lv.Length; i++)
         {
