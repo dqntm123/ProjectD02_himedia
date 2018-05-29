@@ -7,6 +7,8 @@ public class ButtonManager : MonoBehaviour {
     public GameObject selector;
     public GameObject target;
     public GameObject anitarget;
+    public GameObject[] upgradeORunlock;
+    public GameObject[] unitCOST;
     public List<GameObject> unitIdle;
     public string[] unitName;
     void Start ()

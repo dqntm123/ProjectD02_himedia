@@ -32,6 +32,9 @@ public class getButtonIndex : MonoBehaviour {
         EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         bm.selector.transform.position = gameObject.transform.position;     //선택 하이라이터를 이동
+        bm.selector.transform.parent = gameObject.transform;
+        bm.upgradeORunlock[0].SetActive(true);
+        bm.upgradeORunlock[1].SetActive(false);
         clickCt = 1;
         bm.target = gameObject;     //누른 버튼을 타겟으로 지정
         for (int r= 0; r < MoneyManager.inStance.reinFoceValue.Length; r++)

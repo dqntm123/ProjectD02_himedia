@@ -11,6 +11,7 @@ public class BtnManager : MonoBehaviour {
     public GameObject selector;
     public GameObject[] windows;
     public GameObject bgmMg;
+    public GameObject jewelMg;
     public UpDownBtn udbtn;
     
     private void Start()
@@ -27,6 +28,11 @@ public class BtnManager : MonoBehaviour {
             if (LevelManager.instanCe.lv[i] == 10)
             {
                 udbtn.rfuILabel[i].text = "LV " + "Max";
+            }
+            else if(LevelManager.instanCe.lv[i]==0)
+            {
+                udbtn.rfuILabel[i].text = "LOCK";
+                udbtn.rfuILabel[i].color = Color.red;
             }
             else if (LevelManager.instanCe.lv[i] != 10)
             {
@@ -64,6 +70,7 @@ public class BtnManager : MonoBehaviour {
     {
         EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
+        jewelMg.GetComponent<JewelBtnManager>().sibal = false;
         SceneManager.LoadScene(2);
     }
 

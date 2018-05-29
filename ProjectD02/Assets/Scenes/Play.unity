@@ -1802,6 +1802,11 @@ Prefab:
       propertyPath: m_Name
       value: BeefManager
       objectReference: {fileID: 0}
+    - target: {fileID: 114257900278406802, guid: e40a865f0317b36498d4b1726a7bbf4a,
+        type: 2}
+      propertyPath: beefMax
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e40a865f0317b36498d4b1726a7bbf4a, type: 2}
   m_IsPrefabParent: 0
@@ -2778,6 +2783,11 @@ Prefab:
       propertyPath: manaGauge
       value: 
       objectReference: {fileID: 350711742}
+    - target: {fileID: 114816694989807804, guid: 0a28c5268eee86a4e89c1ca967ecd286,
+        type: 2}
+      propertyPath: manaMax
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a28c5268eee86a4e89c1ca967ecd286, type: 2}
   m_IsPrefabParent: 0

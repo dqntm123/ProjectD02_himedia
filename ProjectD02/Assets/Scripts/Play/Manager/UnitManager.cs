@@ -75,6 +75,7 @@ public class UnitManager : MonoBehaviour {
     {
         if (beefMG.GetComponent<BeefManager>().beefCount >= unitCost[0])//gaugeMG 오브젝트의 스크립트의 변수 비프카운터가 유닛코스트 배열0번 값보다 커지거나 같아진다면
         {
+            units[0].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[0];
             unitEnable[0] = true;//유닛쿨타임 배열0번의 bool값을 트루로바꾼다
             unitsEnable[0].SetActive(true);//유닛비활성화창 배열0번의 오브젝트를 켠다
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[0];//변수 비프카운터 값에 유닛코스트배열0번의 값을 뺀다

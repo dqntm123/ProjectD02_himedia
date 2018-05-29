@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Kum 1
-    x: 325
-    y: 167
+    x: 385
+    y: 76
     width: 87
     height: 89
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 0
   - name: Prinny
-    x: 385
-    y: 76
+    x: 325
+    y: 166
     width: 96
     height: 90
     borderLeft: 0

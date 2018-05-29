@@ -123,6 +123,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   unitHP: 0
-  damage: 0
+  atk: 0
+  b_Atk: 0
   enemy: {fileID: 0}
+  lookE: []
+  lv: 0
+  stateTime: 0
+  idleStateMaxTime: 1
+  diecol: {fileID: 0}
+  sensor: {fileID: 0}
   unitstate: 1

@@ -8,12 +8,15 @@ public class JewelBtnManager : MonoBehaviour {
     public GameObject[] jewelBtn;
     public GameObject[] equipSlot;
     public GameObject[] equipBtn;
+    public BtnManager btnmg;
     public List<GameObject> soulStoneItem;
     public GameObject clickBtn;
     public GameObject releaseBtn;
     public bool sibal = false;
     void Awake()
     {
+        btnmg = GameObject.Find("BtnManager").GetComponent<BtnManager>();
+        btnmg.jewelMg = gameObject;
         for (int i = 0; i < jewelBtn.Length; i++)
         {
             jewelBtn[i] = GameObject.Find("Stone" + i);

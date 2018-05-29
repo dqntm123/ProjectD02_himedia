@@ -56,6 +56,11 @@ public class UpDownBtn : MonoBehaviour {
             {
                 rfuILabel[i].text = "LV " + "Max";
             }
+            if (LevelManager.instanCe.lv[i] == 0)
+            {
+                rfuILabel[i].text = "LOCK";
+                rfuILabel[i].color = Color.red;
+            }
         }
     }
     public void ReinForceLabel()

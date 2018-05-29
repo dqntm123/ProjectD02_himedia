@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject mainCamera;
     public bool rightOn = false;
     public bool leftOn = false;
+    public Collider diecol;
     public enum PLAYSTATE
     {
         NONE=0,
