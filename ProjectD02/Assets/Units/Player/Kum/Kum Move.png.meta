@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0c9def30cc3719544905ee99c123d812
-timeCreated: 1527388044
+timeCreated: 1527646065
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,7 +90,7 @@ TextureImporter:
         x: 11
         y: 1
         width: 41
-        height: 94
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,10 +100,10 @@ TextureImporter:
       name: Kum Move_1
       rect:
         serializedVersion: 2
-        x: 51
+        x: 79
         y: 0
         width: 40
-        height: 95
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,10 +113,10 @@ TextureImporter:
       name: Kum Move_2
       rect:
         serializedVersion: 2
-        x: 91
+        x: 150
         y: 0
         width: 39
-        height: 95
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,10 +126,10 @@ TextureImporter:
       name: Kum Move_3
       rect:
         serializedVersion: 2
-        x: 133
+        x: 216
         y: 0
         width: 40
-        height: 95
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +139,10 @@ TextureImporter:
       name: Kum Move_4
       rect:
         serializedVersion: 2
-        x: 173
+        x: 293
         y: 0
         width: 39
-        height: 95
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: Kum Move_5
       rect:
         serializedVersion: 2
-        x: 213
+        x: 376
         y: 0
         width: 40
-        height: 95
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

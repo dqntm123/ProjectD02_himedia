@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 43829c54f18f2fc468dac1ab35de4f52
-timeCreated: 1527392365
+timeCreated: 1527649174
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,7 @@ TextureImporter:
     21300024: Summons_12
     21300026: Summons_13
     21300028: Summons_14
+    21300030: Summons_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -93,54 +94,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Summons_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 275
-        width: 32
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: Summons_1
       rect:
         serializedVersion: 2
         x: 28
         y: 0
-        width: 340
-        height: 300
+        width: 310
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Summons_2
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 275
-        width: 34
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Summons_3
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 0
-        width: 340
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -148,25 +110,12 @@ TextureImporter:
       name: Summons_4
       rect:
         serializedVersion: 2
-        x: 946
-        y: 275
-        width: 34
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Summons_5
-      rect:
-        serializedVersion: 2
-        x: 975
+        x: 508
         y: 0
         width: 340
-        height: 300
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -174,38 +123,12 @@ TextureImporter:
       name: Summons_6
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 275
-        width: 34
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Summons_7
-      rect:
-        serializedVersion: 2
-        x: 1483
+        x: 975
         y: 0
-        width: 340
-        height: 300
+        width: 310
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Summons_8
-      rect:
-        serializedVersion: 2
-        x: 1975
-        y: 275
-        width: 34
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -213,38 +136,12 @@ TextureImporter:
       name: Summons_9
       rect:
         serializedVersion: 2
-        x: 2004
+        x: 1483
         y: 0
-        width: 339
-        height: 300
+        width: 310
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Summons_10
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 0
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Summons_11
-      rect:
-        serializedVersion: 2
-        x: 837
-        y: 0
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -252,12 +149,12 @@ TextureImporter:
       name: Summons_12
       rect:
         serializedVersion: 2
-        x: 1304
+        x: 2004
         y: 0
-        width: 11
-        height: 13
+        width: 339
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -265,25 +162,25 @@ TextureImporter:
       name: Summons_13
       rect:
         serializedVersion: 2
-        x: 1812
+        x: 357
         y: 0
         width: 11
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Summons_14
+      name: Summons_15
       rect:
         serializedVersion: 2
-        x: 2332
+        x: 1304
         y: 0
         width: 11
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

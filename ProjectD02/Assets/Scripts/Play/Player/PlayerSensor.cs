@@ -27,18 +27,24 @@ public class PlayerSensor : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (gameObject.transform.parent.tag == "Player")
         {
-          
-            met.GetComponent<UnitController>().look.Add(col.gameObject);
-            met.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
-              
+            if (col.gameObject.tag == "Enemy")
+            {
+
+                met.GetComponent<UnitController>().look.Add(col.gameObject);
+                met.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
+
+            }
         }
 
-        if(col.gameObject.tag == "Player")
+        if (gameObject.transform.parent.tag == "Enemy")
         {
-            meet.GetComponent<UnitController>().look.Add(col.gameObject);
-            meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
+            if (col.gameObject.tag == "Player")
+            {
+                meet.GetComponent<UnitController>().look.Add(col.gameObject);
+                meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
+            }
         }
     }
 }

@@ -1569,6 +1569,10 @@ Prefab:
       propertyPath: m_Center.y
       value: -0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1873792864220314, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 33142739713106096, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}
     - {fileID: 23601538797836848, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}

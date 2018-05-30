@@ -80,7 +80,7 @@ public class UnitManager : MonoBehaviour {
             unitsEnable[0].SetActive(true);//유닛비활성화창 배열0번의 오브젝트를 켠다
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[0];//변수 비프카운터 값에 유닛코스트배열0번의 값을 뺀다
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[0] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
-            units[0].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;//units 배열 0번의 오브젝트의 enemystate를 MOVE로 바꿔준다
+            //units[0].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;//units 배열 0번의 오브젝트의 enemystate를 MOVE로 바꿔준다
             Instantiate(units[0], transform.position, transform.rotation);//units의 배열0번의 오브젝트 생성   
         }
     }

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114053700310547712}
   m_Layer: 0
   m_Name: Unit1
-  m_TagString: Unit1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,17 +165,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
-  unitHP: 100
+  hP: 100
   atk: 10
   b_Atk: 10
-  enemy: {fileID: 0}
-  lookE: []
-  lv: 1
+  look: []
+  lv: 10
   stateTime: 0
-  idleStateMaxTime: 1
   diecol: {fileID: 65915416289252184}
   sensor: {fileID: 1886488210760170}
   attackStateMaxTime: 1
+  isDead: 0
+  unit: 0
   unitstate: 1
 --- !u!114 &114112917151340304
 MonoBehaviour:
@@ -188,4 +188,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5237a2363624408e4c72c0e1ac098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meto: {fileID: 1016525230552696}
+  met: {fileID: 0}
+  meet: {fileID: 0}

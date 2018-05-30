@@ -38,7 +38,12 @@ public class UnitController : MonoBehaviour {
      void Awake()
     {
        diecol = gameObject.GetComponent<BoxCollider>();
-        atk += b_Atk * lv * 0.1f;
+
+        if (gameObject.tag == "Player")
+        {
+            atk += b_Atk * lv * 0.1f;
+        }
+
     }
     void Start ()
     {
@@ -135,9 +140,12 @@ public class UnitController : MonoBehaviour {
 
     public void DeadProcess()
     {
-        if(gameObject.tag == "Player")
+        Destroy(sensor);
+        diecol.enabled = false;
+        Destroy(gameObject);//오브젝트를 파괴한다
+        if (gameObject.tag == "Player")
         {
-           
+          
         }
     }
 }
