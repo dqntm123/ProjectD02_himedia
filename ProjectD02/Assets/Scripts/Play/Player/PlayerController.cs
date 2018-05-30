@@ -7,21 +7,32 @@ public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
     public GameObject mainCamera;
+    public Animator ani;
     public bool rightOn = false;
     public bool leftOn = false;
     public Collider diecol;
+    public Animation anime;
+
     public enum PLAYSTATE
     {
         NONE=0,
         RIGHT,
         LEFT,
+        Attack1,
+        Attack2,
         DEAD
     }
     public PLAYSTATE playstate;
 
+    void Awake()
+    {
+
+    }
+
 	void Start ()
     {
         mainCamera = GameObject.Find("Main Camera");//시작할때 메인카메라 변수안에 메인카메라 오브젝트를 찾아서 넣는다
+        ani.GetComponent<TweenAlpha>().enabled = false;
 	}
 	
 
@@ -30,16 +41,21 @@ public class PlayerController : MonoBehaviour {
         switch (playstate)
         {
             case PLAYSTATE.NONE:
-                 
+                ani.SetBool("Move", false);
+                ani.SetBool("Attack1", false);
+                ani.SetBool("Attack2", false);
+                transform.rotation = new Quaternion(0, 0, 0, 0);
                 break;
             case PLAYSTATE.RIGHT:
                 if(rightOn==false)//만약 rightOn이 false라면
                 {
+                    ani.SetBool("Move", true);
                     transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//오른쪽으로이동
                 }
                 if (rightOn == true)//만약 rightOn이 true라면
                 {
                     leftOn = false;//leftOn은 폴스
+                    ani.SetBool("Move", true);
                     transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//오른쪽으로이동
                     mainCamera.GetComponent<MainCameraMove>().camerastate = MainCameraMove.CAMERASTATE.RIGHT;//메인카메라에 있는 스크립트에 카메라스테이트를 RIGHT로 바꿔준다
                 }
@@ -47,19 +63,28 @@ public class PlayerController : MonoBehaviour {
             case PLAYSTATE.LEFT:
                 if(leftOn==false)//만약 leftOn이 false라면
                 {
-                    transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);//왼쪽으로이동
+                    ani.SetBool("Move", true);
+                    transform.rotation = new Quaternion(0,-180,0,0);
+                    transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//왼쪽으로이동
                 }
                 if(leftOn==true)//만약 leftOn이 true라면
                 {
                     rightOn = false;//rightOn은 폴스
-                    transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);//왼쪽으로이동
+                    ani.SetBool("Move", true);
+                    transform.rotation = new Quaternion(0, -180, 0, 0);
+                    transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//왼쪽으로이동
                     mainCamera.GetComponent<MainCameraMove>().camerastate = MainCameraMove.CAMERASTATE.LEFT;//메인카메라에 있는 스크립트에 카메라스테이트를 LEFT로 바꿔준다
                 }
                 break;
-            case PLAYSTATE.DEAD:
-
+            case PLAYSTATE.Attack1:
+                ani.SetBool("Attack1", true);
                 break;
-            default:
+            case PLAYSTATE.Attack2:
+                ani.SetBool("Attack2", true);
+                break;
+            case PLAYSTATE.DEAD:
+                ani.SetBool("Dead", true);
+                ani.GetComponent<TweenAlpha>().enabled = true;
                 break;
         }
         if(transform.position.x<-1.75f)//오브젝트 포지션x값이 -1.7보다 작아진다면

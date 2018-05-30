@@ -33,5 +33,6 @@ public class GoToStage : MonoBehaviour {
         }
         Debug.Log("Stage Number is :" + stageNum);
         sm.currentStageNum = stageNum;
+
     }
 }

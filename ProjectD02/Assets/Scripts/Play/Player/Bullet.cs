@@ -6,6 +6,15 @@ public class Bullet : MonoBehaviour {
 
     public GameObject enemy;
     public GameObject player;
+    public float atk;
+
+    public enum SKILLS
+    {
+       SKILL1,
+       SKILL2,
+       SKILL3
+    }
+    public SKILLS skills;
 
 	void Start ()
     {
@@ -19,12 +28,29 @@ public class Bullet : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        //if(gameObject.tag == "Enemy")
-        //{
-        //    enemy = col.gameObject;
-        //    enemy.GetComponent<EnemyController>().enemyHP -= player.GetComponent<UnitController>().atk;
-        //}
-        if(gameObject.tag =="Enemy")
+        switch (skills)
+        {
+            case SKILLS.SKILL1:
+
+                if (gameObject.tag == "Enemy")
+                {
+                    enemy = col.gameObject;
+                    enemy.GetComponent<UnitController>().hP -= atk;
+                }
+
+                break;
+
+            case SKILLS.SKILL2:
+
+                break;
+
+            case SKILLS.SKILL3:
+
+                break;
+            
+        }
+       
+        if (gameObject.tag =="Enemy")
         {
             //player.GetComponent<UnitController>().enemy = col.gameObject;
         }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0c9def30cc3719544905ee99c123d812
-timeCreated: 1527646065
+timeCreated: 1527666364
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,9 +90,9 @@ TextureImporter:
         x: 11
         y: 1
         width: 41
-        height: 40
+        height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -103,9 +103,9 @@ TextureImporter:
         x: 79
         y: 0
         width: 40
-        height: 40
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -116,9 +116,9 @@ TextureImporter:
         x: 150
         y: 0
         width: 39
-        height: 39
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -129,9 +129,9 @@ TextureImporter:
         x: 216
         y: 0
         width: 40
-        height: 41
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -142,9 +142,9 @@ TextureImporter:
         x: 293
         y: 0
         width: 39
-        height: 40
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -155,9 +155,9 @@ TextureImporter:
         x: 376
         y: 0
         width: 40
-        height: 39
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

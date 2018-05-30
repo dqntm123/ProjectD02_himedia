@@ -5,16 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - LeftMenuBtn
-  - Unit1
-  - Enemy1
-  - Castle
   - Skill1
   - Block1
   - Block2
   - Skill2
   - Skill3
-  - Unit2
-  - Unit3
   - Button
   - EnemyGoal
   - Enemy

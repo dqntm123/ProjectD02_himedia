@@ -52,6 +52,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coolTime: 0
-  resPawnTime: 3
+  resPawnTime: 6
   enemys:
   - {fileID: 1577241950876298, guid: 2518a4f1035d60540bf2939618da196b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -7,9 +7,15 @@ public class UnitController : MonoBehaviour {
 
     public float speed;
     public float hP;
+    public float b_Hp;
     public float atk;
     public int b_Atk;
     public Animator anime;
+    public float[] exp;
+    public int sn;
+    public Animation ani;
+
+    public StageManager sm;
 
     public List<GameObject> look;
 
@@ -23,10 +29,12 @@ public class UnitController : MonoBehaviour {
     public GameObject[] effect;
 
 
-    public enum UNIT
+    public enum UNIT //케릭터의 종류를 정함
     {
         PLAYER = 0,
-        ENEMY
+        GUARDIAN,
+        ENEMY,
+        MIDDLEBOSS
     }
     public UNIT unit;
 
@@ -41,11 +49,20 @@ public class UnitController : MonoBehaviour {
 
      void Awake()
     {
-       diecol = gameObject.GetComponent<BoxCollider>();
+        sm = GameObject.Find("StageManager").GetComponent<StageManager>();
+        diecol = gameObject.GetComponent<BoxCollider>();
+        anime.GetComponent<TweenAlpha>().enabled = false;
+        sn = sm.currentStageNum;
 
         if (gameObject.tag == "Player")
         {
-                atk += b_Atk * lv * 0.1f; 
+            atk += b_Atk * lv * 0.1f;
+            hP += b_Hp * lv * 0.1f;
+        }
+        if(gameObject.tag == "Enemy")
+        {
+            atk += b_Atk * sn * 0.1f;
+            hP += b_Hp * sn * 0.1f;
         }
 
     }
@@ -89,10 +106,22 @@ public class UnitController : MonoBehaviour {
                             anime.SetBool("Move", true);
                             transform.Translate(speed * Time.deltaTime, 0, 0);
                             break;
+                        case UNIT.GUARDIAN:
+                            anime.SetBool("Move", true);
+                            transform.Translate(speed * Time.deltaTime, 0, 0);
+                            break;
                         case UNIT.ENEMY:
                             anime.SetBool("Move", true);
                             transform.Translate(-speed * Time.deltaTime, 0, 0);
                             break;
+                        case UNIT.MIDDLEBOSS:
+                            anime.SetBool("Move", true);
+                            transform.Translate(-speed * Time.deltaTime, 0, 0);
+                            break;
+                        //case UNIT.BOSS:
+                        //    anime.SetBool("Move", true);
+                        //    transform.Translate(-speed * Time.deltaTime, 0, 0);
+                        //    break;
                     }
                   
                     break;
@@ -100,35 +129,80 @@ public class UnitController : MonoBehaviour {
                 case UNITSTATE.ATTACK:
                     anime.SetBool("Move", false);
                     anime.SetBool("Attack", false);
-                    if (look.Count>0)
+                    
+                    switch(unit)
                     {
-                        if(look[0] != null)
-                        {
-                            stateTime += Time.deltaTime;
-                            anime.SetBool("Attack", true);
-                            if (stateTime>attackStateMaxTime)
+                        case UNIT.PLAYER:
+
+                            if (look.Count > 0)
                             {
-                                stateTime = 0;
-                                look[0].GetComponent<UnitController>().GetDamage(atk);
-                               
+                                if (look[0] != null)
+                                {
+                                    stateTime += Time.deltaTime;
+                                    anime.SetBool("Attack", true);
+                                    if (stateTime > attackStateMaxTime)
+                                    {
+                                        stateTime = 0;
+                                        look[0].GetComponent<UnitController>().GetDamage(atk);
+
+                                    }
+                                }
+
+                                else
+                                {
+                                    look.RemoveAt(0);
+                                }
                             }
-                        }
 
-                        else
-                        {
-                            look.RemoveAt(0);
-                        }
+                            else
+                            {
+                                unitstate = UNITSTATE.MOVE;
+                            }
+
+                            break;
+
+                        case UNIT.ENEMY:
+
+                            if (look.Count > 0)
+                            {
+                                if (look[0] != null)
+                                {
+                                    stateTime += Time.deltaTime;
+                                    anime.SetBool("Attack", true);
+                                    if (stateTime > attackStateMaxTime)
+                                    {
+                                        stateTime = 0;
+                                        look[0].GetComponent<UnitController>().GetDamage(atk);
+
+                                    }
+                                }
+
+                                else
+                                {
+                                    look.RemoveAt(0);
+                                }
+                            }
+
+                            else
+                            {
+                                unitstate = UNITSTATE.MOVE;
+                            }
+                            break;
+
+                        case UNIT.MIDDLEBOSS:
+
+                            break;
                     }
 
-                    else
-                    {
-                        unitstate = UNITSTATE.MOVE;
-                    }
+                    
+              
                     break;
 
             }
 
         }
+      
+        
 
     }
 
@@ -172,7 +246,7 @@ public class UnitController : MonoBehaviour {
         anime.SetBool("Dead", true);
         Destroy(sensor);
         diecol.enabled = false;
-        //gameObject.GetComponent<TweenAlpha>().enabled = true;
+        anime.GetComponent<TweenAlpha>().enabled = true;
         Destroy(gameObject,1f);//오브젝트를 파괴한다
     }
 }

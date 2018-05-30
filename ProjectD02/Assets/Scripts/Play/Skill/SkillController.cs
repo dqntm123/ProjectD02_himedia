@@ -4,23 +4,70 @@ using UnityEngine;
 
 public class SkillController : MonoBehaviour {
 
+
+    public GameObject enemy;
+ 
+    public float atk;
     public float speed;
-    public float damage;
-    public GameObject effect1;
-	void Update ()
+
+    public enum SKILLS
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
-	}
-    void OnTriggerEnter(Collider col)
+        SKILL1=0,
+        SKILL2,
+        SKILL3
+    }
+    public SKILLS skills;
+
+    void Start()
     {
-        if(col.gameObject.tag=="Castle")//만약 태그된게 Castle라면
+
+    }
+
+    void Update()
+    {
+        switch (skills)
         {
-            Instantiate(effect1, transform.position, transform.rotation);
-            Destroy(gameObject);//오브젝트를 파괴
-        }
-        if (col.gameObject.tag == "Enemy1")//만약 태그된게 Enemy1라면
-        {
+            case SKILLS.SKILL1:
+                transform.Translate(speed*Time.deltaTime, 0, 0);
+                break;
+            case SKILLS.SKILL2:
+                break;
+            case SKILLS.SKILL3:
+                break;
             
         }
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        switch (skills)
+        {
+            case SKILLS.SKILL1:
+
+                if (gameObject.tag == "Enemy")
+                {
+                    enemy = col.gameObject;
+                    enemy.GetComponent<UnitController>().hP -= atk;
+                    Destroy(gameObject);
+                }
+
+                break;
+
+            case SKILLS.SKILL2:
+
+                break;
+
+            case SKILLS.SKILL3:
+
+                break;
+
+        }
+
+        //if (gameObject.tag =="Enemy")
+        //{
+        //player.GetComponent<UnitController>().enemy = col.gameObject;
+        //}
+
+    }
+
 }

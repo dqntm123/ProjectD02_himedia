@@ -55,6 +55,12 @@ MonoBehaviour:
   - {fileID: 1016525230552696, guid: 7058aeaf5b172df4d9791f0a3765ba25, type: 2}
   - {fileID: 1563399291927556, guid: 21d115c05af10f64cab034a9d1075cc8, type: 2}
   - {fileID: 1850396349211658, guid: e426d26d45c32eb448e7155f3b20f8e8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   unitsEnable:
   - {fileID: 0}
   - {fileID: 0}
@@ -66,16 +72,26 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   beefMG: {fileID: 0}
+  unitBtn:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   unitCost:
   - 10
   - 20
   - 30
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 40
+  - 50
+  - 60
+  - 70
+  - 80
+  - 90
   unitCool:
   - 0
   - 0
@@ -88,13 +104,12 @@ MonoBehaviour:
   - 0
   unitResPawn:
   - 0.1
-  - 0.2
-  - 0.3
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  costLabel: []
+  - 0.1
+  - 0.1
+  - 0.1
+  - 0.1
+  - 0.1
+  - 0.15
+  - 0.15
+  - 0.25
   unitEnable: 000000000000000000
