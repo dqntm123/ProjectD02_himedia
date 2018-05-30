@@ -169,12 +169,16 @@ MonoBehaviour:
   atk: 10
   b_Atk: 10
   look: []
-  lv: 10
+  lv: 1
   stateTime: 0
   diecol: {fileID: 65915416289252184}
   sensor: {fileID: 1886488210760170}
   attackStateMaxTime: 1
   isDead: 0
+  dmgcheck:
+  - {fileID: 1860960842652400, guid: f258aecc4fbca7c41b11d09b214f7a5d, type: 2}
+  - {fileID: 1458731092689568, guid: 2a524ecf34aa9cf4a95cf68cb46e24c4, type: 2}
+  effect: []
   unit: 0
   unitstate: 1
 --- !u!114 &114112917151340304

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitController : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class UnitController : MonoBehaviour {
     public float hP;
     public float atk;
     public int b_Atk;
+    public Animator anime;
 
     public List<GameObject> look;
 
@@ -17,6 +19,8 @@ public class UnitController : MonoBehaviour {
     public GameObject sensor;
     public float attackStateMaxTime;
     public bool isDead = false;
+    public GameObject[] dmgcheck;
+    public GameObject[] effect;
 
 
     public enum UNIT
@@ -41,7 +45,7 @@ public class UnitController : MonoBehaviour {
 
         if (gameObject.tag == "Player")
         {
-            atk += b_Atk * lv * 0.1f;
+                atk += b_Atk * lv * 0.1f; 
         }
 
     }
@@ -82,9 +86,11 @@ public class UnitController : MonoBehaviour {
                     switch(unit)
                     {
                         case UNIT.PLAYER:
+                            anime.SetBool("Move", true);
                             transform.Translate(speed * Time.deltaTime, 0, 0);
                             break;
                         case UNIT.ENEMY:
+                            anime.SetBool("Move", true);
                             transform.Translate(-speed * Time.deltaTime, 0, 0);
                             break;
                     }
@@ -92,15 +98,19 @@ public class UnitController : MonoBehaviour {
                     break;
 
                 case UNITSTATE.ATTACK:
-                    if(look.Count>0)
+                    anime.SetBool("Move", false);
+                    anime.SetBool("Attack", false);
+                    if (look.Count>0)
                     {
                         if(look[0] != null)
                         {
                             stateTime += Time.deltaTime;
-                            if(stateTime>attackStateMaxTime)
+                            anime.SetBool("Attack", true);
+                            if (stateTime>attackStateMaxTime)
                             {
                                 stateTime = 0;
                                 look[0].GetComponent<UnitController>().GetDamage(atk);
+                               
                             }
                         }
 
@@ -116,36 +126,53 @@ public class UnitController : MonoBehaviour {
                     }
                     break;
 
-                case UNITSTATE.DEAD:
-
-                    Destroy(sensor);
-                    Destroy(gameObject);//오브젝트를 파괴한다
-                    diecol.enabled = false;
-                  
-                    break;
             }
+
         }
+
     }
 
     void OnTriggerEnter(Collider col)
     {
-       
+       if(gameObject.tag == "Enemy")
+        {
+            if(col.gameObject.tag == "EnemyGoal")
+            {
+                gameObject.transform.position = new Vector3(5, -0.2f, -0.3f);
+            }
+        }
     }
 
     public void GetDamage(float dmg)
     {
         hP -= dmg;
+          
+        if(gameObject.tag=="Player")
+        {
+            //Instantiate(effect[0], transform.position, transform.rotation);
+            GameObject dmgValue = Instantiate(dmgcheck[0]) as GameObject;
+            dmgValue.transform.position = transform.position;
+            dmgValue.transform.rotation = transform.rotation;
+            dmgValue.GetComponent<TextMesh>().text = "-" + dmg;
+        }
+
+        else
+        {
+           // Instantiate(effect[1], transform.position, transform.rotation);
+            GameObject dmgValue = Instantiate(dmgcheck[1]) as GameObject;
+            dmgValue.transform.position = transform.position;
+            dmgValue.transform.rotation = transform.rotation;
+            dmgValue.GetComponent<TextMesh>().text = "-" + dmg;
+        }
 
     }
 
     public void DeadProcess()
     {
+        anime.SetBool("Dead", true);
         Destroy(sensor);
         diecol.enabled = false;
-        Destroy(gameObject);//오브젝트를 파괴한다
-        if (gameObject.tag == "Player")
-        {
-          
-        }
+        //gameObject.GetComponent<TweenAlpha>().enabled = true;
+        Destroy(gameObject,1f);//오브젝트를 파괴한다
     }
 }

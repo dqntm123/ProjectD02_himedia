@@ -64,11 +64,11 @@ public class PlayerController : MonoBehaviour {
         }
         if(transform.position.x<-1.75f)//오브젝트 포지션x값이 -1.7보다 작아진다면
         {
-            transform.position = new Vector3(-1.75f,0.1f,-0.3f);//그 오브젝트의 위치값을 고정한다
+            transform.position = new Vector3(-1.75f,transform.position.y,-0.3f);//그 오브젝트의 위치값을 고정한다
         }
         if (transform.position.x >3.75f)//오브젝트 포지션x값이 3.7보다 커진다면
         {
-             transform.position = new Vector3(3.75f, 0.1f,-0.3f);//그 오브젝트의 위치값을 고정한다
+             transform.position = new Vector3(3.75f, transform.position.y, -0.3f);//그 오브젝트의 위치값을 고정한다
         }
     }
     void OnTriggerEnter(Collider col)
