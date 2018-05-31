@@ -213,12 +213,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1781a3dccb16ee44a6fbcd0246e5fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.3
   hP: 100
-  atk: 30
-  b_Atk: 30
+  b_Hp: 100
+  atk: 50
+  b_Atk: 50
   anime: {fileID: 95192614166226412}
   exp: []
+  sn: 0
+  ani: {fileID: 0}
+  sm: {fileID: 0}
   look: []
   lv: 0
   stateTime: 0

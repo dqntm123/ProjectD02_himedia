@@ -56,5 +56,5 @@ MonoBehaviour:
   manaTime: 0
   manaRespawnTime: 0.7
   manaCount: 0
-  manaMax: 50
+  manaMax: 60
   manaOn: 1

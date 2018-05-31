@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 54434743412478148}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Darking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873792864220314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.2, z: -0.3}
+  m_LocalPosition: {x: -1, y: 0.1, z: -0.258}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0}
   m_Children:
   - {fileID: 4143047593494032}
@@ -100,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024319043665578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.057500005, y: 0.8, z: 0.3}
+  m_LocalPosition: {x: -0.057500005, y: 0.9, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4038125365211230}
@@ -202,17 +202,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skill:
   - {fileID: 1390883081382108, guid: e85dc303fa87f3146bfabc33ddac775c, type: 2}
-  - {fileID: 1924041926880742, guid: f15afe2e51a78094ab6aec619ad6eec1, type: 2}
+  - {fileID: 1628200046543062, guid: b58b2a4730a262443af0f673aeb345b2, type: 2}
   - {fileID: 1578206188631878, guid: 405266bdd68d2b74d9567f49671a2824, type: 2}
   manaMG: {fileID: 0}
   player: {fileID: 0}
   skillCost:
   - 10
-  - 30
+  - 5
   - 50
   skillmo: 1
   statetime: 0
-  skillstart: 0
+  skillstart: 000000
+  cometTargets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114618028197047406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,6 +235,7 @@ MonoBehaviour:
   leftOn: 0
   diecol: {fileID: 65420376664346494}
   anime: {fileID: 0}
+  hp: 0
   playstate: 0
 --- !u!114 &114910900091335926
 MonoBehaviour:

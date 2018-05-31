@@ -18,8 +18,8 @@ public class EnemyManager : MonoBehaviour {
         if(coolTime>resPawnTime)//만약 쿨타임이 리스폰타임보다 커진다면
         {
             coolTime = 0;//쿨타임값을 0으로 되돌리고
-            
-            Instantiate(enemys[0], transform.position, transform.rotation);//enemys배열의 0번 오브젝트를 생성한다
+            int a = Random.Range(0, 5);
+            Instantiate(enemys[a], transform.position, transform.rotation);//enemys배열의 0번 오브젝트를 생성한다
         }
 	}
 }

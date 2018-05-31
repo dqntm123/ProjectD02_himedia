@@ -28,9 +28,10 @@ public class SkillController : MonoBehaviour {
         switch (skills)
         {
             case SKILLS.SKILL1:
-                transform.Translate(speed*Time.deltaTime, 0, 0);
+                transform.Translate(speed * Time.deltaTime, 0, 0);
                 break;
             case SKILLS.SKILL2:
+                transform.Translate(speed * Time.deltaTime, -speed * Time.deltaTime, 0);
                 break;
             case SKILLS.SKILL3:
                 break;
@@ -48,6 +49,14 @@ public class SkillController : MonoBehaviour {
                 {
                     enemy = col.gameObject;
                     enemy.GetComponent<UnitController>().hP -= atk;
+                    Destroy(gameObject);
+                }
+
+
+                if (gameObject.tag == "Castle")
+                {
+                    enemy = col.gameObject;
+                    enemy.GetComponent<Castle>().hp -= atk;
                     Destroy(gameObject);
                 }
 

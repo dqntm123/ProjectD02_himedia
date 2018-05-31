@@ -214,11 +214,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
-  hP: 100
+  hP: 75
+  b_Hp: 75
   atk: 10
   b_Atk: 10
   anime: {fileID: 95834220739832274}
   exp: []
+  sn: 0
+  ani: {fileID: 0}
+  sm: {fileID: 0}
   look: []
   lv: 1
   stateTime: 0

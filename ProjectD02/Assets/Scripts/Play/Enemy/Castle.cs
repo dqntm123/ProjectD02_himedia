@@ -10,22 +10,14 @@ public class Castle : MonoBehaviour {
     public GameObject hpBar;
     private UISlider hpBarUs;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider col)
     {
-        if(other.tag == "Skill1")
-        {
-            hp -= 1;
-        }
-        if (hp == 0)
-        {
-            MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
-            mr.enabled = false;
-            BoxCollider bc = gameObject.GetComponent<BoxCollider>();
-            bc.enabled = false;
-            UILabel ul = roundManager.GetComponent<UILabel>();
-            ul.enabled = true;
-            ul.text = "STAGE CLEAR!";
-        }
+      
+    }
+
+    public void DamageManager()
+    {
+       
     }
 
     private void Start()
@@ -36,5 +28,16 @@ public class Castle : MonoBehaviour {
     private void Update()
     {
         hpBarUs.value = hp/maxHp;
+
+        if (hp == 0)
+        {
+            MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
+            mr.enabled = false;
+            BoxCollider bc = gameObject.GetComponent<BoxCollider>();
+            bc.enabled = false;
+            UILabel ul = roundManager.GetComponent<UILabel>();
+            ul.enabled = true;
+            ul.text = "STAGE CLEAR!";
+        }
     }
 }

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     public bool leftOn = false;
     public Collider diecol;
     public Animation anime;
-
+    public float hp;
     public enum PLAYSTATE
     {
         NONE=0,

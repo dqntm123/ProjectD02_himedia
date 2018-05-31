@@ -6,10 +6,13 @@ public class PlayerSensor : MonoBehaviour {
 
     public GameObject met;
     public GameObject meet;
+    public Transform pPos;
 
 	void Start ()
     {
-		if(gameObject.transform.parent.tag == "Player")
+       
+
+        if (gameObject.transform.parent.tag == "Player")
         {
             met = gameObject.transform.parent.gameObject;
         }
@@ -22,8 +25,8 @@ public class PlayerSensor : MonoBehaviour {
 	
 	void Update ()
     {
-		
-	}
+        pPos = GameObject.FindGameObjectWithTag("Darking").transform;
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -36,6 +39,14 @@ public class PlayerSensor : MonoBehaviour {
                 met.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
 
             }
+            if (col.gameObject.tag == "Castle")
+            {
+
+                met.GetComponent<UnitController>().look.Add(col.gameObject);
+                met.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
+
+            }
+        
         }
 
         if (gameObject.transform.parent.tag == "Enemy")
@@ -45,6 +56,38 @@ public class PlayerSensor : MonoBehaviour {
                 meet.GetComponent<UnitController>().look.Add(col.gameObject);
                 meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
             }
+
+
+            if (col.gameObject.tag == "Darking")
+            {
+                meet.GetComponent<UnitController>().look.Add(col.gameObject);
+                meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
+              
+            }
+
         }
+
     }
+
+    private void OnTriggerExit(Collider col)
+    {
+        //if (gameObject.tag == "Darking")
+        //{
+        //    if (meet.GetComponent<UnitController>().look[0].tag == "Darking")
+        //    {
+        //        //meet.GetComponent<UnitController>().look.RemoveAt(0);
+        //        meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
+        //    }
+        //}
+
+        //if (gameObject.tag == "Player")
+        //{
+        //    if (meet.GetComponent<UnitController>().look[0].tag == "Player")
+        //    {
+        //        meet.GetComponent<UnitController>().look.RemoveAt(0);
+        //        meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
+        //    }
+        //}
+    }
+
 }
