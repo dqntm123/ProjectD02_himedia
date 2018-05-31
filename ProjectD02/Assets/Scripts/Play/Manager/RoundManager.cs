@@ -9,16 +9,19 @@ public class RoundManager : MonoBehaviour {
     public StageManager sm;
     public BoxCollider pauseCol;
     public UISprite pauseSp;
+    public GameObject bgmmg;
 
-	void Start () {
+	void Start ()
+    {
         sm = GameObject.Find("StageManager").GetComponent<StageManager>();
         pauseCol = GameObject.Find("PauseBtn").GetComponent<BoxCollider>();
         pauseSp = GameObject.Find("PauseBtn").GetComponent<UISprite>();
         StartCoroutine(Round());
-	}
+        bgmmg = GameObject.Find("BGMManager");
+    }
 	
 	void Update () {
-		if(castle.hp == 0)
+		if(castle.hp <= 0)
         {
             StartCoroutine(RoundEnd());
         }
@@ -42,5 +45,7 @@ public class RoundManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(2);
+        bgmmg.GetComponent<AudioSource>().clip = MusicManager.instance.bgmClip[1];
+        MusicManager.instance.auDios.Play();
     }
 }

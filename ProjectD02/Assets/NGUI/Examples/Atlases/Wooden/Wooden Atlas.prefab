@@ -48,9 +48,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: ec268c3ea1baceb4abb2168daed86f68, type: 2}
   mSprites:
+  - name: 13123123
+    x: 1514
+    y: 358
+    width: 158
+    height: 158
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Arimo14
-    x: 361
-    y: 511
+    x: 1802
+    y: 378
     width: 126
     height: 126
     borderLeft: 0
@@ -62,8 +75,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 1
   - name: Arimo18
-    x: 408
-    y: 97
+    x: 1617
+    y: 814
     width: 254
     height: 93
     borderLeft: 0
@@ -75,8 +88,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 34
   - name: Arimo20
-    x: 151
-    y: 74
+    x: 1617
+    y: 908
     width: 255
     height: 116
     borderLeft: 0
@@ -88,21 +101,47 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 140
   - name: arrow_0
-    x: 0
-    y: 7
+    x: 1873
+    y: 841
     width: 149
     height: 183
     borderLeft: 0
     borderRight: 0
     borderTop: 0
-    borderBottom: 0
+    borderBottom: 100
     paddingLeft: 1
     paddingRight: 1
     paddingTop: 7
     paddingBottom: 8
+  - name: arrow_right_f
+    x: 1929
+    y: 485
+    width: 62
+    height: 82
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Bar
+    x: 1514
+    y: 316
+    width: 531
+    height: 41
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: btn_pause
-    x: 361
-    y: 639
+    x: 1673
+    y: 376
     width: 128
     height: 128
     borderLeft: 0
@@ -114,8 +153,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Button
-    x: 531
-    y: 641
+    x: 1922
+    y: 805
     width: 17
     height: 17
     borderLeft: 5
@@ -127,8 +166,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Button A
-    x: 618
-    y: 792
+    x: 2023
+    y: 983
     width: 20
     height: 20
     borderLeft: 0
@@ -140,8 +179,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Button B
-    x: 640
-    y: 792
+    x: 1718
+    y: 770
     width: 20
     height: 20
     borderLeft: 0
@@ -153,8 +192,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Button X
-    x: 662
-    y: 779
+    x: 2023
+    y: 857
     width: 20
     height: 20
     borderLeft: 0
@@ -166,8 +205,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Button Y
-    x: 654
-    y: 926
+    x: 1676
+    y: 793
     width: 20
     height: 20
     borderLeft: 0
@@ -179,8 +218,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Checkmark
-    x: 618
-    y: 845
+    x: 1429
+    y: 450
     width: 32
     height: 31
     borderLeft: 0
@@ -192,8 +231,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 5
   - name: Coalition
-    x: 0
-    y: 192
+    x: 1001
+    y: 193
     width: 512
     height: 256
     borderLeft: 0
@@ -204,9 +243,35 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: Coin
+    x: 1940
+    y: 745
+    width: 94
+    height: 95
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Ellixer
+    x: 1493
+    y: 452
+    width: 19
+    height: 29
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Emoticon - Angry
-    x: 662
-    y: 801
+    x: 2023
+    y: 878
     width: 20
     height: 20
     borderLeft: 0
@@ -218,8 +283,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Emoticon - Annoyed
-    x: 640
-    y: 770
+    x: 1697
+    y: 793
     width: 20
     height: 20
     borderLeft: 0
@@ -231,85 +296,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Emoticon - Dead
-    x: 652
-    y: 890
-    width: 20
-    height: 20
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Emoticon - Frown
-    x: 407
-    y: 457
-    width: 20
-    height: 20
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Emoticon - Laugh
-    x: 650
-    y: 823
-    width: 20
-    height: 20
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Emoticon - Rambo
-    x: 429
-    y: 453
-    width: 20
-    height: 20
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Emoticon - Skull
-    x: 385
-    y: 457
-    width: 20
-    height: 20
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Emoticon - Smile
-    x: 451
-    y: 453
-    width: 20
-    height: 20
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Emoticon - Smirk
-    x: 618
+    x: 1697
     y: 770
     width: 20
     height: 20
@@ -321,9 +308,87 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: Emoticon - Frown
+    x: 1676
+    y: 770
+    width: 20
+    height: 20
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Emoticon - Laugh
+    x: 2023
+    y: 1004
+    width: 20
+    height: 20
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Emoticon - Rambo
+    x: 2023
+    y: 941
+    width: 20
+    height: 20
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Emoticon - Skull
+    x: 2023
+    y: 920
+    width: 20
+    height: 20
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Emoticon - Smile
+    x: 2023
+    y: 899
+    width: 20
+    height: 20
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Emoticon - Smirk
+    x: 2023
+    y: 962
+    width: 20
+    height: 20
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Flag-FR
-    x: 151
-    y: 20
+    x: 1940
+    y: 692
     width: 80
     height: 52
     borderLeft: 0
@@ -335,8 +400,8 @@ MonoBehaviour:
     paddingTop: 19
     paddingBottom: 9
   - name: Flag-US
-    x: 233
-    y: 20
+    x: 1520
+    y: 529
     width: 80
     height: 52
     borderLeft: 0
@@ -348,8 +413,8 @@ MonoBehaviour:
     paddingTop: 19
     paddingBottom: 9
   - name: Flat
-    x: 512
-    y: 641
+    x: 1922
+    y: 823
     width: 17
     height: 17
     borderLeft: 5
@@ -361,8 +426,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Glow - Inner
-    x: 377
-    y: 43
+    x: 1617
+    y: 784
     width: 29
     height: 29
     borderLeft: 1
@@ -374,8 +439,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Glow - Outer
-    x: 315
-    y: 12
+    x: 1601
+    y: 521
     width: 60
     height: 60
     borderLeft: 26
@@ -387,8 +452,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: goblinEx
-    x: 489
-    y: 521
+    x: 1514
+    y: 199
     width: 124
     height: 116
     borderLeft: 0
@@ -400,8 +465,8 @@ MonoBehaviour:
     paddingTop: 12
     paddingBottom: 0
   - name: Gold Coin lr
-    x: 600
-    y: 684
+    x: 1765
+    y: 592
     width: 79
     height: 83
     borderLeft: 0
@@ -413,8 +478,8 @@ MonoBehaviour:
     paddingTop: 8
     paddingBottom: 9
   - name: Highlight - Shadowed
-    x: 377
-    y: 13
+    x: 1647
+    y: 785
     width: 28
     height: 28
     borderLeft: 9
@@ -426,8 +491,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Highlight - Thin
-    x: 361
-    y: 455
+    x: 2021
+    y: 692
     width: 22
     height: 22
     borderLeft: 6
@@ -439,7 +504,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: infinity_stone_base_by_saiol
-    x: 0
+    x: 1001
     y: 450
     width: 359
     height: 574
@@ -451,9 +516,48 @@ MonoBehaviour:
     paddingRight: 11
     paddingTop: 12
     paddingBottom: 13
+  - name: Layer
+    x: 0
+    y: 426
+    width: 1000
+    height: 598
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Layer 1 copy
+    x: 1520
+    y: 582
+    width: 244
+    height: 93
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Mana
+    x: 2021
+    y: 715
+    width: 19
+    height: 29
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Minus
-    x: 361
-    y: 479
+    x: 1361
+    y: 486
     width: 80
     height: 30
     borderLeft: 0
@@ -465,8 +569,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: NGUI
-    x: 408
-    y: 19
+    x: 1673
+    y: 505
     width: 255
     height: 76
     borderLeft: 0
@@ -478,8 +582,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Plus
-    x: 618
-    y: 948
+    x: 1845
+    y: 599
     width: 76
     height: 76
     borderLeft: 0
@@ -490,9 +594,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: Press
+    x: 1361
+    y: 676
+    width: 578
+    height: 92
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Resize Icon
-    x: 491
-    y: 639
+    x: 1718
+    y: 794
     width: 19
     height: 19
     borderLeft: 0
@@ -504,8 +621,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: Right Bracket
-    x: 650
-    y: 816
+    x: 2023
+    y: 851
     width: 5
     height: 5
     borderLeft: 1
@@ -517,8 +634,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Row Outline
-    x: 385
-    y: 450
+    x: 2023
+    y: 845
     width: 5
     height: 5
     borderLeft: 2
@@ -530,8 +647,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Screw
-    x: 618
-    y: 814
+    x: 1462
+    y: 452
     width: 30
     height: 29
     borderLeft: 0
@@ -543,8 +660,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: spiritIcon_1
-    x: 491
-    y: 660
+    x: 1929
+    y: 568
     width: 107
     height: 107
     borderLeft: 0
@@ -555,9 +672,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: stage_start_item_bg_n
+    x: 1361
+    y: 517
+    width: 158
+    height: 158
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Stripes 1
-    x: 443
-    y: 475
+    x: 1442
+    y: 482
     width: 34
     height: 34
     borderLeft: 1
@@ -569,8 +699,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Stripes 2
-    x: 618
-    y: 912
+    x: 1361
+    y: 451
     width: 34
     height: 34
     borderLeft: 1
@@ -582,8 +712,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Stripes 3
-    x: 600
-    y: 648
+    x: 1477
+    y: 482
     width: 34
     height: 34
     borderLeft: 1
@@ -595,8 +725,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Window
-    x: 489
-    y: 470
+    x: 1872
+    y: 791
     width: 49
     height: 49
     borderLeft: 11
@@ -608,7 +738,7 @@ MonoBehaviour:
     paddingTop: 6
     paddingBottom: 4
   - name: Wooden Background
-    x: 361
+    x: 1361
     y: 769
     width: 255
     height: 255
@@ -621,8 +751,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: X Mark
-    x: 618
-    y: 878
+    x: 1396
+    y: 453
     width: 32
     height: 32
     borderLeft: 0

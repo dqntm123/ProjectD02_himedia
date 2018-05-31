@@ -10,7 +10,7 @@ public class SkillManager : MonoBehaviour {
     public float[] skillCost;
     public float skillmo;
     public float statetime;
-    public bool[] skillstart ;
+    public bool skillstart = false;
 
     public GameObject[] cometTargets;
 
@@ -22,29 +22,18 @@ public class SkillManager : MonoBehaviour {
 	
 	void Update ()
     {
-       if(skillstart[0] == true)
+        if(skillstart == true)
         {
             statetime += Time.deltaTime;
             if (statetime > skillmo)
             {
                 Instantiate(skill[0], transform.position, transform.rotation);//skill배열의 0번을 생성한다
                 player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.NONE;
-                skillstart[0] = false;
+                skillstart = false;
                 statetime = 0;
             }
-        }
-        if (skillstart[1] == true)
-        {
-            statetime += Time.deltaTime;
-            if (statetime > skillmo)
-            {
-                Instantiate(skill[1], new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);//skill배열의 1번을 생성한다
-                player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.NONE;
-                skillstart[1] = false;
-                statetime = 0;
-            }
-        }
-    }
+        }               
+	}
 
     public void Skill1()
     {
@@ -55,7 +44,7 @@ public class SkillManager : MonoBehaviour {
             manaMG.GetComponent<ManaManager>().manaCount -= skillCost[0];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(skillCost[0] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
           
-            skillstart[0] = true;
+            skillstart = true;
         }
     }   
 
@@ -63,10 +52,11 @@ public class SkillManager : MonoBehaviour {
     {
         if (manaMG.GetComponent<ManaManager>().manaCount >= skillCost[1])
         {
-            player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack2;
+            
+
             manaMG.GetComponent<ManaManager>().manaCount -= skillCost[1];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(skillCost[1] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
-            skillstart[1] = true;
+            Instantiate(skill[1], new Vector3(transform.position.x, transform.position.y+1, transform.position.z), transform.rotation);//skill배열의 1번을 생성한다
         }
     }
     public void Skill3()

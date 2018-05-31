@@ -6,7 +6,7 @@ public class PlayerSensor : MonoBehaviour {
 
     public GameObject met;
     public GameObject meet;
-    public Transform pPos;
+    public Transform playerPos;
 
 	void Start ()
     {
@@ -25,7 +25,7 @@ public class PlayerSensor : MonoBehaviour {
 	
 	void Update ()
     {
-        pPos = GameObject.FindGameObjectWithTag("Darking").transform;
+        playerPos = GameObject.FindGameObjectWithTag("Darking").transform;
     }
 
     void OnTriggerEnter(Collider col)
@@ -62,7 +62,6 @@ public class PlayerSensor : MonoBehaviour {
             {
                 meet.GetComponent<UnitController>().look.Add(col.gameObject);
                 meet.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.ATTACK;
-              
             }
 
         }

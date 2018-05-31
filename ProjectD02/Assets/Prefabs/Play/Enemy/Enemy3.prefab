@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256411878050562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.336, z: 0}
+  m_LocalPosition: {x: 3.2945242, y: -0.42616355, z: 0}
   m_LocalScale: {x: 0.25, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4278122189819940}
@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   met: {fileID: 0}
   meet: {fileID: 0}
+  playerPos: {fileID: 0}
 --- !u!114 &114286758072610914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,7 +323,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: 2d51d8c29790d144c97c1790fbf1b38d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

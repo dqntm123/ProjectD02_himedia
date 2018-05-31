@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -170,14 +170,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 270
-  mHeight: 60
+  mWidth: 280
+  mHeight: 80
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.5
+  aspectRatio: 3.5
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -192,7 +192,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Highlight - Shadowed
+  mSpriteName: Press
   mFillCenter: 1
 --- !u!1 &222428018
 GameObject:
@@ -220,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222428018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 302.0001, y: 0, z: 0}
+  m_LocalPosition: {x: 299, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2014665420}
@@ -255,16 +255,16 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 0, g: 0.6689658, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 280
-  mHeight: 70
+  mWidth: 260
+  mHeight: 43
   mDepth: 11
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4
+  aspectRatio: 6.0465117
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -279,7 +279,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Window
+  mSpriteName: Bar
   mFillCenter: 1
 --- !u!114 &222428021
 MonoBehaviour:
@@ -2020,7 +2020,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519420426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 300.00006, y: -0, z: 0}
+  m_LocalPosition: {x: 299, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048708696}
@@ -2055,16 +2055,16 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 0, g: 0.6689658, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 280
-  mHeight: 70
+  mWidth: 260
+  mHeight: 43
   mDepth: 11
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4
+  aspectRatio: 6.0465117
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -2079,7 +2079,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Window
+  mSpriteName: Bar
   mFillCenter: 1
 --- !u!114 &1519420429
 MonoBehaviour:
@@ -2382,14 +2382,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 270
-  mHeight: 60
+  mWidth: 280
+  mHeight: 80
   mDepth: 10
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.5
+  aspectRatio: 3.5
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -2404,7 +2404,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Highlight - Shadowed
+  mSpriteName: Press
   mFillCenter: 1
 --- !u!1 &1897825468
 GameObject:
@@ -2541,7 +2541,7 @@ MonoBehaviour:
   bgmClip:
   - {fileID: 8300000, guid: fd828e01f695e0447bdd9f28fd3421de, type: 3}
   - {fileID: 8300000, guid: b0ab5e8cd57028940b451c452984bd9a, type: 3}
-  - {fileID: 8300000, guid: efd240df4e7b1bc43906ede352c8a202, type: 3}
+  - {fileID: 8300000, guid: 0c5b75d8282d4b5488d3110c92291419, type: 3}
   auDios: {fileID: 0}
   sliderValue: 1
   bgmVoulme: 1

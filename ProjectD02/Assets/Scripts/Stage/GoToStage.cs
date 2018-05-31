@@ -7,10 +7,11 @@ public class GoToStage : MonoBehaviour {
 
     public StageManager sm;
     public int stageNum;
-
+    public GameObject bgmMg;
     private void Start()
     {
         sm = GameObject.Find("StageManager").GetComponent<StageManager>();
+        bgmMg = GameObject.Find("BGMManager");
     }
 
     public void OnClick()
@@ -18,6 +19,8 @@ public class GoToStage : MonoBehaviour {
         EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         SceneManager.LoadScene(3);
+        bgmMg.GetComponent<AudioSource>().clip = MusicManager.instance.bgmClip[2];
+        MusicManager.instance.auDios.Play();
         GetStageNum();
     }
 

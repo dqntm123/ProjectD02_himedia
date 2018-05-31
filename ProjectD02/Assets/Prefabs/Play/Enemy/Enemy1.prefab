@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1577241950876298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.336, z: 0}
+  m_LocalPosition: {x: 2.308, y: -0.328, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.3}
   m_Children:
   - {fileID: 4342008981446814}
@@ -102,7 +102,7 @@ Transform:
   m_GameObject: {fileID: 1790206728004268}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.9899999, z: 0}
-  m_LocalScale: {x: 5, y: 3.5, z: 3.333333}
+  m_LocalScale: {x: 5, y: 5, z: 3.333333}
   m_Children: []
   m_Father: {fileID: 4735748648154574}
   m_RootOrder: 1
@@ -171,7 +171,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65570120415056818
 BoxCollider:
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.3
   hP: 80
-  b_Hp: 0
+  b_Hp: 80
   atk: 10
   b_Atk: 10
   anime: {fileID: 95263406076074074}
@@ -291,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   met: {fileID: 0}
   meet: {fileID: 0}
+  playerPos: {fileID: 0}
 --- !u!212 &212712782617023072
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -322,7 +323,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300004, guid: 8090c06ce3bad3743818b8f2684d42d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   met: {fileID: 0}
   meet: {fileID: 0}
+  pPos: {fileID: 0}
 --- !u!114 &114601449573476828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,7 +323,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300004, guid: 2e4f437f45d549c4487ddc5ccaa840fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
