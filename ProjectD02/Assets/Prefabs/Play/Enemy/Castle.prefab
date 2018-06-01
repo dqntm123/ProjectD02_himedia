@@ -122,6 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 1000
-  hp: 1000
+  hp: 2000
   roundManager: {fileID: 0}
   hpBar: {fileID: 0}

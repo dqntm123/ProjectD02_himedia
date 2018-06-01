@@ -507,7 +507,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4239722539762004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +638,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4635220968687992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,6 +1365,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1991210383725770
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4912335972515836}
+  m_Layer: 0
+  m_Name: HpBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1994760659204614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,7 +1437,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1479474179642196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 606, y: -146, z: 0.000007623296}
+  m_LocalPosition: {x: 617, y: -133, z: 0.000007623296}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children:
   - {fileID: 4742973573842442}
@@ -1463,11 +1478,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891967772282348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.34733328, y: 0.043695465, z: -0.3694116}
+  m_LocalScale: {x: 0.0027777776, y: 0.0027777776, z: 0.0027777776}
   m_Children: []
-  m_Father: {fileID: 4383225461757902}
+  m_Father: {fileID: 4912335972515836}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4059969782449312
@@ -1519,7 +1534,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033482729759190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4636276876667574}
@@ -1670,7 +1685,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1475561276001666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27, y: -24, z: 0}
+  m_LocalPosition: {x: 38, y: -24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4992967786193158}
@@ -1764,10 +1779,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671419023142700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -150, y: 0, z: 0}
+  m_LocalPosition: {x: -154, y: 0, z: 0}
   m_LocalScale: {x: 1.0007999, y: 1.0007999, z: 1.0007999}
   m_Children:
-  - {fileID: 4052490552110060}
+  - {fileID: 4912335972515836}
   m_Father: {fileID: 4530048960350888}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2126,7 +2141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1685814332705764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27, y: -24, z: 0}
+  m_LocalPosition: {x: 38, y: -24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4424970092374086}
@@ -2139,7 +2154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1901227750407574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -2, z: 0}
+  m_LocalPosition: {x: 2, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4470394975696778}
@@ -2179,7 +2194,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592219851046764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 150, y: 0, z: 0}
+  m_LocalPosition: {x: 154, y: 0, z: 0}
   m_LocalScale: {x: 1.0008001, y: 1.0008001, z: 1.0008001}
   m_Children:
   - {fileID: 4071608233731152}
@@ -2193,7 +2208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059639390578136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -612, y: -146, z: 0}
+  m_LocalPosition: {x: -612, y: -133, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4819748249133234}
@@ -2248,7 +2263,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1956437246480822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -134.00002, y: 0, z: 0}
+  m_LocalPosition: {x: -140, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4006318665961650}
@@ -2290,7 +2305,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042782016452782}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 34.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2345,7 +2360,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578824756820638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: 0.000000030908623, w: -0.000000030908623}
   m_LocalPosition: {x: 170, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2388,7 +2403,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1078447637619974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 141, y: 0, z: 0}
+  m_LocalPosition: {x: 140, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4639532571504090}
@@ -2481,6 +2496,20 @@ Transform:
   m_Father: {fileID: 4771205181464114}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4912335972515836
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991210383725770}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 125.039986, y: -15.730368, z: 132.98817}
+  m_LocalScale: {x: 360, y: 360, z: 360}
+  m_Children:
+  - {fileID: 4052490552110060}
+  m_Father: {fileID: 4383225461757902}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4932711768033660
 Transform:
   m_ObjectHideFlags: 1
@@ -2488,7 +2517,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789989975463164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27, y: -24, z: 0}
+  m_LocalPosition: {x: 38, y: -24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4248444139363016}
@@ -2569,7 +2598,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1525663880040660}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -170, y: 0, z: 0}
   m_LocalScale: {x: 1.0008, y: 1.0008, z: 1.0008}
   m_Children: []
@@ -2798,7 +2827,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 250, y: 90, z: 0}
+  m_Size: {x: 90, y: 240, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65484983899431756
 BoxCollider:
@@ -2834,7 +2863,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 85, y: 85, z: 0}
+  m_Size: {x: 130, y: 130, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65527008432783704
 BoxCollider:
@@ -2882,7 +2911,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 250, y: 90, z: 0}
+  m_Size: {x: 90, y: 240, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65623464157065492
 BoxCollider:
@@ -2894,7 +2923,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 85, y: 85, z: 0}
+  m_Size: {x: 130, y: 130, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65632498424865330
 BoxCollider:
@@ -3073,16 +3102,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 80
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -3304,14 +3333,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 65
-  mHeight: 65
+  mWidth: 50
+  mHeight: 75
   mDepth: 7
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1
+  aspectRatio: 0.6666667
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -3326,7 +3355,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: spiritIcon_1
+  mSpriteName: Mana
   mFillCenter: 1
 --- !u!114 &114045230847566054
 MonoBehaviour:
@@ -3380,7 +3409,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Press
   mFillCenter: 1
 --- !u!114 &114060654083614976
 MonoBehaviour:
@@ -3518,16 +3547,16 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 0, g: 0.6689658, b: 1, a: 1}
+  mColor: {r: 0.41911763, g: 0.6705079, b: 1, a: 1}
   mPivot: 4
   mWidth: 250
-  mHeight: 45
+  mHeight: 30
   mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.5555553
+  aspectRatio: 8.333333
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -3542,7 +3571,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Flat
+  mSpriteName: Bar
   mFillCenter: 1
 --- !u!114 &114097479654207812
 MonoBehaviour:
@@ -3657,8 +3686,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -3679,7 +3708,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114125756632315768
 MonoBehaviour:
@@ -3714,13 +3743,13 @@ MonoBehaviour:
   mWidth: 146
   mHeight: 40
   mDepth: 13
-  mMat: {fileID: 2100000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 3.65
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: VS
   mFontSize: 40
@@ -3731,9 +3760,9 @@ MonoBehaviour:
   mEffectStyle: 2
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 3, y: 3}
   mOverflow: 0
-  mApplyGradient: 1
+  mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
@@ -3806,16 +3835,16 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 0.14705884, b: 0.14705884, a: 1}
   mPivot: 4
-  mWidth: 229
-  mHeight: 40
+  mWidth: 265
+  mHeight: 32
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.725
+  aspectRatio: 8.28125
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -3829,8 +3858,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114090579253300334, guid: dd9b15a6d5e979a4fa6138623beb73f1, type: 2}
-  mSpriteName: status_gage_bar_green
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Bar
   mFillCenter: 1
 --- !u!114 &114132890454902090
 MonoBehaviour:
@@ -3914,16 +3943,16 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 0, b: 0, a: 1}
+  mColor: {r: 0.6490383, g: 0, b: 1, a: 1}
   mPivot: 4
   mWidth: 250
-  mHeight: 45
+  mHeight: 30
   mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.5555553
+  aspectRatio: 8.333333
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -3938,7 +3967,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Flat
+  mSpriteName: Bar
   mFillCenter: 1
 --- !u!114 &114163644391671992
 MonoBehaviour:
@@ -3973,13 +4002,13 @@ MonoBehaviour:
   mWidth: 96
   mHeight: 37
   mDepth: 7
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.5945945
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: EXIT
   mFontSize: 26
@@ -3990,9 +4019,9 @@ MonoBehaviour:
   mEffectStyle: 2
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mOverflow: 0
-  mApplyGradient: 1
+  mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
@@ -4113,8 +4142,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114090579253300334, guid: dd9b15a6d5e979a4fa6138623beb73f1, type: 2}
-  mSpriteName: status_gage_bar_bg
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Press
   mFillCenter: 1
 --- !u!114 &114196566758229368
 MonoBehaviour:
@@ -4149,16 +4178,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 70
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -4235,8 +4264,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114090579253300334, guid: dd9b15a6d5e979a4fa6138623beb73f1, type: 2}
-  mSpriteName: status_gage_bar_bg
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Press
   mFillCenter: 1
 --- !u!114 &114201302923827578
 MonoBehaviour:
@@ -4468,7 +4497,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Press
   mFillCenter: 1
 --- !u!114 &114259953236442362
 MonoBehaviour:
@@ -4640,16 +4669,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 60
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -4771,14 +4800,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 250
-  mHeight: 90
+  mWidth: 90
+  mHeight: 240
   mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.7777777
+  aspectRatio: 0.375
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -4792,8 +4821,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114396569446223304, guid: 9463625710838854881d594b5bee409a, type: 2}
-  mSpriteName: Arrow
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: arrow_0
   mFillCenter: 1
 --- !u!114 &114297548888889994
 MonoBehaviour:
@@ -4825,14 +4854,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 250
-  mHeight: 90
+  mWidth: 90
+  mHeight: 240
   mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.7777777
+  aspectRatio: 0.375
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -4846,8 +4875,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114396569446223304, guid: 9463625710838854881d594b5bee409a, type: 2}
-  mSpriteName: Arrow
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: arrow_0
   mFillCenter: 1
 --- !u!114 &114305590800027306
 MonoBehaviour:
@@ -4903,8 +4932,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -4925,7 +4954,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114328159286586416
 MonoBehaviour:
@@ -4977,7 +5006,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3012
+  startingRenderQueue: 3011
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -5021,16 +5050,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 7
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 5
-  mFontSize: 50
+  mFontSize: 40
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -5226,16 +5255,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 50
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -5291,8 +5320,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -5313,7 +5342,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114386729237270756
 MonoBehaviour:
@@ -5547,16 +5576,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 40
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -5669,13 +5698,13 @@ MonoBehaviour:
   mWidth: 1384
   mHeight: 792
   mDepth: 18
-  mMat: {fileID: 2100000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.7474748
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: STAGE 0
   mFontSize: 120
@@ -5688,7 +5717,7 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 5, y: 5}
   mOverflow: 0
-  mApplyGradient: 1
+  mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
@@ -5734,8 +5763,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -5756,7 +5785,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114452754132955396
 MonoBehaviour:
@@ -5842,8 +5871,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 0.93103456, b: 0, a: 1}
   mPivot: 4
-  mWidth: 40
-  mHeight: 40
+  mWidth: 30
+  mHeight: 30
   mDepth: 14
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
@@ -5864,7 +5893,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: arrow_0
+  mSpriteName: arrow_right_f
   mFillCenter: 1
 --- !u!114 &114469475993703108
 MonoBehaviour:
@@ -5976,8 +6005,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -5998,7 +6027,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114489174642492678
 MonoBehaviour:
@@ -6033,13 +6062,13 @@ MonoBehaviour:
   mWidth: 96
   mHeight: 37
   mDepth: 7
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.5945945
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: RESTART
   mFontSize: 50
@@ -6050,9 +6079,9 @@ MonoBehaviour:
   mEffectStyle: 2
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mOverflow: 0
-  mApplyGradient: 1
+  mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
@@ -6101,16 +6130,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 7
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 50
-  mFontSize: 50
+  mFontSize: 40
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -6147,7 +6176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5ecb5660b11414fb042fb826e03b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scalingStyle: 0
+  scalingStyle: 2
   manualWidth: 1280
   manualHeight: 720
   minimumHeight: 320
@@ -6235,16 +6264,16 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 0, g: 0, b: 0, a: 1}
+  mColor: {r: 0.60294116, g: 0.60294116, b: 0.60294116, a: 1}
   mPivot: 4
-  mWidth: 1300
+  mWidth: 1600
   mHeight: 220
   mDepth: 0
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.909091
+  aspectRatio: 7.2727275
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -6259,7 +6288,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Button
+  mSpriteName: Layer
   mFillCenter: 1
 --- !u!114 &114566814431516834
 MonoBehaviour:
@@ -6299,7 +6328,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3011
+  startingRenderQueue: 3010
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -6408,7 +6437,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 4
+  mDepth: 5
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
@@ -6446,16 +6475,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 20
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -6511,8 +6540,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -6533,7 +6562,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114597450782551894
 MonoBehaviour:
@@ -6880,13 +6909,13 @@ MonoBehaviour:
   mWidth: 136
   mHeight: 50
   mDepth: 15
-  mMat: {fileID: 2100000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.72
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: StopWatch
   mFontSize: 30
@@ -6897,9 +6926,9 @@ MonoBehaviour:
   mEffectStyle: 2
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mOverflow: 0
-  mApplyGradient: 1
+  mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
@@ -6948,16 +6977,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 90
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -7067,8 +7096,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -7089,7 +7118,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114723550785851620
 MonoBehaviour:
@@ -7310,16 +7339,16 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0.9862069, g: 1, b: 0, a: 1}
   mPivot: 4
-  mWidth: 229
-  mHeight: 40
+  mWidth: 265
+  mHeight: 32
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.725
+  aspectRatio: 8.28125
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -7333,8 +7362,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114090579253300334, guid: dd9b15a6d5e979a4fa6138623beb73f1, type: 2}
-  mSpriteName: status_gage_bar_green
+  mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
+  mSpriteName: Bar
   mFillCenter: 1
 --- !u!114 &114781837086489814
 MonoBehaviour:
@@ -7538,13 +7567,13 @@ MonoBehaviour:
   mWidth: 96
   mHeight: 37
   mDepth: 7
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 2.5945945
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5618ba3f5e75d924b94671e62415b399, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: RESUME
   mFontSize: 50
@@ -7555,9 +7584,9 @@ MonoBehaviour:
   mEffectStyle: 2
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
-  mEffectDistance: {x: 1, y: 1}
+  mEffectDistance: {x: 2, y: 2}
   mOverflow: 0
-  mApplyGradient: 1
+  mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
@@ -7603,8 +7632,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -7625,7 +7654,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114886488519331236
 MonoBehaviour:
@@ -7665,7 +7694,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3008
+  startingRenderQueue: 3006
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -7777,16 +7806,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 7
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 10
-  mFontSize: 50
+  mFontSize: 40
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -7842,8 +7871,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 85
-  mHeight: 85
+  mWidth: 130
+  mHeight: 130
   mDepth: 9
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
@@ -7864,7 +7893,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Glow - Inner
+  mSpriteName: Window
   mFillCenter: 1
 --- !u!114 &114934434727732376
 MonoBehaviour:
@@ -7896,14 +7925,14 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 70
-  mHeight: 70
+  mWidth: 50
+  mHeight: 75
   mDepth: 7
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
-  keepAspectRatio: 0
-  aspectRatio: 1
+  keepAspectRatio: 1
+  aspectRatio: 0.6666667
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
@@ -7918,7 +7947,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
-  mSpriteName: Gold Coin lr
+  mSpriteName: Ellixer
   mFillCenter: 1
 --- !u!114 &114941715724214298
 MonoBehaviour:
@@ -7964,16 +7993,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 30
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1
@@ -8152,16 +8181,16 @@ MonoBehaviour:
   mWidth: 45
   mHeight: 45
   mDepth: 8
-  mMat: {fileID: 2100000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 7487f228931f3b74ca4beb930369ff35, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   mFont: {fileID: 0}
   mText: 10
-  mFontSize: 50
+  mFontSize: 30
   mFontStyle: 1
   mAlignment: 0
   mEncoding: 1

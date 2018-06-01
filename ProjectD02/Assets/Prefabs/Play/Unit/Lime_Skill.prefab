@@ -83,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   player: {fileID: 1563399291927556, guid: 21d115c05af10f64cab034a9d1075cc8, type: 2}
+  lv: 0
   atk: 0
   speed: 1
   skills: 0

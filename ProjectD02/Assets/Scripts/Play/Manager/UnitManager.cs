@@ -260,7 +260,7 @@ public class UnitManager : MonoBehaviour {
             units[5].GetComponent<UnitController>().lv = LevelManager.instanCe.lv[5];
             unitEnable[5] = true;
             unitsEnable[5].SetActive(true);
-            beefMG.GetComponent<BeefManager>().beefCount -= unitCost[2];
+            beefMG.GetComponent<BeefManager>().beefCount -= unitCost[5];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[5] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[5].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
             Instantiate(units[5], transform.position, transform.rotation);

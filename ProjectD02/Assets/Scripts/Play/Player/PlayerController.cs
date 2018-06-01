@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour {
     public Animator ani;
     public bool rightOn = false;
     public bool leftOn = false;
+    public bool isDead = false;
     public Collider diecol;
     public Animation anime;
     public float hp;
+    public float maxHp;
+    public GameObject Hpbar;
     public enum PLAYSTATE
     {
         NONE=0,
@@ -20,24 +23,31 @@ public class PlayerController : MonoBehaviour {
         LEFT,
         Attack1,
         Attack2,
+        Win,
         DEAD
     }
     public PLAYSTATE playstate;
 
     void Awake()
     {
-
+        
     }
 
 	void Start ()
     {
         mainCamera = GameObject.Find("Main Camera");//시작할때 메인카메라 변수안에 메인카메라 오브젝트를 찾아서 넣는다
-        ani.GetComponent<TweenAlpha>().enabled = false;
-	}
+        maxHp = hp;
+    }
 	
 
 	void Update ()
     {
+        if(hp<=0)
+        {
+            hp = 0;
+            isDead = true;
+            DeadProcess();
+        }
         switch (playstate)
         {
             case PLAYSTATE.NONE:
@@ -50,12 +60,14 @@ public class PlayerController : MonoBehaviour {
                 if(rightOn==false)//만약 rightOn이 false라면
                 {
                     ani.SetBool("Move", true);
+                    moveSpeed = 0.4f;
                     transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//오른쪽으로이동
                 }
                 if (rightOn == true)//만약 rightOn이 true라면
                 {
                     leftOn = false;//leftOn은 폴스
                     ani.SetBool("Move", true);
+                    moveSpeed = 0.4f;
                     transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//오른쪽으로이동
                     mainCamera.GetComponent<MainCameraMove>().camerastate = MainCameraMove.CAMERASTATE.RIGHT;//메인카메라에 있는 스크립트에 카메라스테이트를 RIGHT로 바꿔준다
                 }
@@ -64,6 +76,7 @@ public class PlayerController : MonoBehaviour {
                 if(leftOn==false)//만약 leftOn이 false라면
                 {
                     ani.SetBool("Move", true);
+                    moveSpeed = 0.4f;
                     transform.rotation = new Quaternion(0,-180,0,0);
                     transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//왼쪽으로이동
                 }
@@ -71,6 +84,7 @@ public class PlayerController : MonoBehaviour {
                 {
                     rightOn = false;//rightOn은 폴스
                     ani.SetBool("Move", true);
+                    moveSpeed = 0.4f;
                     transform.rotation = new Quaternion(0, -180, 0, 0);
                     transform.Translate(moveSpeed * Time.deltaTime, 0, 0);//왼쪽으로이동
                     mainCamera.GetComponent<MainCameraMove>().camerastate = MainCameraMove.CAMERASTATE.LEFT;//메인카메라에 있는 스크립트에 카메라스테이트를 LEFT로 바꿔준다
@@ -78,13 +92,17 @@ public class PlayerController : MonoBehaviour {
                 break;
             case PLAYSTATE.Attack1:
                 ani.SetBool("Attack1", true);
+                moveSpeed = 0;
                 break;
             case PLAYSTATE.Attack2:
                 ani.SetBool("Attack2", true);
+                moveSpeed = 0;
+                break;
+            case PLAYSTATE.Win:
+                ani.SetBool("Win", true);
                 break;
             case PLAYSTATE.DEAD:
-                ani.SetBool("Dead", true);
-                ani.GetComponent<TweenAlpha>().enabled = true;
+
                 break;
         }
         if(transform.position.x<-1.75f)//오브젝트 포지션x값이 -1.7보다 작아진다면
@@ -94,6 +112,14 @@ public class PlayerController : MonoBehaviour {
         if (transform.position.x >3.75f)//오브젝트 포지션x값이 3.7보다 커진다면
         {
              transform.position = new Vector3(3.75f, transform.position.y, -0.3f);//그 오브젝트의 위치값을 고정한다
+        }
+        if(isDead==false)
+        {
+            if(Hpbar.transform.localScale.x<=0)
+            {
+                Hpbar.transform.localScale = new Vector3(0, 360, 360);
+            }
+            Hpbar.transform.localScale = new Vector3(hp/maxHp*360,360,360);
         }
     }
     void OnTriggerEnter(Collider col)
@@ -120,5 +146,10 @@ public class PlayerController : MonoBehaviour {
     {
         playstate = PLAYSTATE.NONE;//플레이스테이트에 NONE로 이동
         mainCamera.GetComponent<MainCameraMove>().camerastate = MainCameraMove.CAMERASTATE.NONE;//메인카메라에 있는 스크립트에 카메라스테이트를 NONE로 바꿔준다
+    }
+    public void DeadProcess()
+    {
+        ani.SetBool("Dead", true);
+        diecol.enabled = false;
     }
 }

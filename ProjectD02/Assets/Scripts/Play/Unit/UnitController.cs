@@ -10,6 +10,7 @@ public class UnitController : MonoBehaviour {
     public float b_Hp;
     public float atk;
     public int b_Atk;
+    public float maxHp;
     public Animator anime;
     public int sn;
     public StageManager sm;
@@ -23,6 +24,8 @@ public class UnitController : MonoBehaviour {
     public GameObject[] dmgcheck;
     public GameObject[] effect;
     public GameObject Bullets;
+    public GameObject lvManager;
+    public GameObject[] hpBar;
 
     public enum UNIT //케릭터의 종류를 정함
     {
@@ -48,20 +51,25 @@ public class UnitController : MonoBehaviour {
 
      void Awake()
     {
+        
         sm = GameObject.Find("StageManager").GetComponent<StageManager>();
         diecol = gameObject.GetComponent<BoxCollider>();
         anime.GetComponent<TweenAlpha>().enabled = false;
         sn = sm.currentStageNum;
-
+        
+        //Bullets.SetActive(false);
+        //lv=lvManager.GetComponent<LevelManager>().
         if (gameObject.tag == "Player")
         {
             atk += b_Atk * lv * 0.1f;
             hP += b_Hp * lv * 0.1f;
+            maxHp = hP;
         }
         if(gameObject.tag == "Enemy")
         {
             atk += b_Atk * sn * 0.1f;
             hP += b_Hp * sn * 0.1f;
+            maxHp = hP;
         }
 
     }
@@ -77,6 +85,8 @@ public class UnitController : MonoBehaviour {
       
         if(hP <= 0)
         {
+            hP = 0;
+
             isDead = true;
         
             DeadProcess();
@@ -272,7 +282,13 @@ public class UnitController : MonoBehaviour {
                                         {
 
                                             stateTime = 0;
-                                            Instantiate(Bullets, transform.position , transform.rotation);
+                                         
+                                            Bullets.GetComponent<SkillController>().atk = atk;
+                                            Bullets.GetComponent<SkillController>().lv = lv;
+                                            Instantiate(Bullets, transform.position, transform.rotation);
+                                       
+                                         
+                                         
 
 
                                         }
@@ -284,8 +300,9 @@ public class UnitController : MonoBehaviour {
                                         {
 
                                             stateTime = 0;
+                                            Bullets.GetComponent<SkillController>().atk = atk;
+                                            Bullets.GetComponent<SkillController>().lv = lv;
                                             Instantiate(Bullets, transform.position, transform.rotation);
-                                            //Instantiate(Bullets, transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), transform.rotation);
 
                                         }
                                     }
@@ -379,6 +396,19 @@ public class UnitController : MonoBehaviour {
 
                     break;
 
+            }
+        }
+        if(hP<maxHp)
+        {
+            if (isDead == false)
+            {
+                hpBar[0].SetActive(true);
+                hpBar[1].SetActive(true);
+                if (hpBar[1].transform.localScale.x < 0)
+                {
+                    hpBar[1].transform.localScale = new Vector3(0, 1, 1);
+                }
+                hpBar[1].transform.localScale = new Vector3(hP / maxHp * 1, 1, 1);
             }
         }
     }

@@ -7,6 +7,19 @@ using System.Linq;
 
 public class StageManager : MonoBehaviour {
 
+    private static StageManager _instance = null;
+    public static StageManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType(typeof(StageManager)) as StageManager;
+            }
+            return _instance;
+        }
+    }
+
     public int currentStageNum;
     public int[] status;
     public UISprite[] stageSprites;
@@ -14,12 +27,17 @@ public class StageManager : MonoBehaviour {
     public UILabel starSumLabel;
     public int starSum;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     void Start () {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+
         for (int i = 0; i < status.Length; i++)
         {
             if (status[i] == 0)

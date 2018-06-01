@@ -8,6 +8,7 @@ public class GoToStage : MonoBehaviour {
     public StageManager sm;
     public int stageNum;
     public GameObject bgmMg;
+
     private void Start()
     {
         sm = GameObject.Find("StageManager").GetComponent<StageManager>();
@@ -36,6 +37,5 @@ public class GoToStage : MonoBehaviour {
         }
         Debug.Log("Stage Number is :" + stageNum);
         sm.currentStageNum = stageNum;
-
     }
 }

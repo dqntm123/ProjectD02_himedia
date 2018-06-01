@@ -7,31 +7,46 @@ public class SkillController : MonoBehaviour {
 
     public GameObject enemy;
     public GameObject player;
+    public float lv;
+    public GameObject UnitsManager;
  
     public float atk;
     public float speed;
 
     public enum SKILLS
     {
-        SKILL1=0,
-        SKILL2
+        UNITSKILL=0,
+        ENEMYSKILL,
+        SKILL1,
+        SKILL2,
+        SKILL3
     }
     public SKILLS skills;
 
+     void Awake()
+    {
+        //player = gameObject.transform.parent.gameObject;  
+
+    }
+
     void Start()
     {
-        atk = player.GetComponent<UnitController>().atk;
+        //atk += player.GetComponent<UnitController>().b_Atk * lv * 0.1f;
     }
 
     void Update()
     {
         switch (skills)
         {
-            case SKILLS.SKILL1:
+            case SKILLS.UNITSKILL:
                 transform.Translate(speed * Time.deltaTime, 0, 0);
                 break;
             case SKILLS.SKILL2:
                 transform.Translate(speed * Time.deltaTime, -speed * Time.deltaTime, 0);
+                break;
+
+            case SKILLS.ENEMYSKILL:
+                transform.Translate(-speed * Time.deltaTime, 0, 0);
                 break;
            
         }
@@ -64,7 +79,7 @@ public class SkillController : MonoBehaviour {
             if (col.gameObject.tag == "Player")
             {
                 enemy = col.gameObject;
-                enemy.GetComponent<UnitController>().GetDamage(atk);
+                enemy.GetComponent<UnitController>().GetDamage(player.GetComponent<UnitController>().atk);
                 Destroy(gameObject);
              
             }

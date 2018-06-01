@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873792864220314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.1, z: -0.258}
+  m_LocalPosition: {x: -0.956, y: 0.004, z: -0.258}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0}
   m_Children:
   - {fileID: 4143047593494032}
@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1956152284303124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 0.05, z: 0}
+  m_LocalPosition: {x: 1, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4038125365211230}
@@ -212,7 +212,7 @@ MonoBehaviour:
   - 50
   skillmo: 1
   statetime: 0
-  skillstart: 000000
+  skillstart: 0
   cometTargets:
   - {fileID: 0}
   - {fileID: 0}
@@ -233,9 +233,12 @@ MonoBehaviour:
   ani: {fileID: 95585822555830192}
   rightOn: 0
   leftOn: 0
+  isDead: 0
   diecol: {fileID: 65420376664346494}
   anime: {fileID: 0}
-  hp: 0
+  hp: 2000
+  maxHp: 0
+  Hpbar: {fileID: 0}
   playstate: 0
 --- !u!114 &114910900091335926
 MonoBehaviour:

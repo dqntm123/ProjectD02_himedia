@@ -43,7 +43,11 @@ public class RoundManager : MonoBehaviour {
 
     IEnumerator RoundEnd()
     {
-        yield return new WaitForSeconds(2.0f);
+        UILabel ul = gameObject.GetComponent<UILabel>();
+        ul.enabled = true;
+        ul.text = "STAGE CLEAR!";
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(2.0f);
         SceneManager.LoadScene(2);
         bgmmg.GetComponent<AudioSource>().clip = MusicManager.instance.bgmClip[1];
         MusicManager.instance.auDios.Play();

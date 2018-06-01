@@ -17,6 +17,11 @@ public class ButtonManager : MonoBehaviour {
         {
             buttons[i].AddComponent<getButtonIndex>();
         }
+        unitIdle[0].SetActive(true);
+        unitIdle[0].GetComponent<AniTarget>().parentObj = buttons[0];
+        unitIdle[0].transform.parent = buttons[0].transform;
+        buttons[0].GetComponent<getButtonIndex>().clickCt = 1;
+        target = buttons[0];
     }
     private void Update()
     {

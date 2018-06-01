@@ -69,6 +69,7 @@ public class UnitLock : MonoBehaviour {
         bmg.target=udbt.btmMg.buttons[unitCount];
         bmg.unitIdle[unitCount].SetActive(true);
         bmg.unitIdle[unitCount].transform.parent= udbt.btmMg.buttons[unitCount].transform;
+        bmg.unitIdle[unitCount].GetComponent<AniTarget>().parentObj = udbt.btmMg.buttons[unitCount];
         udbt.btmMg.buttons[unitCount].GetComponent<getButtonIndex>().clickCt += 1;
         udbt.btmMg.buttons[unitCount].GetComponent<getButtonIndex>().nameLabel.GetComponent<UILabel>().text = bmg.unitName[unitCount];
         select.transform.parent = udbt.btmMg.buttons[unitCount].transform;

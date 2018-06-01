@@ -47,6 +47,7 @@ public class getButtonIndex : MonoBehaviour {
                 //    bm.unitIdle[r].SetActive(true);
                 //}
                 bm.anitarget.transform.parent = bm.target.transform;
+                bm.anitarget.GetComponent<AniTarget>().parentObj = gameObject;
                 bm.unitIdle[r].SetActive(true);
                 udb.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[r]);
                 nameLabel.GetComponent<UILabel>().text = bm.unitName[r];
