@@ -9,47 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1722124139104586}
+  m_RootGameObject: {fileID: 1784747554853928}
   m_IsPrefabParent: 1
---- !u!1 &1722124139104586
+--- !u!1 &1784747554853928
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4223914546822208}
-  - component: {fileID: 212017319457479376}
-  - component: {fileID: 95463690528198604}
-  - component: {fileID: 54243894156579416}
-  - component: {fileID: 65230030287151152}
-  - component: {fileID: 114657276110049710}
+  - component: {fileID: 4794039515934042}
+  - component: {fileID: 212590649161953458}
+  - component: {fileID: 65092951694022990}
+  - component: {fileID: 54533364133499236}
+  - component: {fileID: 114273062864399664}
   m_Layer: 0
-  m_Name: Succbus_Skill
+  m_Name: Felynn_skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4223914546822208
+--- !u!4 &4794039515934042
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722124139104586}
+  m_GameObject: {fileID: 1784747554853928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.84195, y: -1.0642595, z: 0}
+  m_LocalPosition: {x: 3.239, y: 0.108, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54243894156579416
+--- !u!54 &54533364133499236
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722124139104586}
+  m_GameObject: {fileID: 1784747554853928}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -59,60 +58,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65230030287151152
+--- !u!65 &65092951694022990
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722124139104586}
+  m_GameObject: {fileID: 1784747554853928}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.29, z: 0.2}
+  m_Size: {x: 0.53, y: 0.95, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95463690528198604
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722124139104586}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f2d04cc3196331e48affdce7c07bffa1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114657276110049710
+--- !u!114 &114273062864399664
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722124139104586}
+  m_GameObject: {fileID: 1784747554853928}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1000a06e76d1987469513bb3533b749d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  caster: {fileID: 1073922991719924, guid: 8b6f3719f2d903445a23717f3fa37663, type: 2}
+  caster: {fileID: 1268267865184392, guid: bc24872b870127b4dab7b9ee3e785536, type: 2}
   lv: 1
   UnitsManager: {fileID: 0}
-  atk: 55
+  atk: 110
   speed: 1
   aoeTargets: []
   skills: 0
---- !u!212 &212017319457479376
+--- !u!212 &212590649161953458
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722124139104586}
+  m_GameObject: {fileID: 1784747554853928}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -139,12 +121,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 61028ba92aa4eb64ab8da071d49d90ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 761947be869810f40aafefd854a7ec1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.95}
+  m_Size: {x: 0.75, y: 0.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

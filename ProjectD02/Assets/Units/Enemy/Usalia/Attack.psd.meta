@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3435dac7d91cf5941a41838d2544964b
-timeCreated: 1527391246
+timeCreated: 1527834906
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -13,6 +13,11 @@ TextureImporter:
     21300012: Attack_15
     21300014: Attack_16
     21300016: Attack_17
+    21300018: Attack_3
+    21300020: Attack_7
+    21300022: Attack_8
+    21300024: Attack_9
+    21300026: Attack_12
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -87,26 +92,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack_0
+      name: Attack_3
       rect:
         serializedVersion: 2
-        x: 596
+        x: 297
         y: 0
-        width: 179
-        height: 300
+        width: 91
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Attack_1
+      name: Attack_7
       rect:
         serializedVersion: 2
-        x: 1441
+        x: 720
         y: 0
-        width: 176
-        height: 300
+        width: 89
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Attack_8
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 74
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Attack_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 89
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +147,10 @@ TextureImporter:
       name: Attack_10
       rect:
         serializedVersion: 2
-        x: 1634
-        y: 0
-        width: 146
-        height: 300
+        x: 93
+        y: 1
+        width: 84
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +160,23 @@ TextureImporter:
       name: Attack_11
       rect:
         serializedVersion: 2
-        x: 188
-        y: 3
-        width: 164
-        height: 297
+        x: 203
+        y: 0
+        width: 85
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Attack_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 86
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +186,10 @@ TextureImporter:
       name: Attack_13
       rect:
         serializedVersion: 2
-        x: 0
+        x: 493
         y: 0
-        width: 176
-        height: 300
+        width: 86
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,49 +199,10 @@ TextureImporter:
       name: Attack_14
       rect:
         serializedVersion: 2
-        x: 405
-        y: 1
-        width: 187
-        height: 299
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Attack_15
-      rect:
-        serializedVersion: 2
-        x: 798
+        x: 602
         y: 0
-        width: 169
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Attack_16
-      rect:
-        serializedVersion: 2
-        x: 988
-        y: 0
-        width: 169
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Attack_17
-      rect:
-        serializedVersion: 2
-        x: 1205
-        y: 0
-        width: 169
-        height: 300
+        width: 86
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

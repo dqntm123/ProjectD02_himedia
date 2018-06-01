@@ -23,6 +23,7 @@ public class Castle : MonoBehaviour {
     private void Start()
     {
         hpBarUs = hpBar.GetComponent<UISlider>();
+        maxHp = hp;
     }
 
     private void Update()

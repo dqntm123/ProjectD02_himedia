@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1cca6e7f3c2b52e409835e54159ab51a
-timeCreated: 1527391304
+timeCreated: 1527834937
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -88,8 +88,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 167
-        height: 300
+        width: 84
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,10 +99,10 @@ TextureImporter:
       name: Dead_1
       rect:
         serializedVersion: 2
-        x: 184
+        x: 92
         y: 0
-        width: 167
-        height: 300
+        width: 84
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,10 +112,10 @@ TextureImporter:
       name: Dead_2
       rect:
         serializedVersion: 2
-        x: 374
+        x: 187
         y: 0
-        width: 211
-        height: 300
+        width: 106
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,10 +125,10 @@ TextureImporter:
       name: Dead_3
       rect:
         serializedVersion: 2
-        x: 637
+        x: 318
         y: 0
-        width: 121
-        height: 300
+        width: 61
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,10 +138,10 @@ TextureImporter:
       name: Dead_4
       rect:
         serializedVersion: 2
-        x: 808
+        x: 404
         y: 0
-        width: 126
-        height: 300
+        width: 63
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

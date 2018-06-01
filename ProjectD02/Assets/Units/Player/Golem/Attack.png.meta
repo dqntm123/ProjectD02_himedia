@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: da0aa5b8226b8df46bfc5a7541ced496
-timeCreated: 1527390377
+timeCreated: 1527835340
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,8 +90,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 203
-        height: 300
+        width: 102
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,10 +101,10 @@ TextureImporter:
       name: Attack_1
       rect:
         serializedVersion: 2
-        x: 235
+        x: 117
         y: 0
-        width: 202
-        height: 300
+        width: 102
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,10 +114,10 @@ TextureImporter:
       name: Attack_2
       rect:
         serializedVersion: 2
-        x: 467
-        y: 2
-        width: 206
-        height: 298
+        x: 233
+        y: 0
+        width: 104
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,23 +127,10 @@ TextureImporter:
       name: Attack_3
       rect:
         serializedVersion: 2
-        x: 692
-        y: 2
-        width: 266
-        height: 298
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Attack_4
-      rect:
-        serializedVersion: 2
-        x: 959
-        y: 66
-        width: 9
-        height: 13
+        x: 346
+        y: 0
+        width: 139
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +140,10 @@ TextureImporter:
       name: Attack_5
       rect:
         serializedVersion: 2
-        x: 1019
-        y: 0
-        width: 258
-        height: 300
+        x: 509
+        y: 2
+        width: 130
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +153,10 @@ TextureImporter:
       name: Attack_6
       rect:
         serializedVersion: 2
-        x: 1351
-        y: 0
-        width: 264
-        height: 300
+        x: 675
+        y: 2
+        width: 132
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

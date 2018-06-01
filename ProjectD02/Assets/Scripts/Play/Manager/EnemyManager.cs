@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour {
     public float coolTime;
     public float resPawnTime;
     public GameObject[] enemys;
+
 	void Start ()
     {
 		

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5ffe5f9f0250f9a4d8934b9ca6317f3d
-timeCreated: 1527388447
+timeCreated: 1527843968
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,8 +90,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 206
-        height: 300
+        width: 104
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,10 +101,10 @@ TextureImporter:
       name: Gard_1
       rect:
         serializedVersion: 2
-        x: 216
+        x: 107
         y: 0
-        width: 198
-        height: 300
+        width: 101
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,10 +114,10 @@ TextureImporter:
       name: Gard_2
       rect:
         serializedVersion: 2
-        x: 424
+        x: 212
         y: 0
-        width: 189
-        height: 300
+        width: 95
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,10 +127,10 @@ TextureImporter:
       name: Gard_3
       rect:
         serializedVersion: 2
-        x: 623
+        x: 311
         y: 0
-        width: 179
-        height: 300
+        width: 91
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: Gard_4
       rect:
         serializedVersion: 2
-        x: 808
+        x: 404
         y: 0
-        width: 174
-        height: 300
+        width: 88
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: Gard_5
       rect:
         serializedVersion: 2
-        x: 1005
+        x: 502
         y: 0
-        width: 176
-        height: 300
+        width: 89
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Gard_6
       rect:
         serializedVersion: 2
-        x: 1191
+        x: 595
         y: 0
-        width: 206
-        height: 300
+        width: 104
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

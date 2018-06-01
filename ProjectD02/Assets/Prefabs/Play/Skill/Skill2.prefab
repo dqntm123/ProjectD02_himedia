@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23199103407596816}
   - component: {fileID: 54401192695896406}
   - component: {fileID: 114936853579140928}
+  - component: {fileID: 114196372310726386}
   m_Layer: 0
   m_Name: Skill2
   m_TagString: Skill2
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d802547f084836b4ca16e2ae4b25059d, type: 2}
+  - {fileID: 2100000, guid: 1d0f92d737792804eb65be4c0e559633, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,6 +111,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114196372310726386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924041926880742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a207850c77663ac43af8a0ae74955131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114936853579140928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,7 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000a06e76d1987469513bb3533b749d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  target: {fileID: 0}
+  caster: {fileID: 0}
+  lv: 0
+  UnitsManager: {fileID: 0}
   atk: 0
   speed: 3
-  skills: 0
+  aoeTargets: []
+  skills: 3

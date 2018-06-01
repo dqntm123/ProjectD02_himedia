@@ -81,10 +81,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000a06e76d1987469513bb3533b749d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  player: {fileID: 1563399291927556, guid: 21d115c05af10f64cab034a9d1075cc8, type: 2}
-  lv: 0
-  atk: 0
+  target: {fileID: 0}
+  caster: {fileID: 1563399291927556, guid: 21d115c05af10f64cab034a9d1075cc8, type: 2}
+  lv: 1
+  UnitsManager: {fileID: 0}
+  atk: 27.5
   speed: 1
   skills: 0
 --- !u!212 &212471999516374610

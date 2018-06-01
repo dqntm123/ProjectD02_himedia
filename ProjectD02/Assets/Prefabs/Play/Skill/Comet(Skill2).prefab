@@ -53,9 +53,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
+  player: {fileID: 0}
+  lv: 0
+  UnitsManager: {fileID: 0}
   atk: 0
   speed: 2
-  skills: 1
+  skills: 3
 --- !u!212 &212190232035536390
 SpriteRenderer:
   m_ObjectHideFlags: 1

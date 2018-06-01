@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 243b99e795fc6dc4eb46a194fb197984
-timeCreated: 1527388530
+timeCreated: 1527844104
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -89,8 +89,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 182
-        height: 306
+        width: 90
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,10 +100,10 @@ TextureImporter:
       name: Move_1
       rect:
         serializedVersion: 2
-        x: 195
+        x: 95
         y: 0
-        width: 188
-        height: 306
+        width: 93
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,10 +113,10 @@ TextureImporter:
       name: Move_2
       rect:
         serializedVersion: 2
-        x: 392
+        x: 192
         y: 0
-        width: 191
-        height: 305
+        width: 95
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,10 +126,10 @@ TextureImporter:
       name: Move_3
       rect:
         serializedVersion: 2
-        x: 613
+        x: 300
         y: 0
-        width: 194
-        height: 306
+        width: 96
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +139,10 @@ TextureImporter:
       name: Move_4
       rect:
         serializedVersion: 2
-        x: 813
-        y: 1
-        width: 208
-        height: 305
+        x: 398
+        y: 0
+        width: 103
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: Move_5
       rect:
         serializedVersion: 2
-        x: 1028
+        x: 504
         y: 0
-        width: 212
-        height: 306
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

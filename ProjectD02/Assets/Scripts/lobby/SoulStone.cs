@@ -8,6 +8,8 @@ public class SoulStone : MonoBehaviour {
     public GameObject jewelPN;
     public GameObject[] jewelChang;
     public bool[] btnIn;
+    public int costValue;
+    public int soulSkillNumber;
     void Awake()
     {
         jewelPN = GameObject.Find("JewelPanel");

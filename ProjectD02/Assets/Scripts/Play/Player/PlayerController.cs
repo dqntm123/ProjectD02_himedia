@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour {
     public float hp;
     public float maxHp;
     public GameObject Hpbar;
+    public GameObject enemyManager;
+    public List<GameObject> everys;
+
     public enum PLAYSTATE
     {
         NONE=0,
@@ -149,7 +152,10 @@ public class PlayerController : MonoBehaviour {
     }
     public void DeadProcess()
     {
+        enemyManager = GameObject.Find("EnemyManaer");
         ani.SetBool("Dead", true);
         diecol.enabled = false;
+        Destroy(enemyManager);
+        isDead = true;
     }
 }

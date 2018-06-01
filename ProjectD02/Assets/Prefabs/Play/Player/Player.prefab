@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4428927648004790}
   - component: {fileID: 212221964594126862}
   - component: {fileID: 95585822555830192}
-  - component: {fileID: 114910900091335926}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Untagged
@@ -202,14 +201,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skill:
   - {fileID: 1390883081382108, guid: e85dc303fa87f3146bfabc33ddac775c, type: 2}
-  - {fileID: 1628200046543062, guid: b58b2a4730a262443af0f673aeb345b2, type: 2}
+  - {fileID: 1924041926880742, guid: f15afe2e51a78094ab6aec619ad6eec1, type: 2}
   - {fileID: 1578206188631878, guid: 405266bdd68d2b74d9567f49671a2824, type: 2}
   manaMG: {fileID: 0}
   player: {fileID: 0}
-  skillCost:
-  - 10
-  - 5
-  - 50
+  costLabel:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  skillCost: 050000000500000005000000
   skillmo: 1
   statetime: 0
   skillstart: 0
@@ -239,49 +239,9 @@ MonoBehaviour:
   hp: 2000
   maxHp: 0
   Hpbar: {fileID: 0}
+  enemyManager: {fileID: 0}
+  everys: []
   playstate: 0
---- !u!114 &114910900091335926
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1024319043665578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e2747e3775af504da1a4d5a46c5a1ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  method: 0
-  style: 0
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ignoreTimeScale: 1
-  delay: 0
-  duration: 1
-  steeperCurves: 0
-  tweenGroup: 0
-  useFixedUpdate: 0
-  onFinished: []
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
-  from: 1
-  to: 0
 --- !u!212 &212221964594126862
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 552a136033e6e554c9d37aa3a7fd6a5e
-timeCreated: 1527391333
+timeCreated: 1527834953
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -89,8 +89,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 142
-        height: 300
+        width: 72
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,10 +100,10 @@ TextureImporter:
       name: Idle_1
       rect:
         serializedVersion: 2
-        x: 159
+        x: 79
         y: 0
-        width: 146
-        height: 300
+        width: 74
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,10 +113,10 @@ TextureImporter:
       name: Idle_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 159
         y: 0
-        width: 148
-        height: 300
+        width: 76
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,10 +126,10 @@ TextureImporter:
       name: Idle_3
       rect:
         serializedVersion: 2
-        x: 482
+        x: 240
         y: 0
-        width: 147
-        height: 300
+        width: 75
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +139,10 @@ TextureImporter:
       name: Idle_4
       rect:
         serializedVersion: 2
-        x: 643
+        x: 321
         y: 0
-        width: 144
-        height: 300
+        width: 73
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: Idle_5
       rect:
         serializedVersion: 2
-        x: 805
+        x: 402
         y: 0
-        width: 143
-        height: 300
+        width: 72
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

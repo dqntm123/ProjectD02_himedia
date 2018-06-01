@@ -5,13 +5,15 @@ using UnityEngine;
 public class SkillController : MonoBehaviour {
 
 
-    public GameObject enemy;
-    public GameObject player;
+    public GameObject target;
+    public GameObject caster;
     public float lv;
     public GameObject UnitsManager;
  
     public float atk;
     public float speed;
+
+    public List<GameObject> aoeTargets;
 
     public enum SKILLS
     {
@@ -26,12 +28,12 @@ public class SkillController : MonoBehaviour {
      void Awake()
     {
         //player = gameObject.transform.parent.gameObject;  
-
     }
 
     void Start()
     {
         //atk += player.GetComponent<UnitController>().b_Atk * lv * 0.1f;
+        aoeTargets.Clear();
     }
 
     void Update()
@@ -42,9 +44,8 @@ public class SkillController : MonoBehaviour {
                 transform.Translate(speed * Time.deltaTime, 0, 0);
                 break;
             case SKILLS.SKILL2:
-                transform.Translate(speed * Time.deltaTime, -speed * Time.deltaTime, 0);
+                transform.Translate(speed * Time.deltaTime, 0, 0);
                 break;
-
             case SKILLS.ENEMYSKILL:
                 transform.Translate(-speed * Time.deltaTime, 0, 0);
                 break;
@@ -54,46 +55,58 @@ public class SkillController : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+        if(caster.tag == "Darking")
+        {
+            if(col.gameObject.tag == "Enemy")
+            {
+                if (aoeTargets.Count <= 2)
+                {
+                    aoeTargets.Add(col.gameObject);                    
+                }
+                if(aoeTargets.Count == 3)
+                {
+                    foreach (GameObject i in aoeTargets)
+                    {
+                        Debug.Log(i.name);
+                    }
+                }
+            }
+        }
 
-        if (player.tag == "Player")
+        if (caster.tag == "Player")
         {
             if (col.gameObject.tag == "Enemy")
             {
-                enemy = col.gameObject;
-                enemy.GetComponent<UnitController>().GetDamage(atk);
+                target = col.gameObject;
+                target.GetComponent<UnitController>().GetDamage(atk);
                 Destroy(gameObject);
-        
             }
-
 
             if (col.gameObject.tag == "Castle")
             {
-                enemy = col.gameObject;
-                enemy.GetComponent<Castle>().hp -= atk;
+                target = col.gameObject;
+                target.GetComponent<Castle>().hp -= atk;
                 Destroy(gameObject);
             }
         }
 
-        if (player.tag == "Enemy")
+        if (caster.tag == "Enemy")
         {
             if (col.gameObject.tag == "Player")
             {
-                enemy = col.gameObject;
-                enemy.GetComponent<UnitController>().GetDamage(player.GetComponent<UnitController>().atk);
+                target = col.gameObject;
+                target.GetComponent<UnitController>().GetDamage(caster.GetComponent<UnitController>().atk);
                 Destroy(gameObject);
              
             }
 
-
             if (col.gameObject.tag == "Darking")
             {
-                enemy = col.gameObject;
-                enemy.GetComponent<PlayerController>().hp -= atk;
+                target = col.gameObject;
+                target.GetComponent<PlayerController>().hp -= atk;
                 Destroy(gameObject);
             }
         }
-
-
     }
 
         //if (gameObject.tag =="Enemy")
@@ -101,6 +114,6 @@ public class SkillController : MonoBehaviour {
         //player.GetComponent<UnitController>().enemy = col.gameObject;
         //}
 
-    }
+}
 
 

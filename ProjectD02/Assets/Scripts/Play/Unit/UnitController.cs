@@ -26,6 +26,7 @@ public class UnitController : MonoBehaviour {
     public GameObject Bullets;
     public GameObject lvManager;
     public GameObject[] hpBar;
+    public GameObject Main;
 
     public enum UNIT //케릭터의 종류를 정함
     {
@@ -51,7 +52,7 @@ public class UnitController : MonoBehaviour {
 
      void Awake()
     {
-        
+        Main = GameObject.FindGameObjectWithTag("Darking");
         sm = GameObject.Find("StageManager").GetComponent<StageManager>();
         diecol = gameObject.GetComponent<BoxCollider>();
         anime.GetComponent<TweenAlpha>().enabled = false;
@@ -82,7 +83,11 @@ public class UnitController : MonoBehaviour {
 	
 	void Update ()
     {
-      
+      if(Main.GetComponent<PlayerController>().hp<=0)
+        {
+            isDead = true;
+            DeadProcess();
+        }
         if(hP <= 0)
         {
             hP = 0;
@@ -419,7 +424,7 @@ public class UnitController : MonoBehaviour {
         {
             if(col.gameObject.tag == "EnemyGoal")
             {
-                gameObject.transform.position = new Vector3(5, -0.2f, -0.3f);
+                gameObject.transform.position = new Vector3(5, -0.05f, -0.3f);
             }
         }
     }

@@ -436,7 +436,7 @@ MonoBehaviour:
   sn: 0
   sm: {fileID: 0}
   look: []
-  lv: 0
+  lv: 1
   stateTime: 0
   diecol: {fileID: 65799264191060598}
   sensor: {fileID: 1715337601772186}
@@ -446,12 +446,13 @@ MonoBehaviour:
   - {fileID: 1860960842652400, guid: f258aecc4fbca7c41b11d09b214f7a5d, type: 2}
   - {fileID: 1458731092689568, guid: 2a524ecf34aa9cf4a95cf68cb46e24c4, type: 2}
   effect: []
-  Bullets: {fileID: 0}
+  Bullets: {fileID: 1784747554853928, guid: 5cab0d752fe165441bf8c44a0d8daf25, type: 2}
   lvManager: {fileID: 0}
   hpBar:
   - {fileID: 1589253852108326}
   - {fileID: 1371992418456142}
-  unit: 0
+  Main: {fileID: 0}
+  unit: 4
   unitstate: 1
 --- !u!114 &114803219598745770
 MonoBehaviour:

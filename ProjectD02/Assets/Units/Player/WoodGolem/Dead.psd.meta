@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 99a0a5251b976f442a078eef55cfe7f2
-timeCreated: 1527388403
+timeCreated: 1527843944
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -85,8 +85,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 270
-        height: 300
+        width: 136
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -96,10 +96,10 @@ TextureImporter:
       name: Dead_1
       rect:
         serializedVersion: 2
-        x: 311
+        x: 155
         y: 0
-        width: 318
-        height: 300
+        width: 160
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

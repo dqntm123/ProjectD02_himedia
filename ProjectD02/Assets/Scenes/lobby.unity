@@ -835,6 +835,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 8
 --- !u!114 &39519799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,6 +1431,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 3
 --- !u!114 &147837785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2833,13 +2837,13 @@ Transform:
   m_LocalPosition: {x: 16, y: -122.01919, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2058400819}
-  - {fileID: 1265337662}
+  - {fileID: 1252069845}
   - {fileID: 545822366}
+  - {fileID: 1265337662}
   - {fileID: 147837783}
   - {fileID: 318932919}
   - {fileID: 2130202936}
-  - {fileID: 1252069845}
+  - {fileID: 2058400819}
   - {fileID: 2048379904}
   - {fileID: 39519797}
   - {fileID: 875363204}
@@ -3156,6 +3160,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 4
 --- !u!114 &318932921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6063,7 +6069,7 @@ GameObject:
   - component: {fileID: 545822368}
   - component: {fileID: 545822367}
   m_Layer: 8
-  m_Name: SoulStone2
+  m_Name: SoulStone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6080,7 +6086,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 288269454}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &545822367
 MonoBehaviour:
@@ -6107,6 +6113,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 1
 --- !u!114 &545822368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6217,6 +6225,48 @@ MonoBehaviour:
   hideInactive: 0
   keepWithinPanel: 0
   sorted: 0
+--- !u!1 &556755361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 556755363}
+  - component: {fileID: 556755362}
+  m_Layer: 0
+  m_Name: SoulSkillManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &556755362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556755361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcfdeab951598d4ea3d84ddb6ab3759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulskillNunber: 
+  skillCostValue: 
+--- !u!4 &556755363
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556755361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13919672, y: 0.023809783, z: -0.30029297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &569188716
 GameObject:
   m_ObjectHideFlags: 0
@@ -13313,7 +13363,7 @@ GameObject:
   - component: {fileID: 1252069847}
   - component: {fileID: 1252069846}
   m_Layer: 8
-  m_Name: SoulStone6
+  m_Name: SoulStone0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13330,7 +13380,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 288269454}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1252069846
 MonoBehaviour:
@@ -13357,6 +13407,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 0
 --- !u!114 &1252069847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13481,7 +13533,7 @@ GameObject:
   - component: {fileID: 1265337664}
   - component: {fileID: 1265337663}
   m_Layer: 8
-  m_Name: SoulStone1
+  m_Name: SoulStone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13498,7 +13550,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 288269454}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1265337663
 MonoBehaviour:
@@ -13525,6 +13577,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 2
 --- !u!114 &1265337664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20335,6 +20389,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 7
 --- !u!114 &2048379906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20434,7 +20490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameIndex: 0
-  framerate: 10
+  framerate: 7
   ignoreTimeScale: 1
   loop: 1
   frames:
@@ -20525,7 +20581,7 @@ GameObject:
   - component: {fileID: 2058400820}
   - component: {fileID: 2058400821}
   m_Layer: 8
-  m_Name: SoulStone0
+  m_Name: SoulStone6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20542,7 +20598,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 288269454}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2058400820
 MonoBehaviour:
@@ -20623,6 +20679,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 6
 --- !u!1 &2061649067
 GameObject:
   m_ObjectHideFlags: 0
@@ -21258,6 +21316,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   btnIn: 0000
+  costValue: 10
+  soulSkillNumber: 5
 --- !u!114 &2130202938
 MonoBehaviour:
   m_ObjectHideFlags: 0

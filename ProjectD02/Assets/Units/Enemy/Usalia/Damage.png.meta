@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2ffaa3fd74762dd4fb21e095b1240c75
-timeCreated: 1527391276
+timeCreated: 1527834919
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -84,10 +84,10 @@ TextureImporter:
       name: Damage_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 8
         y: 0
-        width: 167
-        height: 300
+        width: 84
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -97,10 +97,10 @@ TextureImporter:
       name: Damage_1
       rect:
         serializedVersion: 2
-        x: 202
+        x: 101
         y: 0
-        width: 167
-        height: 300
+        width: 84
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,10 +110,10 @@ TextureImporter:
       name: Damage_2
       rect:
         serializedVersion: 2
-        x: 400
+        x: 200
         y: 0
-        width: 137
-        height: 300
+        width: 69
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

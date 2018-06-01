@@ -14,6 +14,7 @@ public class JewelBtnManager : MonoBehaviour {
     public GameObject clickBtn;
     public GameObject releaseBtn;
     public bool sibal = false;
+
     void Awake()
     {
         btnmg = GameObject.Find("BtnManager").GetComponent<BtnManager>();
@@ -29,6 +30,7 @@ public class JewelBtnManager : MonoBehaviour {
             equipSlot[a].AddComponent<EquipSlotBtn>();
         }
     }
+
     void Start()
     {
         Scene sc = SceneManager.GetActiveScene();
@@ -72,6 +74,8 @@ public class JewelBtnManager : MonoBehaviour {
                             clickBtn.GetComponent<JewelBtn>().soulItem.transform.position = equipSlot[i].transform.position;
                             equipSlot[i].GetComponent<EquipSlotBtn>().soulIn = true;
                             soulStoneItem.Remove(clickBtn.GetComponent<JewelBtn>().soulItem);
+                            SoulSkillManager.INSTANCE.soulskillNunber.Add(clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber);
+                            SoulSkillManager.INSTANCE.skillCostValue.Add(clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().costValue);
                         }
                     }
                 }
@@ -99,6 +103,8 @@ public class JewelBtnManager : MonoBehaviour {
                             releaseBtn.GetComponent<EquipSlotBtn>().item.transform.position = jewelBtn[a].transform.position;
                             jewelBtn[a].GetComponent<JewelBtn>().stoneIn = true;
                             soulStoneItem.Add(releaseBtn.GetComponent<EquipSlotBtn>().item);
+                            SoulSkillManager.INSTANCE.soulskillNunber.Remove(releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().soulSkillNumber);
+                            SoulSkillManager.INSTANCE.skillCostValue.Remove(releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().costValue);
                         }
                     }
                 }

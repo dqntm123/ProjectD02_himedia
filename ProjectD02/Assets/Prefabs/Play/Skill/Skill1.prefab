@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 14b7e3b1fbd704e458dae1282896a262, type: 2}
+  - {fileID: 2100000, guid: 99dc3b0cf4995884cae493ed947729d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,7 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1000a06e76d1987469513bb3533b749d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  target: {fileID: 0}
+  caster: {fileID: 1873792864220314, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}
+  lv: 0
+  UnitsManager: {fileID: 0}
   atk: 100
   speed: 1
-  skills: 0
+  aoeTargets: []
+  skills: 2
