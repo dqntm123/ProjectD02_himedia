@@ -9,7 +9,7 @@ public class AutoDestroyByDistance : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(transform.position.x > 20)
+		if(transform.position.x > 20 || transform.position.y < 0)
         {
             Destroy(gameObject);
         }

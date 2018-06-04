@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
+   
     public float coolTime;
     public float resPawnTime;
     public GameObject[] enemys;
+    public GameObject[] middleBoss;
+    public GameObject[] boss;
+  
+
 
 	void Start ()
     {
@@ -22,5 +27,10 @@ public class EnemyManager : MonoBehaviour {
             //int a = Random.Range(0, 5);
             Instantiate(enemys[0], transform.position, transform.rotation);//enemys배열의 0번 오브젝트를 생성한다
         }
+
 	}
+
+    
+
+    
 }

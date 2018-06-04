@@ -27,6 +27,7 @@ public class SoulSkillManager : MonoBehaviour {
         else if (_INSTANCE != this)//_instance 생성되있다면
             Destroy(gameObject);//중복으로 생성하지 않게한다
         DontDestroyOnLoad(gameObject);//파괴되지않게 유지한다
+        //LoadedSoulStone();
     }
 	
 	void Update ()
@@ -36,5 +37,20 @@ public class SoulSkillManager : MonoBehaviour {
         {
 
         }
+       //SaveSoulStone();
+    }
+
+    public void SaveSoulStone()
+    {
+        PlayerPrefs.SetInt("SoulStone1", soulskillNunber[0]);
+        PlayerPrefs.SetInt("SoulStone2", soulskillNunber[1]);
+        PlayerPrefs.SetInt("SoulStone3", soulskillNunber[2]);
+    }
+
+    public void LoadedSoulStone()
+    {
+        soulskillNunber[0] = PlayerPrefs.GetInt("SoulStone1", soulskillNunber[0]);
+        soulskillNunber[1] = PlayerPrefs.GetInt("SoulStone1", soulskillNunber[1]);
+        soulskillNunber[2] = PlayerPrefs.GetInt("SoulStone1", soulskillNunber[2]);
     }
 }

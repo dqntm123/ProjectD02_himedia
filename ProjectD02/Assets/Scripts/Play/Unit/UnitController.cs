@@ -17,9 +17,10 @@ public class UnitController : MonoBehaviour {
     public List<GameObject> look;
     public float lv;
     public float stateTime = 0;
-    public Collider diecol;
+    private Collider diecol;
     public GameObject sensor;
     public float attackStateMaxTime;
+    public float idleStateMaxTime;
     public bool isDead = false;
     public GameObject[] dmgcheck;
     public GameObject[] effect;
@@ -27,6 +28,15 @@ public class UnitController : MonoBehaviour {
     public GameObject lvManager;
     public GameObject[] hpBar;
     public GameObject Main;
+    public GameObject[] somon;
+    public int[] SomonRound;
+    public RoundManager rm;
+    public bool stun=false;
+    public GameObject skill;
+    public float posionTime;
+    public float posionDMG;
+    
+
 
     public enum UNIT //케릭터의 종류를 정함
     {
@@ -57,7 +67,7 @@ public class UnitController : MonoBehaviour {
         diecol = gameObject.GetComponent<BoxCollider>();
         anime.GetComponent<TweenAlpha>().enabled = false;
         sn = sm.currentStageNum;
-        
+        rm = GameObject.Find("RoundManager").GetComponent<RoundManager>();
         //Bullets.SetActive(false);
         //lv=lvManager.GetComponent<LevelManager>().
         if (gameObject.tag == "Player")
@@ -102,15 +112,33 @@ public class UnitController : MonoBehaviour {
             switch (unitstate)
             {
                 case UNITSTATE.IDLE:
-                    if(look[0] == null)
+                    
+                    if (stun == false)
                     {
-                        look.RemoveAt(0);
-                        unitstate = UNITSTATE.MOVE;
-                    }
+                        if (look[0] == null)
+                        {
+                            look.RemoveAt(0);
+                            unitstate = UNITSTATE.MOVE;
+                        }
 
-                    else
+                        else
+                        {
+                            unitstate = UNITSTATE.ATTACK;
+                        }
+                    }
+                   
+                    if(stun==true)
                     {
-                        unitstate = UNITSTATE.ATTACK;
+                        stateTime += Time.deltaTime;
+                        if(stateTime>idleStateMaxTime)
+                        {
+                            stateTime = 0;
+                            look.Clear();
+                            unitstate = UNITSTATE.MOVE;
+                           
+                            stun = false;
+                        }
+                    
                     }
 
                     break;
@@ -139,6 +167,10 @@ public class UnitController : MonoBehaviour {
                             anime.SetBool("Attack", false);
                             anime.SetBool("Move", true);
                             transform.Translate(-speed * Time.deltaTime, 0, 0);
+                            if(gameObject.transform.position.x<=3.5f)
+                            {
+                                unitstate = UNITSTATE.ATTACK;
+                            }
                             break;
 
                         case UNIT.PLAYERACHER:
@@ -146,10 +178,12 @@ public class UnitController : MonoBehaviour {
                             anime.SetBool("Move", true);
                             transform.Translate(speed * Time.deltaTime, 0, 0);
                             break;
-                            //case UNIT.BOSS:
-                            //    anime.SetBool("Move", true);
-                            //    transform.Translate(-speed * Time.deltaTime, 0, 0);
-                            //    break;
+
+                        case UNIT.BOSS:
+                            anime.SetBool("Attack", false);
+                            anime.SetBool("Move", true);
+                            transform.Translate(-speed * Time.deltaTime, 0, 0);
+                            break;
                     }
                   
                     break;
@@ -267,8 +301,87 @@ public class UnitController : MonoBehaviour {
 
                         case UNIT.MIDDLEBOSS:
 
+                            stateTime += Time.deltaTime;
+                            anime.SetBool("Attack", true);
+                            if (sn == SomonRound[0])
+                            {
+                                if (stateTime > attackStateMaxTime)
+                                {
+                                    stateTime = 0;
+                                    Instantiate(somon[0], transform.position, transform.rotation);
+                                }
+                            }
+
+                            if(sn== SomonRound[1])
+                            {
+                                if (stateTime > attackStateMaxTime)
+                                {
+                                    stateTime = 0;
+                                    Instantiate(somon[0], transform.position, transform.rotation);
+                                }
+                            }
+
+                            break;
+
+                        case UNIT.BOSS:
 
 
+                            if (look.Count > 0)
+                            {
+                                if (look[0] != null)
+                                {
+                                    stateTime += Time.deltaTime;
+                                    anime.SetBool("Attack", true);
+
+                                    if (look[0].tag == "Player")
+                                    {
+                                        if (stateTime > attackStateMaxTime)
+                                        {
+                                            stateTime = 0;
+                                            look[0].GetComponent<UnitController>().GetDamage(atk);
+                                        }
+                                    }
+
+
+                                    if (look[0].tag == "Darking")
+                                    {
+                                        if (stateTime > attackStateMaxTime)
+                                        {
+
+                                            stateTime = 0;
+                                            look[0].GetComponent<PlayerController>().hp -= atk;
+
+                                            //float distance = Vector3.Distance(sensor.GetComponent<PlayerSensor>().playerPos.position, sensor.transform.position);
+
+                                            float distance = sensor.GetComponent<PlayerSensor>().playerPos.position.x - sensor.transform.position.x;
+
+                                            if (distance < -0.5f)
+                                            {
+                                                look.RemoveAt(0);
+                                                unitstate = UNITSTATE.MOVE;
+                                            }
+
+                                            if (distance > 0)
+                                            {
+                                                look.RemoveAt(0);
+                                                unitstate = UNITSTATE.MOVE;
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                else
+                                {
+                                    look.RemoveAt(0);
+                                }
+
+                            }
+
+                            else
+                            {
+                                unitstate = UNITSTATE.MOVE;
+                            }
 
                             break;
 
@@ -427,6 +540,11 @@ public class UnitController : MonoBehaviour {
                 gameObject.transform.position = new Vector3(5, -0.05f, -0.3f);
             }
         }
+
+       if(col.gameObject.tag=="Skill")
+        {
+            skill = col.gameObject;
+        }
     }
 
    
@@ -457,10 +575,53 @@ public class UnitController : MonoBehaviour {
 
     public void DeadProcess()
     {
+        if(unit ==UNIT.BOSS)
+        {
+            rm.GetComponent<RoundManager>().bossDead = true;
+        }
+
+        if (unit == UNIT.MIDDLEBOSS)
+        {
+            rm.GetComponent<RoundManager>().bossDead = true;
+        }
+
+        if(unit==UNIT.ENEMY)
+        {
+
+        }
         anime.SetBool("Dead", true);
         Destroy(sensor);      
         diecol.enabled = false;
         anime.GetComponent<TweenAlpha>().enabled = true;
         Destroy(gameObject,1f);//오브젝트를 파괴한다
+    }
+
+    public void DotDamage()
+    {
+        StartCoroutine(DotCo());
+    }
+
+    public IEnumerator DotCo()
+    {
+        for (int i = 0; i < posionTime; i++)
+        {
+            gameObject.GetComponent<UnitController>().GetDamage(posionDMG);
+            UISprite spr = gameObject.GetComponent<UISprite>();
+           // Color green = new Color(53 / 255, 188 / 255, 12 / 255);
+            spr.color = new Color(53 / 255, 188 / 255, 12 / 255);
+            if (i==10)
+            {
+                spr.color = new Color(0, 0, 0);
+                yield return null;
+            }
+            if (hP <= 0)
+            {
+                hP = 0;
+                isDead = true;
+                DeadProcess();
+            }
+            yield return new WaitForSeconds(1f);
+        }
+
     }
 }

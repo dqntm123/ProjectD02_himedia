@@ -59,3 +59,11 @@ MonoBehaviour:
   - {fileID: 1256411878050562, guid: ba87d3e186e146b43a39960d15d1aec2, type: 2}
   - {fileID: 1439695051402430, guid: 69d3309dc984ac74394edb814f547d18, type: 2}
   - {fileID: 1129278964136898, guid: 02984c2f4f7d4444f82c75a5263d0f3c, type: 2}
+  middleBoss:
+  - {fileID: 1457832757603806, guid: 7ba5ed0655a227142938ec840b5e434d, type: 2}
+  - {fileID: 1289545833551638, guid: 2e88dd180813bf94c9577c6e8cd75365, type: 2}
+  boss:
+  - {fileID: 1512414200680020, guid: 8199b923004e2ba41a4d91e0ee1b1f33, type: 2}
+  stageNumber: 0
+  middleStage: 060000000c000000
+  bossStage: 12000000

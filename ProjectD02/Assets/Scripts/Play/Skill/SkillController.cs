@@ -9,19 +9,17 @@ public class SkillController : MonoBehaviour {
     public GameObject caster;
     public float lv;
     public GameObject UnitsManager;
+    private BoxCollider bc;
+   
  
     public float atk;
     public float speed;
 
-    public List<GameObject> aoeTargets;
-
     public enum SKILLS
     {
         UNITSKILL=0,
-        ENEMYSKILL,
-        SKILL1,
-        SKILL2,
-        SKILL3
+        ENEMYSKILL
+     
     }
     public SKILLS skills;
 
@@ -33,7 +31,8 @@ public class SkillController : MonoBehaviour {
     void Start()
     {
         //atk += player.GetComponent<UnitController>().b_Atk * lv * 0.1f;
-        aoeTargets.Clear();
+        
+        bc = GetComponent<BoxCollider>();
     }
 
     void Update()
@@ -43,9 +42,7 @@ public class SkillController : MonoBehaviour {
             case SKILLS.UNITSKILL:
                 transform.Translate(speed * Time.deltaTime, 0, 0);
                 break;
-            case SKILLS.SKILL2:
-                transform.Translate(speed * Time.deltaTime, 0, 0);
-                break;
+            
             case SKILLS.ENEMYSKILL:
                 transform.Translate(-speed * Time.deltaTime, 0, 0);
                 break;
@@ -55,23 +52,7 @@ public class SkillController : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if(caster.tag == "Darking")
-        {
-            if(col.gameObject.tag == "Enemy")
-            {
-                if (aoeTargets.Count <= 2)
-                {
-                    aoeTargets.Add(col.gameObject);                    
-                }
-                if(aoeTargets.Count == 3)
-                {
-                    foreach (GameObject i in aoeTargets)
-                    {
-                        Debug.Log(i.name);
-                    }
-                }
-            }
-        }
+        
 
         if (caster.tag == "Player")
         {

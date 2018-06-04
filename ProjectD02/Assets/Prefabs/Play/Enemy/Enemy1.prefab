@@ -479,6 +479,7 @@ MonoBehaviour:
   hpBar:
   - {fileID: 1566491477845380}
   - {fileID: 1490209208810686}
+  Main: {fileID: 0}
   unit: 2
   unitstate: 0
 --- !u!114 &114554840388934376

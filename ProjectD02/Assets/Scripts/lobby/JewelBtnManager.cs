@@ -23,11 +23,15 @@ public class JewelBtnManager : MonoBehaviour {
         {
             jewelBtn[i] = GameObject.Find("Stone" + i);
             jewelBtn[i].AddComponent<JewelBtn>();
+            jewelBtn[i].GetComponent<JewelBtn>().myNumber = i;
+            jewelBtn[i].GetComponent<JewelBtn>().sdL = GameObject.Find("ExplanationLabel").GetComponent<UILabel>();
         }
         for (int a = 0; a < equipSlot.Length; a++)
         {
             equipSlot[a] = GameObject.Find("Slot" + a);
             equipSlot[a].AddComponent<EquipSlotBtn>();
+            equipSlot[a].GetComponent<EquipSlotBtn>().myNum = a;
+            equipSlot[a].GetComponent<EquipSlotBtn>().sdL = GameObject.Find("ExplanationLabel").GetComponent<UILabel>();
         }
     }
 
@@ -69,13 +73,16 @@ public class JewelBtnManager : MonoBehaviour {
                         {
                             clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().btnIn[0] = false;
                             clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().btnIn[1] = true;
+                            //equipSlot[i].GetComponent<EquipSlotBtn>().equipSoulNum[i] = clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber;
+                            //clickBtn.GetComponent<JewelBtn>().slotSoulNum[clickBtn.GetComponent<JewelBtn>().myNumber] = -1;
+                            //equipSlot[i].GetComponent<EquipSlotBtn>().SaveEquipSoulNumber();
                             equipSlot[i].GetComponent<EquipSlotBtn>().item = clickBtn.GetComponent<JewelBtn>().soulItem;
                             clickBtn.GetComponent<JewelBtn>().soulItem.transform.parent = equipSlot[i].transform;
                             clickBtn.GetComponent<JewelBtn>().soulItem.transform.position = equipSlot[i].transform.position;
                             equipSlot[i].GetComponent<EquipSlotBtn>().soulIn = true;
                             soulStoneItem.Remove(clickBtn.GetComponent<JewelBtn>().soulItem);
-                            SoulSkillManager.INSTANCE.soulskillNunber.Add(clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber);
-                            SoulSkillManager.INSTANCE.skillCostValue.Add(clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().costValue);
+                            SoulSkillManager.INSTANCE.soulskillNunber.Insert(i, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber);
+                            SoulSkillManager.INSTANCE.skillCostValue.Insert(i, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().costValue);
                         }
                     }
                 }
@@ -98,7 +105,9 @@ public class JewelBtnManager : MonoBehaviour {
                         {
                             releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().btnIn[0] = true;
                             releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().btnIn[1] = false;
-                            jewelBtn[a].GetComponent<JewelBtn>().soulItem = releaseBtn.GetComponent<EquipSlotBtn>().item;
+                            jewelBtn[a].GetComponent<JewelBtn>().slotSoulNum[a] = releaseBtn.GetComponent<EquipSlotBtn>().item.GetComponent<SoulStone>().soulSkillNumber;
+                            //releaseBtn.GetComponent<EquipSlotBtn>().equipSoulNum[releaseBtn.GetComponent<EquipSlotBtn>().myNum] = -1;
+                            //jewelBtn[a].GetComponent<JewelBtn>().soulItem = releaseBtn.GetComponent<EquipSlotBtn>().item;
                             releaseBtn.GetComponent<EquipSlotBtn>().item.transform.parent = jewelBtn[a].transform;
                             releaseBtn.GetComponent<EquipSlotBtn>().item.transform.position = jewelBtn[a].transform.position;
                             jewelBtn[a].GetComponent<JewelBtn>().stoneIn = true;
@@ -121,6 +130,15 @@ public class JewelBtnManager : MonoBehaviour {
             jewelBtn[i].GetComponent<JewelBtn>().soulItem = soulStoneItem[i];
             jewelBtn[i].GetComponent<JewelBtn>().soulItem.transform.parent = jewelBtn[i].transform;
             jewelBtn[i].GetComponent<JewelBtn>().stoneIn = true;
+            //jewelBtn[i].GetComponent<JewelBtn>().slotSoulNum[i] = jewelBtn[i].GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber;
         }
+    }
+    public void SaveStonePos()
+    {
+
+    }
+    public void LoadedStonePos()
+    {
+
     }
 }

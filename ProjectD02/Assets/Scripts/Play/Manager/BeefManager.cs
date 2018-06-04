@@ -34,6 +34,11 @@ public class BeefManager : MonoBehaviour {
         {
             beefCount = 0;
         }
+        if(beefCount>=90)
+        {
+            beefCount = 90;
+            beefGauge.transform.localScale = new Vector3(360, beefGauge.transform.localScale.y, transform.localScale.z);
+        }
         if (beefCount >= beefMax)//비프카운트와 비프맥스의 값이 커지거나 같아진다면
         {
             beefOn = false;//비프온은 폴스로 바꾼다

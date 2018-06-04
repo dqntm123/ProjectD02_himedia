@@ -30,15 +30,15 @@ public class Castle : MonoBehaviour {
     {
         hpBarUs.value = hp/maxHp;
 
-        if (hp == 0)
+        if (hp <= 0)
         {
             MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
             mr.enabled = false;
             BoxCollider bc = gameObject.GetComponent<BoxCollider>();
             bc.enabled = false;
-            UILabel ul = roundManager.GetComponent<UILabel>();
-            ul.enabled = true;
-            ul.text = "STAGE CLEAR!";
+            //UILabel ul = roundManager.GetComponent<UILabel>();
+            //ul.enabled = true;
+            //ul.text = "STAGE CLEAR!";
         }
     }
 }

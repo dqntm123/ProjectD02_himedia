@@ -8,13 +8,12 @@ TagManager:
   - Skill1
   - Block1
   - Block2
-  - Skill2
-  - Skill3
   - Button
   - EnemyGoal
   - Enemy
   - Castle
   - Darking
+  - Skill
   layers:
   - Default
   - TransparentFX
