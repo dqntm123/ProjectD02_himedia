@@ -15,20 +15,20 @@ public class JewelBtn : MonoBehaviour {
     public string sdStr;        //stone detail string
     public List<GameObject> ssi;        //jewelBtnManager - soul stone item
     public List<string> stoneDetails;
-    public int[] slotSoulNum = new int[11];
     void Awake()
     {
-        //for (int i = 0; i < slotSoulNum.Length; i++)
-        //{
-        //    slotSoulNum[i] = -1;
-        //}
         jewelManager = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         select = GameObject.Find("Selector");
         selectPos = select.transform.localPosition;
         stoneDetails = GameObject.Find("SoulStoneDetailList").GetComponent<SoulStoneDetailList>().stoneDetailStr;
     }
-	
-	void Update ()
+
+    void Start()
+    {
+
+    }
+
+    void Update ()
     {
         if (select.transform.parent != gameObject.transform)
         {
@@ -36,7 +36,9 @@ public class JewelBtn : MonoBehaviour {
         }
         if (soulItem!=null&&soulItem.transform.parent != gameObject.transform)
         {
+            soulItem = null;
             stoneIn = false;
+            //jewelManager.jewelslotNum[myNumber] = -1;
         }
         ssi = jewelManager.soulStoneItem;
     }
@@ -52,7 +54,8 @@ public class JewelBtn : MonoBehaviour {
         clickCount += 1;
         foreach (GameObject ss in ssi)
         {
-            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss))
+            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss) ||
+                gameObject.transform.GetChild(1).name == "SoulStone" + ssi.IndexOf(ss))
             {
                 sdStr = stoneDetails[ssi.IndexOf(ss)];
             }           
@@ -70,20 +73,5 @@ public class JewelBtn : MonoBehaviour {
         }
         jewelManager.clickBtn = gameObject;       
         sdL.text = sdStr;
-    }
-
-    public void SaveSlotSoulNumber()
-    {
-        //for (int i = 0; i < slotSoulNum.Length; i++)
-        //{
-        //    PlayerPrefs.SetInt("SlotSoulNum000"+i,slotSoulNum[i]);
-        //}
-    }
-    public void LoadedSlotSoulNumber()
-    {
-    //    for (int i = 0; i < slotSoulNum.Length; i++)
-    //    {
-    //        slotSoulNum[i] = PlayerPrefs.GetInt("SlotSoulNum000" + i, slotSoulNum[i]);
-    //    }
     }
 }

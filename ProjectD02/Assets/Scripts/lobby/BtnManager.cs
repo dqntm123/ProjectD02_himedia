@@ -13,7 +13,10 @@ public class BtnManager : MonoBehaviour {
     public GameObject bgmMg;
     public GameObject jewelMg;
     public UpDownBtn udbtn;
-    
+    public GameObject readychang;
+    private float cooltime;
+    private float respawn = 2;
+    private bool boolen = false;
     private void Start()
     {
         MinionBtn();
@@ -44,6 +47,16 @@ public class BtnManager : MonoBehaviour {
     void Update()
     {
         bgmMg = GameObject.Find("BGMManager");
+        if(boolen==true)
+        {
+            cooltime += Time.deltaTime;
+            if(cooltime>respawn)
+            {
+                cooltime = 0;
+                boolen = false;
+                readychang.SetActive(false);
+            }
+        }
     }
 
     public void MinionBtn()
@@ -60,12 +73,15 @@ public class BtnManager : MonoBehaviour {
         //windows[2].SetActive(false);
     }
 
-    //public void ShopBtn()
-    //{
-    //    windows[0].SetActive(false);
-    //    windows[1].SetActive(false);
-    //    windows[2].SetActive(true);
-    //}
+    public void ShopBtn()
+    {
+        //windows[0].SetActive(false);
+        //windows[1].SetActive(false);
+        //windows[2].SetActive(true);
+        readychang.SetActive(true);
+        boolen = true;
+
+    }
 
     public void WolrdBtn()
     {

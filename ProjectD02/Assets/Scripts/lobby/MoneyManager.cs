@@ -32,7 +32,7 @@ public class MoneyManager : MonoBehaviour {
         else if (_inStance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-       // LoadedMoney();
+       LoadedMoney();
     }
 	
 	void Update ()
@@ -45,7 +45,7 @@ public class MoneyManager : MonoBehaviour {
             goldLabel.GetComponent<UILabel>().text = FoMatCount(goldCount);
             soulLabel.GetComponent<UILabel>().text = FoMatCount(soulCount);
         }
-        //SaveMoney();
+        SaveMoney();
     }
     public void SaveMoney()
     {
@@ -78,5 +78,19 @@ public class MoneyManager : MonoBehaviour {
     public string FoMatCount(float data)//숫자단위마다 ','을 찍어주는 함수
     {
         return string.Format("{0:#,###0}", data);
+    }
+
+    public void AssaGoldDeuck()
+    {
+        goldCount = PlayerPrefs.GetFloat("Gold", goldCount);
+        goldCount += 100;
+        PlayerPrefs.SetFloat("Gold", goldCount);
+    }
+
+    public void AssaSoulDeuck()
+    {
+        soulCount = PlayerPrefs.GetFloat("Soul", soulCount);
+        soulCount += 10;
+        PlayerPrefs.SetFloat("Soul", soulCount);
     }
 }

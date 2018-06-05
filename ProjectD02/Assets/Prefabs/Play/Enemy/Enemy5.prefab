@@ -480,9 +480,9 @@ MonoBehaviour:
   look: []
   lv: 0
   stateTime: 0
-  diecol: {fileID: 65815481291398294}
   sensor: {fileID: 1654157916538208}
   attackStateMaxTime: 2
+  idleStateMaxTime: 0
   isDead: 0
   dmgcheck:
   - {fileID: 1860960842652400, guid: f258aecc4fbca7c41b11d09b214f7a5d, type: 2}
@@ -494,6 +494,16 @@ MonoBehaviour:
   - {fileID: 1250785658239202}
   - {fileID: 1651148772492314}
   Main: {fileID: 0}
+  somon: []
+  SomonRound: 
+  rm: {fileID: 0}
+  stun: 0
+  skill: {fileID: 0}
+  posionTime: 0
+  posionDMG: 0
+  dropGold: {fileID: 1458354843709214, guid: 6816c2349c5c5fe47b92bef855fd88c6, type: 2}
+  dropSoul: {fileID: 1499530026019642, guid: e49fb7cf161d3b54eabddec92703e89e, type: 2}
+  mm: {fileID: 0}
   unit: 2
   unitstate: 0
 --- !u!212 &212705823295655400

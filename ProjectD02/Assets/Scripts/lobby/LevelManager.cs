@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour {
         }
     }
     public int[] lv;
+    public int[] soulLv;
     void Start ()
     {
         if (_instanCe == null)

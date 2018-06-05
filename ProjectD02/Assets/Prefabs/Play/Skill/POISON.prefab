@@ -133,7 +133,7 @@ MonoBehaviour:
   hillUnits: []
   skillAtk: 10
   comet: {fileID: 0}
-  speed: 0
+  speed: 1
   stunTime: 0
   numberOfTimes: 10
   skillCost: 0

@@ -35,7 +35,15 @@ public class UnitController : MonoBehaviour {
     public GameObject skill;
     public float posionTime;
     public float posionDMG;
-    
+    public GameObject dropGold;
+    public GameObject dropSoul;
+    private int goldRate;
+    private int soulRate;
+    public GameObject mm;
+
+
+
+
 
 
     public enum UNIT //케릭터의 종류를 정함
@@ -68,6 +76,7 @@ public class UnitController : MonoBehaviour {
         anime.GetComponent<TweenAlpha>().enabled = false;
         sn = sm.currentStageNum;
         rm = GameObject.Find("RoundManager").GetComponent<RoundManager>();
+        mm = GameObject.Find("MoneyManager");
         //Bullets.SetActive(false);
         //lv=lvManager.GetComponent<LevelManager>().
         if (gameObject.tag == "Player")
@@ -93,18 +102,66 @@ public class UnitController : MonoBehaviour {
 	
 	void Update ()
     {
+        
+
       if(Main.GetComponent<PlayerController>().hp<=0)
         {
             isDead = true;
             DeadProcess();
         }
+
         if(hP <= 0)
         {
             hP = 0;
-
+            hpBar[1].transform.localScale = new Vector3(0, 1, 1);
             isDead = true;
         
             DeadProcess();
+
+         
+            if (goldRate <= 19)
+            {
+                if(dropGold!=null)
+                {
+                    Instantiate(dropGold, transform.position, transform.rotation);
+                    MoneyManager.inStance.AssaGoldDeuck();
+                    
+                    dropGold = null;
+                }
+
+                else
+                {
+                    dropGold = null;
+                }
+            }
+
+            else
+            {
+                dropGold = null;
+            }
+
+
+            if (soulRate <= 19)
+            {
+                if (dropSoul != null)
+                {
+                    Instantiate(dropSoul, transform.position, transform.rotation);
+                    MoneyManager.inStance.AssaGoldDeuck();
+                    dropSoul = null;
+                }
+
+                else
+                {
+                    dropSoul = null;
+                }
+            }
+
+            else
+            {
+                dropSoul = null;
+            }
+
+
         }
 
         if(isDead == false)
@@ -115,9 +172,9 @@ public class UnitController : MonoBehaviour {
                     
                     if (stun == false)
                     {
-                        if (look[0] == null)
+                        if (look.Count==0 || look[0]==null)
                         {
-                            look.RemoveAt(0);
+                            look.Clear();
                             unitstate = UNITSTATE.MOVE;
                         }
 
@@ -125,20 +182,21 @@ public class UnitController : MonoBehaviour {
                         {
                             unitstate = UNITSTATE.ATTACK;
                         }
+
+                     
                     }
                    
                     if(stun==true)
                     {
+                     
                         stateTime += Time.deltaTime;
                         if(stateTime>idleStateMaxTime)
                         {
                             stateTime = 0;
-                            look.Clear();
-                            unitstate = UNITSTATE.MOVE;
-                           
+                            unitstate = UNITSTATE.IDLE;
                             stun = false;
                         }
-                    
+
                     }
 
                     break;
@@ -587,7 +645,8 @@ public class UnitController : MonoBehaviour {
 
         if(unit==UNIT.ENEMY)
         {
-
+            goldRate = Random.Range(0, 99);
+            soulRate = Random.Range(0, 99);
         }
         anime.SetBool("Dead", true);
         Destroy(sensor);      
@@ -607,11 +666,12 @@ public class UnitController : MonoBehaviour {
         {
             gameObject.GetComponent<UnitController>().GetDamage(posionDMG);
             UISprite spr = gameObject.GetComponent<UISprite>();
-           // Color green = new Color(53 / 255, 188 / 255, 12 / 255);
-            spr.color = new Color(53 / 255, 188 / 255, 12 / 255);
+            // Color green = new Color(53 / 255, 188 / 255, 12 / 255);
+            //spr.color = Color.green;
+            //rfuILabel[i].color = Color.red;
             if (i==10)
             {
-                spr.color = new Color(0, 0, 0);
+                //spr.color = Color.white;
                 yield return null;
             }
             if (hP <= 0)

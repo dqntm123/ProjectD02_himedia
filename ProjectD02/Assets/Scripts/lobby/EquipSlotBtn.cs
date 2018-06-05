@@ -15,14 +15,8 @@ public class EquipSlotBtn : MonoBehaviour {
     public string sdStr;        //stone detail string
     public List<GameObject> ssi;        //jewelBtnManager - soul stone item 
     public List<string> stoneDetails;
-    public int[] equipSoulNum = new int[3];
     void Awake()
     {
-        //for (int i = 0; i < equipSoulNum.Length; i++)
-        //{
-        //    equipSoulNum[i] = -1;
-        //}
-        //LoadedEquipSoulNumber();
         jewelMg = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         sel = GameObject.Find("Selector");
         selPos = sel.transform.localPosition;
@@ -37,8 +31,12 @@ public class EquipSlotBtn : MonoBehaviour {
         }
         if (item != null && item.transform.parent != gameObject.transform)
         {
-            item = null;
+            //item = null;
             soulIn = false;
+        }
+        if(soulIn==false)
+        {
+            item = null;
         }
         ssi = jewelMg.soulStoneItem;
     }
@@ -54,7 +52,8 @@ public class EquipSlotBtn : MonoBehaviour {
         equipCount += 1;
         foreach (GameObject ss in ssi)
         {
-            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss))
+            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss) ||
+                gameObject.transform.GetChild(1).name == "SoulStone" + ssi.IndexOf(ss))
             {
                 sdStr = stoneDetails[ssi.IndexOf(ss)];
             }
@@ -76,20 +75,5 @@ public class EquipSlotBtn : MonoBehaviour {
         //}
         jewelMg.releaseBtn = gameObject;
         sdL.text = sdStr;
-    }
-
-    public void SaveEquipSoulNumber()
-    {
-        //PlayerPrefs.SetInt("Equip", equipSoulNum[myNum]);
-        //PlayerPrefs.SetInt("EquipSloT1", equipSoulNum[0]);
-        //PlayerPrefs.SetInt("EquipSloT2", equipSoulNum[1]);
-        //PlayerPrefs.SetInt("EquipSloT3", equipSoulNum[2]);
-    }
-    public void LoadedEquipSoulNumber()
-    {
-         //equipSoulNum[myNum]=PlayerPrefs.GetInt("Equip", equipSoulNum[myNum]);
-        //equipSoulNum[0] = PlayerPrefs.GetInt("EquipSloT1", equipSoulNum[0]);
-        //equipSoulNum[1] = PlayerPrefs.GetInt("EquipSloT2", equipSoulNum[1]);
-        //equipSoulNum[2] = PlayerPrefs.GetInt("EquipSloT3", equipSoulNum[2]);
     }
 }

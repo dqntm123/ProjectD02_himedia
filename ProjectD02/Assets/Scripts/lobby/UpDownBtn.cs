@@ -62,7 +62,11 @@ public class UpDownBtn : MonoBehaviour {
                 rfuILabel[i].color = Color.red;
             }
         }
+
     }
+
+
+
     public void ReinForceLabel()
     {
 

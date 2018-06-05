@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour {
     public float skillCost;
     public GameObject iceberg;
 
+
     public enum SKILLS
     {
         BULLET,
@@ -113,11 +114,23 @@ public class Bullet : MonoBehaviour {
                         foreach (GameObject target in cm.aoeTargets)
                         {
                             Debug.Log(target.name);
-                            Instantiate(comet, new Vector3(target.transform.position.x - 3.5f,target.transform.position.y + 5,target.transform.position.z), comet.transform.rotation);
-                            comet.transform.parent = target.transform;
+                            Instantiate(comet, new Vector3(target.transform.position.x - 3.5f, target.transform.position.y + 5, target.transform.position.z), comet.transform.rotation);
+                            comet.name = "Comet" + cm.aoeTargets.IndexOf(target);
+                            //transform.parent = target.transform;
                             target.GetComponent<UnitController>().GetDamage(skillAtk);
                         }
-                      
+
+                        //for (int i = 0; i < cm.aoeTargets.Count; i++)
+                        //{
+
+
+                        //    Instantiate(comet, new Vector3(target[i].transform.position.x - 3.5f, target[i].transform.position.y + 5, target[i].transform.position.z), comet.transform.rotation);
+                        //    transform.parent = target[i].transform;
+                        //    target[i].GetComponent<UnitController>().GetDamage(skillAtk);
+                        //}
+
+
+
                         Debug.Log("유성 3개 떨어뜨림!");
                     }
                 }
@@ -190,9 +203,9 @@ public class Bullet : MonoBehaviour {
                 if (col.gameObject.tag == "Enemy")
                 {
                     enemy = col.gameObject;
-                    enemy.GetComponent<UnitController>().idleStateMaxTime = stunTime;
-                    enemy.GetComponent<UnitController>().stun = true;
-                    enemy.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.IDLE;
+                    enemy.GetComponent<UnitController>().idleStateMaxTime = stunTime;  //idleStateMaxTime은 idle 상태에서 머무르게 하는 시간이며, 머무르는 시간과 스턴 타임을 동일하게해서 스턴타임 만큼 아이들상태에서 기다리게함
+                    enemy.GetComponent<UnitController>().stun = true; //스턴이 켜져있음을 알림
+                    enemy.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.IDLE; 
                     gameObject.SetActive(false);
                     iceberg.GetComponent<IceBerg>().iceTime = stunTime;
                     Destroy(gameObject, stunTime);

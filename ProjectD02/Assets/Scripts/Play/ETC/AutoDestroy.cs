@@ -10,9 +10,4 @@ public class AutoDestroy : MonoBehaviour {
     {
         Destroy(gameObject, destroyValue);
     }
-	
-	void Update ()
-    {
-       
-	}
 }
