@@ -6,12 +6,20 @@ public class ThunderStorm : MonoBehaviour {
 
     public Transform player;
     public GameObject[] lightning;
+    public UISprite splash;
 
-	void Start () {
+    void Awake()
+    {
+       
+    }
+
+    void Start ()
+    {
 		
 	}
 	
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
@@ -27,5 +35,12 @@ public class ThunderStorm : MonoBehaviour {
         Instantiate(lightning[0], playerfront0, lightning[0].transform.rotation);
         Instantiate(lightning[1], playerfront1, lightning[1].transform.rotation);     
         yield return null;
+        splash.alpha = 0.9f;
+        float splashTime = 0.6f;
+        for (float i = 0.9f; i > 0; i -= 0.01f) 
+        {
+            splash.alpha -= 0.01f;
+            yield return new WaitForSeconds(splashTime/(0.9f/0.01f));            
+        }
     }
 }

@@ -8,6 +8,8 @@ public class MoneyManager : MonoBehaviour {
 
     public float goldCount;
     public float soulCount;
+    //public float getGold;
+    //public float getSoul;
     public float[] reinFoceValue;
     //public float reinFoecUpValue;
     public GameObject goldLabel;
@@ -32,7 +34,7 @@ public class MoneyManager : MonoBehaviour {
         else if (_inStance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-       LoadedMoney();
+       //LoadedMoney();
     }
 	
 	void Update ()

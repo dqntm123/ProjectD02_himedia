@@ -36,6 +36,7 @@ public class Castle : MonoBehaviour {
             mr.enabled = false;
             BoxCollider bc = gameObject.GetComponent<BoxCollider>();
             bc.enabled = false;
+            Destroy(gameObject);
             //UILabel ul = roundManager.GetComponent<UILabel>();
             //ul.enabled = true;
             //ul.text = "STAGE CLEAR!";

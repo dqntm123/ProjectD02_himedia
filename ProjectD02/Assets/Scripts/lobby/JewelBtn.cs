@@ -54,8 +54,8 @@ public class JewelBtn : MonoBehaviour {
         clickCount += 1;
         foreach (GameObject ss in ssi)
         {
-            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss) ||
-                gameObject.transform.GetChild(1).name == "SoulStone" + ssi.IndexOf(ss))
+            if (gameObject.transform.GetChild(0).name == "SoulStone" + ssi.IndexOf(ss) )
+                //gameObject.transform.GetChild(1).name == "SoulStone" + ssi.IndexOf(ss))
             {
                 sdStr = stoneDetails[ssi.IndexOf(ss)];
             }           

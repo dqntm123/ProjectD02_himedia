@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 970c6b6baeb91304c856a197edfa6dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 2000
-  hp: 2000
+  maxHp: 200
+  hp: 200
   roundManager: {fileID: 0}
   hpBar: {fileID: 0}

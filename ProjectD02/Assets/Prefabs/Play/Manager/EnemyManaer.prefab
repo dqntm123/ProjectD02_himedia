@@ -64,6 +64,3 @@ MonoBehaviour:
   - {fileID: 1289545833551638, guid: 2e88dd180813bf94c9577c6e8cd75365, type: 2}
   boss:
   - {fileID: 1512414200680020, guid: 8199b923004e2ba41a4d91e0ee1b1f33, type: 2}
-  stageNumber: 0
-  middleStage: 060000000c000000
-  bossStage: 12000000

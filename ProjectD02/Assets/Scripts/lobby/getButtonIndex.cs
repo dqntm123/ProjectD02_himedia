@@ -8,6 +8,7 @@ public class getButtonIndex : MonoBehaviour {
 
     public ButtonManager bm;
     public UpDownBtn udb;
+    public GameObject udbtn;
     public GameObject nameLabel;
     public int clickCt = 0;
     public bool reinForce = false;
@@ -15,6 +16,7 @@ public class getButtonIndex : MonoBehaviour {
     {
         bm = GameObject.Find("BtnManager").GetComponent<ButtonManager>();
         udb = GameObject.Find("BtnManager").GetComponent<UpDownBtn>();
+        udbtn = GameObject.Find("UpgradeBtn");
         nameLabel = GameObject.Find("MainLevel");
         nameLabel.GetComponent<UILabel>().text =bm.unitName[0];
     }
@@ -31,6 +33,7 @@ public class getButtonIndex : MonoBehaviour {
     {
         EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
+        udbtn.GetComponent<UIButton>().enabled = true;
         bm.selector.transform.position = gameObject.transform.position;     //선택 하이라이터를 이동
         bm.selector.transform.parent = gameObject.transform;
         bm.upgradeORunlock[0].SetActive(true);

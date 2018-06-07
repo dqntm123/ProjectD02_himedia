@@ -38,8 +38,9 @@ GameObject:
   - component: {fileID: 114870343243862680}
   - component: {fileID: 54129180384229780}
   - component: {fileID: 65004119370441528}
+  - component: {fileID: 143439228166664718}
   m_Layer: 0
-  m_Name: Comet
+  m_Name: Comet0
   m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,8 +111,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed72c4b727e698a428e54e8cd3e6b132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cm: {fileID: 0}
   target: {fileID: 0}
+  cometAtk: 0
+  speed: 1
+--- !u!143 &143439228166664718
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621099916980768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212406320935560486
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class CometMove : MonoBehaviour {
 
-    public GameObject cm;
+
     public GameObject target;
+    public float cometAtk;
+    public float speed = 1;
+
+    CharacterController characterController;
+  
 
     public void Awake()
     {
 
-        if(gameObject.name=="Comet0")
-        {
-            target = cm.GetComponent<CometManager>().aoeTargets[0];
-        }
+        //if(gameObject.name=="Comet0")
+        //{
+        //    target = cm.GetComponent<CometManager>().aoeTargets[0];
+        //}
 
 
-        if (gameObject.name == "Comet1")
-        {
-            target = cm.GetComponent<CometManager>().aoeTargets[1];
-        }
+        //if (gameObject.name == "Comet1")
+        //{
+        //    target = cm.GetComponent<CometManager>().aoeTargets[1];
+        //}
 
 
 
-        if (gameObject.name == "Comet2")
-        {
-            target = cm.GetComponent<CometManager>().aoeTargets[2];
-        }
+        //if (gameObject.name == "Comet2")
+        //{
+        //    target = cm.GetComponent<CometManager>().aoeTargets[2];
+        //}
 
 
 
@@ -34,8 +39,8 @@ public class CometMove : MonoBehaviour {
 
     void Start()
     {
-        cm = GameObject.Find("CometManager");
 
+        characterController = GetComponent<CharacterController>();
         //for (int i = 0; i < cm.GetComponent<CometManager>().aoeTargets.Count; i++)
         //{
         //    target[i] = cm.GetComponent<CometManager>().aoeTargets[i];
@@ -48,21 +53,24 @@ public class CometMove : MonoBehaviour {
 	void Update ()
     {
 
-      //gameObject.transform.Translate(3 * Time.deltaTime, -5 * Time.deltaTime, 0);
+        Vector3 dir = target.transform.position - transform.position;
+        dir.Normalize();
+        characterController.SimpleMove(dir * speed);
+       
 
-        if (target != null)
-        {
-            float distance = (target.transform.position - transform.position).magnitude;
-        }
+        gameObject.transform.Translate(3 * Time.deltaTime, -5 * Time.deltaTime, 0);
+        
 
     }
 
-    public void OnTriggerExit(Collider col)
+    public void OnTriggerEneter(Collider col)
     {
-        if (col.gameObject.tag == "Finish")
+        if(col.gameObject.tag == "Enemy")
         {
-            Destroy(gameObject, 1);
+            col.gameObject.GetComponent<UnitController>().GetDamage(cometAtk);
+            Destroy(gameObject,1);
         }
+     
     }
 
 }

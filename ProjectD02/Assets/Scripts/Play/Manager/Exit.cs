@@ -18,5 +18,6 @@ public class Exit : MonoBehaviour {
         SceneManager.LoadScene(2);
         bgmMG.GetComponent<AudioSource>().clip = MusicManager.instance.bgmClip[1];
         MusicManager.instance.auDios.Play();
+       // MoneyManager.inStance.SaveMoney();
     }
 }

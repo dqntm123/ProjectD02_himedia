@@ -8,14 +8,15 @@ public class Bullet : MonoBehaviour {
     public GameObject player;
     public GameObject[] hillUnits;
     public float skillAtk; //스킬의 계수를 정하는 변수
-    public GameObject comet;
+    public GameObject[] comet;
     private CometManager cm;
-    private BoxCollider bc;
+    public Collider bc;
     public float speed;
     public float stunTime;
     public float numberOfTimes;
     public float skillCost;
     public GameObject iceberg;
+    public List<GameObject> aoeTargets;
 
 
     public enum SKILLS
@@ -25,7 +26,7 @@ public class Bullet : MonoBehaviour {
         HILL,
         FIRE,
         WIND,
-        THUNDERBOLT,
+        THUNDERSTORM,
         ICE,
         CONVERT,
         POISON
@@ -34,11 +35,13 @@ public class Bullet : MonoBehaviour {
 
     void Start()
     {
+        bc = gameObject.GetComponent<BoxCollider>();
+
         switch (skills)
         {
             case SKILLS.COMET:
-                cm = GameObject.Find("CometManager").GetComponent<CometManager>();
-                cm.aoeTargets.Clear();
+                //cm = GameObject.Find("CometManager").GetComponent<CometManager>();
+                aoeTargets.Clear();
                 break;
         }
     }
@@ -65,8 +68,9 @@ public class Bullet : MonoBehaviour {
             case SKILLS.WIND:
                 transform.Translate(speed * Time.deltaTime, 0, 0);
                 break;
-            case SKILLS.THUNDERBOLT:
+            case SKILLS.THUNDERSTORM:
                 transform.Translate(speed * Time.deltaTime, 0, 0);
+                Destroy(gameObject, stunTime);
                 break;
             case SKILLS.ICE:
                 transform.Translate(speed * Time.deltaTime, 0, 0);
@@ -84,6 +88,12 @@ public class Bullet : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+
+        if(col.gameObject.tag == "Finish")
+        {
+            Destroy(gameObject);
+        }
+
         switch (skills)
         {
             case SKILLS.BULLET:
@@ -104,41 +114,27 @@ public class Bullet : MonoBehaviour {
 
                 if (col.gameObject.tag == "Enemy")
                 {
-                    if (cm.aoeTargets.Count <= 2)
+
+                    if (aoeTargets.Count <= 2)
                     {
-                        cm.aoeTargets.Add(col.gameObject);
+                        aoeTargets.Add(col.gameObject);
                     }
 
-                    if (cm.aoeTargets.Count == 3 || col.gameObject.tag == "Finish")
-                    {
-                        foreach (GameObject target in cm.aoeTargets)
-                        {
-                            Debug.Log(target.name);
-                            Instantiate(comet, new Vector3(target.transform.position.x - 3.5f, target.transform.position.y + 5, target.transform.position.z), comet.transform.rotation);
-                            comet.name = "Comet" + cm.aoeTargets.IndexOf(target);
-                            //transform.parent = target.transform;
-                            target.GetComponent<UnitController>().GetDamage(skillAtk);
-                        }
-
-                        //for (int i = 0; i < cm.aoeTargets.Count; i++)
-                        //{
-
-
-                        //    Instantiate(comet, new Vector3(target[i].transform.position.x - 3.5f, target[i].transform.position.y + 5, target[i].transform.position.z), comet.transform.rotation);
-                        //    transform.parent = target[i].transform;
-                        //    target[i].GetComponent<UnitController>().GetDamage(skillAtk);
-                        //}
-
-
-
-                        Debug.Log("유성 3개 떨어뜨림!");
-                    }
                 }
 
                 if (col.gameObject.tag == "Finish")
                 {
+                    for (int i = 0; i < aoeTargets.Count; i++)
+                    {
+                        comet[i].GetComponent<CometMove>().target = aoeTargets[i];
+                        Instantiate(comet[i], new Vector3(comet[i].GetComponent<CometMove>().target.transform.position.x - 3.5f, comet[i].GetComponent<CometMove>().target.transform.position.y + 5, comet[i].GetComponent<CometMove>().target.transform.position.z), comet[i].transform.rotation);
+                    }
+                    bc.enabled = false;
                     Destroy(gameObject, 1);
+                    speed = 0;
                 }
+
+
 
                 break;
 
@@ -183,18 +179,19 @@ public class Bullet : MonoBehaviour {
                 
                 break;
 
-            case SKILLS.THUNDERBOLT:
+            case SKILLS.THUNDERSTORM:
 
-                if(col.gameObject.tag=="Enemy")
+                if (col.gameObject.tag == "Enemy")
                 {
+                    bc.enabled = false;
                     col.gameObject.GetComponent<UnitController>().GetDamage(skillAtk);
                     col.gameObject.GetComponent<UnitController>().idleStateMaxTime = stunTime;
                     col.gameObject.GetComponent<UnitController>().stun = true;
                     col.gameObject.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.IDLE;
-                    Destroy(gameObject, 1);
+                    //Destroy(gameObject, stunTime);
                 }
 
-               
+
                 break;
 
             case SKILLS.ICE:
@@ -229,11 +226,14 @@ public class Bullet : MonoBehaviour {
                 if(col.gameObject.tag == "Enemy")
                 {
                     enemy = col.gameObject;
+                    bc.enabled = false;
                     enemy.GetComponent<UnitController>().posionTime = numberOfTimes;
                     enemy.GetComponent<UnitController>().posionDMG = skillAtk;
                     enemy.GetComponent<UnitController>().DotDamage();
                     Destroy(gameObject);
-                    //bc.enabled = false;
+
+
+
 
                     //if (dot < stunTime)
                     //{
@@ -256,9 +256,12 @@ public class Bullet : MonoBehaviour {
                 break;
 
         }
+
+
        
         
     }
+    
 
 
 }

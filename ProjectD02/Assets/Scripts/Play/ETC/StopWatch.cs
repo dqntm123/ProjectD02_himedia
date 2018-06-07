@@ -5,14 +5,20 @@ using UnityEngine;
 public class StopWatch : MonoBehaviour {
 
     public UILabel ul;
-    private float sec;
+    public float sec;
+    public bool gameFinish = false;
 
-	void Start () {
+	void Start ()
+    {
         sec = 0;
 	}
 	
-	void Update () {
-        sec += Time.deltaTime;
-        ul.text = sec.ToString("#,#00.0 sec");
+	void Update ()
+    {
+        if(gameFinish==false)
+        {
+            sec += Time.deltaTime;
+            ul.text = sec.ToString("#,#00.0 sec");
+        }
 	}
 }

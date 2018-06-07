@@ -26,7 +26,7 @@ public class SoulStone : MonoBehaviour {
         firstValue = jewemanager.stoneValue[soulSkillNumber];
         if (firstValue==0)
         {
-            Debug.Log("0");
+            //Debug.Log("0");
             for (int a = 0; a < jewelChang.Length; a++)
             {
                 jewelChang[a] = GameObject.Find("Stone" + a);
@@ -49,7 +49,7 @@ public class SoulStone : MonoBehaviour {
         }
         else if(firstValue==1)
         {
-            Debug.Log("1");
+           // Debug.Log("1");
             for (int a = 0; a < jewelChang.Length; a++)
             {
                 jewelChang[a] = GameObject.Find("Stone" + a);
@@ -86,6 +86,10 @@ public class SoulStone : MonoBehaviour {
                     }
                 }
             }
+        }
+        if (btnIn[0] == true&&btnIn[1]==false)
+        {
+            jewemanager.soulStoneItem.Add(gameObject);
         }
     }
 

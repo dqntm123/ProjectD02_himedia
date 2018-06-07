@@ -1572,46 +1572,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStageNum: 0
   status: 010000000200000003000000030000000200000000000000040000000400000004000000040000000400000004000000040000000400000004000000040000000400000004000000
-  stageSprites:
-  - {fileID: 1180697705}
-  - {fileID: 842361709}
-  - {fileID: 279427606}
-  - {fileID: 945244134}
-  - {fileID: 2128697348}
-  - {fileID: 30959049}
-  - {fileID: 1347940818}
-  - {fileID: 1331905236}
-  - {fileID: 146174741}
-  - {fileID: 1463603247}
-  - {fileID: 1106545616}
-  - {fileID: 891405485}
-  - {fileID: 641099591}
-  - {fileID: 1623630181}
-  - {fileID: 1512426548}
-  - {fileID: 1941189574}
-  - {fileID: 1189491440}
-  - {fileID: 947003688}
-  stageNum:
-  - {fileID: 1772323497}
-  - {fileID: 1140881488}
-  - {fileID: 112509700}
-  - {fileID: 337408835}
-  - {fileID: 2066400391}
-  - {fileID: 1417201738}
-  - {fileID: 1799502146}
-  - {fileID: 2121222284}
-  - {fileID: 1845047195}
-  - {fileID: 1820546444}
-  - {fileID: 1424867931}
-  - {fileID: 1614396536}
-  - {fileID: 1376150893}
-  - {fileID: 842964725}
-  - {fileID: 757332540}
-  - {fileID: 1525043889}
-  - {fileID: 926760584}
-  - {fileID: 1174093035}
-  starSumLabel: {fileID: 163815277}
-  starSum: 0
 --- !u!4 &421295721
 Transform:
   m_ObjectHideFlags: 0
@@ -6763,6 +6723,86 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!1 &2019639097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2019639099}
+  - component: {fileID: 2019639098}
+  m_Layer: 0
+  m_Name: StarAndSpriteManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2019639098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2019639097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0956dcf23bb1c449276320c3d8d918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageSprites:
+  - {fileID: 1180697705}
+  - {fileID: 842361709}
+  - {fileID: 279427606}
+  - {fileID: 945244134}
+  - {fileID: 2128697348}
+  - {fileID: 30959049}
+  - {fileID: 1347940818}
+  - {fileID: 1331905236}
+  - {fileID: 146174741}
+  - {fileID: 1463603247}
+  - {fileID: 1106545616}
+  - {fileID: 891405485}
+  - {fileID: 641099591}
+  - {fileID: 1623630181}
+  - {fileID: 1512426548}
+  - {fileID: 1941189574}
+  - {fileID: 1189491440}
+  - {fileID: 947003688}
+  stageNum:
+  - {fileID: 1772323497}
+  - {fileID: 1140881488}
+  - {fileID: 112509700}
+  - {fileID: 337408835}
+  - {fileID: 2066400391}
+  - {fileID: 1417201738}
+  - {fileID: 1799502146}
+  - {fileID: 2121222284}
+  - {fileID: 1845047195}
+  - {fileID: 1820546444}
+  - {fileID: 1424867931}
+  - {fileID: 1614396536}
+  - {fileID: 1376150893}
+  - {fileID: 842964725}
+  - {fileID: 757332540}
+  - {fileID: 1525043889}
+  - {fileID: 926760584}
+  - {fileID: 1174093035}
+  starSumLabel: {fileID: 163815277}
+  starSum: 0
+--- !u!4 &2019639099
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2019639097}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.083991766, y: -0.16724667, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2025898754
 GameObject:
   m_ObjectHideFlags: 0

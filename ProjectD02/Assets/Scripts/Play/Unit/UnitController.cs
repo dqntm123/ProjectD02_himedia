@@ -39,7 +39,10 @@ public class UnitController : MonoBehaviour {
     public GameObject dropSoul;
     private int goldRate;
     private int soulRate;
-    public GameObject mm;
+    public GameObject moneyManager;
+    public GameObject sternEffect;
+    private bool doting = false;
+    public GameObject poisonFire;
 
 
 
@@ -76,7 +79,7 @@ public class UnitController : MonoBehaviour {
         anime.GetComponent<TweenAlpha>().enabled = false;
         sn = sm.currentStageNum;
         rm = GameObject.Find("RoundManager").GetComponent<RoundManager>();
-        mm = GameObject.Find("MoneyManager");
+        moneyManager = GameObject.Find("MoneyManager");
         //Bullets.SetActive(false);
         //lv=lvManager.GetComponent<LevelManager>().
         if (gameObject.tag == "Player")
@@ -103,8 +106,17 @@ public class UnitController : MonoBehaviour {
 	void Update ()
     {
         
+        if(doting==true)
+        {
+            poisonFire.SetActive(true);
+        }
 
-      if(Main.GetComponent<PlayerController>().hp<=0)
+       
+
+
+
+
+        if (Main.GetComponent<PlayerController>().hp<=0)
         {
             isDead = true;
             DeadProcess();
@@ -115,6 +127,8 @@ public class UnitController : MonoBehaviour {
             hP = 0;
             hpBar[1].transform.localScale = new Vector3(0, 1, 1);
             isDead = true;
+          
+           
         
             DeadProcess();
 
@@ -172,6 +186,7 @@ public class UnitController : MonoBehaviour {
                     
                     if (stun == false)
                     {
+                        sternEffect.SetActive(false);
                         if (look.Count==0 || look[0]==null)
                         {
                             look.Clear();
@@ -188,7 +203,7 @@ public class UnitController : MonoBehaviour {
                    
                     if(stun==true)
                     {
-                     
+                        sternEffect.SetActive(true);
                         stateTime += Time.deltaTime;
                         if(stateTime>idleStateMaxTime)
                         {
@@ -658,6 +673,7 @@ public class UnitController : MonoBehaviour {
     public void DotDamage()
     {
         StartCoroutine(DotCo());
+        doting = true;
     }
 
     public IEnumerator DotCo()
@@ -672,11 +688,14 @@ public class UnitController : MonoBehaviour {
             if (i==10)
             {
                 //spr.color = Color.white;
+               
                 yield return null;
             }
             if (hP <= 0)
             {
                 hP = 0;
+                doting = false;
+               
                 isDead = true;
                 DeadProcess();
             }

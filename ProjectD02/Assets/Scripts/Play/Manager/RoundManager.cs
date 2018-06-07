@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RoundManager : MonoBehaviour {
 
@@ -13,12 +14,12 @@ public class RoundManager : MonoBehaviour {
     public GameObject bgmmg;
     public int[] middleBossStage;
     public int[] bossStage;
-    public int stagetCheck;
+    public int stageCheck;
     public bool castleBreak = false;
     public bool someon = false;
     public GameObject boss;
     public bool bossDead = false;
-
+    public GameObject finishChang;
 
 	void Start ()
     {
@@ -28,14 +29,14 @@ public class RoundManager : MonoBehaviour {
         pauseSp = GameObject.Find("PauseBtn").GetComponent<UISprite>();
         StartCoroutine(Round());
         bgmmg = GameObject.Find("BGMManager");
-        stagetCheck = sm.GetComponent<StageManager>().currentStageNum;
+        stageCheck = sm.GetComponent<StageManager>().currentStageNum;
         
 
     }
 	
-	void Update () {
-
-        if(castle.hp <= 0)
+	void Update ()
+    {
+        if (castle.hp <= 0)
         {
             castleBreak = true;
         }
@@ -46,7 +47,7 @@ public class RoundManager : MonoBehaviour {
         {
             if (em != null)
             {
-                if (stagetCheck == middleBossStage[0])
+                if (stageCheck == middleBossStage[0])
                 {
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[0], em.transform.position, em.transform.rotation);
                     Destroy(em);
@@ -54,7 +55,7 @@ public class RoundManager : MonoBehaviour {
                     em = null;
                 }
 
-                if (stagetCheck == middleBossStage[1])
+                if (stageCheck == middleBossStage[1])
                 {
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[1], em.transform.position, em.transform.rotation);
                     Destroy(em);
@@ -62,7 +63,7 @@ public class RoundManager : MonoBehaviour {
                     em = null;
                 }
 
-                if (stagetCheck == bossStage[0])
+                if (stageCheck == bossStage[0])
                 {
                     Instantiate(em.GetComponent<EnemyManager>().boss[0], em.transform.position, em.transform.rotation);
                     Destroy(em);
@@ -82,7 +83,6 @@ public class RoundManager : MonoBehaviour {
             }
 
         }
-
     }
 
     IEnumerator Round()
@@ -106,11 +106,29 @@ public class RoundManager : MonoBehaviour {
         ul.text = "STAGE CLEAR!";
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(2.0f);
+        if (StageManager.instance.status[stageCheck - 1] >= 0 && StageManager.instance.status[stageCheck - 1] <3 && StageManager.instance.status[stageCheck] != 4)
+        {
+            StageManager.instance.status[stageCheck - 1] += 1;
+        }
+        if (StageManager.instance.status[stageCheck - 1] == 0 && StageManager.instance.status[stageCheck] == 4)
+        {
+            StageManager.instance.status[stageCheck - 1] += 1;
+            StageManager.instance.status[stageCheck] = 0;
+        }
+        gameObject.SetActive(false);
+        finishChang.SetActive(true);
+        //StageManager.instance.SaveSataus();
+        //SceneManager.LoadScene(2);
+    }
+    public void StageScene()
+    {
+        EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+        EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         SceneManager.LoadScene(2);
         bgmmg.GetComponent<AudioSource>().clip = MusicManager.instance.bgmClip[1];
         MusicManager.instance.auDios.Play();
+        //MoneyManager.inStance.SaveMoney();
     }
-
     
 
 }

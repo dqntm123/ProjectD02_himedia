@@ -466,9 +466,9 @@ MonoBehaviour:
   look: []
   lv: 0
   stateTime: 0
-  diecol: {fileID: 65766036461868108}
   sensor: {fileID: 1216241506841478}
   attackStateMaxTime: 3
+  idleStateMaxTime: 0
   isDead: 0
   dmgcheck:
   - {fileID: 1860960842652400, guid: f258aecc4fbca7c41b11d09b214f7a5d, type: 2}
@@ -484,6 +484,14 @@ MonoBehaviour:
   - {fileID: 1577241950876298, guid: 2518a4f1035d60540bf2939618da196b, type: 2}
   SomonRound: 0100000000000000
   rm: {fileID: 0}
+  stun: 0
+  skill: {fileID: 0}
+  posionTime: 0
+  posionDMG: 0
+  dropGold: {fileID: 0}
+  dropSoul: {fileID: 0}
+  mm: {fileID: 0}
+  sternEffect: {fileID: 0}
   unit: 3
   unitstate: 0
 --- !u!114 &114726816387201560

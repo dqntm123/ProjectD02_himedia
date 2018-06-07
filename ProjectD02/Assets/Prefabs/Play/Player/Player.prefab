@@ -204,13 +204,14 @@ MonoBehaviour:
   - {fileID: 1978312800766216, guid: 4f1cd53a3c30e69468533c24dbd412f6, type: 2}
   - {fileID: 1401890802582374, guid: 9302d36357a55a04eb20029cb7a081fc, type: 2}
   - {fileID: 1336448160776698, guid: 39df07116be92ab44bd1b71ca6108d4a, type: 2}
-  - {fileID: 0}
+  - {fileID: 1015843092463584, guid: 26e3e178d48e8344a93b92cbf9cffde2, type: 2}
   - {fileID: 1025220800016412, guid: b56c8914bb9728947a1fcd188e054569, type: 2}
   - {fileID: 1919031490425288, guid: ca4648c29fe284d468b23d4961f158fc, type: 2}
   - {fileID: 1149704582394532, guid: 467b5cd3864d5684597c404382e2e67e, type: 2}
   - {fileID: 1449044719207414, guid: 9722087af776a124788512fb0af07708, type: 2}
   manaMG: {fileID: 0}
   player: {fileID: 0}
+  maincamera: {fileID: 0}
   skillImage:
   - {fileID: 0}
   - {fileID: 0}
