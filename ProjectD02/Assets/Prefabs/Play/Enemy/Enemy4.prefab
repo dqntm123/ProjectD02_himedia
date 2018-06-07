@@ -672,6 +672,7 @@ MonoBehaviour:
   moneyManager: {fileID: 0}
   sternEffect: {fileID: 1968329406403346}
   poisonFire: {fileID: 1695557483531958}
+  wind: 0
   unit: 2
   unitstate: 0
 --- !u!114 &114302923336197662
@@ -16424,7 +16425,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300010, guid: 560fe2ea9e176804a83e3c838f9fc9ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

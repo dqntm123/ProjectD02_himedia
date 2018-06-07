@@ -17,6 +17,7 @@ public class BtnManager : MonoBehaviour {
     private float cooltime;
     private float closeTime = 1.5f;
     private bool boolen = false;
+
     private void Start()
     {
         MinionBtn();

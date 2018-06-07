@@ -9,6 +9,8 @@ public class Castle : MonoBehaviour {
     public GameObject roundManager;
     public GameObject hpBar;
     private UISlider hpBarUs;
+    public GameObject[] enemy;
+    public RoundManager rm;
 
     private void OnTriggerEnter(Collider col)
     {
@@ -24,6 +26,7 @@ public class Castle : MonoBehaviour {
     {
         hpBarUs = hpBar.GetComponent<UISlider>();
         maxHp = hp;
+        rm = GameObject.Find("RoundManager").GetComponent<RoundManager>();
     }
 
     private void Update()
@@ -32,8 +35,17 @@ public class Castle : MonoBehaviour {
 
         if (hp <= 0)
         {
-            MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
-            mr.enabled = false;
+           if(rm.someon == false)
+            {
+                enemy = GameObject.FindGameObjectsWithTag("Enemy");
+                for (int i = 0; i < enemy.Length; i++)
+                {
+                    enemy[i].GetComponent<UnitController>().DeadProcess();
+                }
+            }
+           
+            //MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
+            //mr.enabled = false;
             BoxCollider bc = gameObject.GetComponent<BoxCollider>();
             bc.enabled = false;
             Destroy(gameObject);

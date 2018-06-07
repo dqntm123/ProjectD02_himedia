@@ -20,6 +20,7 @@ public class SoulSkillManager : MonoBehaviour {
     }
     public List<int> soulskillNunber;
     public List<int> skillCostValue;
+    public List<int> stoneReinforce;
     void Start ()
     {
         if (_INSTANCE == null)//_instance가 null일때
@@ -55,6 +56,10 @@ public class SoulSkillManager : MonoBehaviour {
         {
             PlayerPrefs.SetInt("SoulCostValue" + i, skillCostValue[i]);
         }
+        for (int i = 0; i < stoneReinforce.Count; i++)
+        {
+            PlayerPrefs.SetInt("StoneReinForce" + i,stoneReinforce[i]);
+        }
     }
 
     public void LoadedSoulStone()
@@ -67,6 +72,10 @@ public class SoulSkillManager : MonoBehaviour {
         for (int i = 0; i < skillCostValue.Count; i++)
         {
             skillCostValue[i]= PlayerPrefs.GetInt("SoulCostValue" + i, skillCostValue[i]);
+        }
+        for (int i = 0; i < stoneReinforce.Count; i++)
+        {
+            stoneReinforce[i]=PlayerPrefs.GetInt("StoneReinForce" + i, stoneReinforce[i]);
         }
     }
 }

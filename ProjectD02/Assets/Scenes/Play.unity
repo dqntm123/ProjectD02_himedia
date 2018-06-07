@@ -450,11 +450,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 4.332
       objectReference: {fileID: 0}
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0.276
       objectReference: {fileID: 0}
     - target: {fileID: 4609428238904334, guid: a88d2fef903987d499de78e718e4b2c5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -632,7 +632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4038125365211230, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.004
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4038125365211230, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}
       propertyPath: m_LocalPosition.z
@@ -693,12 +693,6 @@ Prefab:
       propertyPath: skillcostLabel.Array.data[2]
       value: 
       objectReference: {fileID: 610257801}
-    - target: {fileID: 114248476483557490, guid: 14c63b9d995c2664b9a47d568f00ae25,
-        type: 2}
-      propertyPath: skill.Array.data[4]
-      value: 
-      objectReference: {fileID: 1211378061246960, guid: 9dd580f58f53b094da12c0c740173324,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14c63b9d995c2664b9a47d568f00ae25, type: 2}
   m_IsPrefabParent: 0
@@ -1004,10 +998,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1295309520}
-    - target: {fileID: 1157916921660326, guid: 72459343e3d1bf24989dd3537ee52a46, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72459343e3d1bf24989dd3537ee52a46, type: 2}
   m_IsPrefabParent: 0

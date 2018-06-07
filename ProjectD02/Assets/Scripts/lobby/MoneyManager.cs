@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MoneyManager : MonoBehaviour {
 
-    public float goldCount;
-    public float soulCount;
+    public int goldCount;
+    public int soulCount;
     //public float getGold;
     //public float getSoul;
-    public float[] reinFoceValue;
+    public int[] unitReinFoceValue;
+    public int[] stoneReinFoecValue;
     //public float reinFoecUpValue;
     public GameObject goldLabel;
     public GameObject soulLabel;
@@ -34,7 +35,7 @@ public class MoneyManager : MonoBehaviour {
         else if (_inStance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-       //LoadedMoney();
+       LoadedMoney();
     }
 	
 	void Update ()
@@ -53,45 +54,43 @@ public class MoneyManager : MonoBehaviour {
     {
         PlayerPrefs.SetFloat("Gold", goldCount);
         PlayerPrefs.SetFloat("Soul", soulCount);
-        PlayerPrefs.SetFloat("ReinForceValue1", reinFoceValue[0]);
-        PlayerPrefs.SetFloat("ReinForceValue2", reinFoceValue[1]);
-        PlayerPrefs.SetFloat("ReinForceValue3", reinFoceValue[2]);
-        PlayerPrefs.SetFloat("ReinForceValue4", reinFoceValue[3]);
-        PlayerPrefs.SetFloat("ReinForceValue5", reinFoceValue[4]);
-        PlayerPrefs.SetFloat("ReinForceValue6", reinFoceValue[5]);
-        PlayerPrefs.SetFloat("ReinForceValue7", reinFoceValue[6]);
-        PlayerPrefs.SetFloat("ReinForceValue8", reinFoceValue[7]);
-        PlayerPrefs.SetFloat("ReinForceValue9", reinFoceValue[8]);
+        for (int i = 0; i < unitReinFoceValue.Length; i++)
+        {
+            PlayerPrefs.SetInt("UnitReinForceValue" + i, unitReinFoceValue[i]);
+        }
+        for (int i = 0; i < stoneReinFoecValue.Length; i++)
+        {
+            PlayerPrefs.SetInt("StoneReinForceValue" + i, stoneReinFoecValue[i]);
+        }
     }
     public void LoadedMoney()
     {
-        goldCount = PlayerPrefs.GetFloat("Gold", goldCount);
-        soulCount = PlayerPrefs.GetFloat("Soul", soulCount);
-        reinFoceValue[0] = PlayerPrefs.GetFloat("ReinForceValue1", reinFoceValue[0]);
-        reinFoceValue[1] = PlayerPrefs.GetFloat("ReinForceValue2", reinFoceValue[1]);
-        reinFoceValue[2] = PlayerPrefs.GetFloat("ReinForceValue3", reinFoceValue[2]);
-        reinFoceValue[3] = PlayerPrefs.GetFloat("ReinForceValue4", reinFoceValue[3]);
-        reinFoceValue[4] = PlayerPrefs.GetFloat("ReinForceValue5", reinFoceValue[4]);
-        reinFoceValue[5] = PlayerPrefs.GetFloat("ReinForceValue6", reinFoceValue[5]);
-        reinFoceValue[6] = PlayerPrefs.GetFloat("ReinForceValue7", reinFoceValue[6]);
-        reinFoceValue[7] = PlayerPrefs.GetFloat("ReinForceValue8", reinFoceValue[7]);
-        reinFoceValue[8] = PlayerPrefs.GetFloat("ReinForceValue9", reinFoceValue[8]);
+        goldCount = PlayerPrefs.GetInt("Gold", goldCount);
+        soulCount = PlayerPrefs.GetInt("Soul", soulCount);
+        for (int i = 0; i < unitReinFoceValue.Length; i++)
+        {
+            unitReinFoceValue[i]=PlayerPrefs.GetInt("UnitReinForceValue" + i, unitReinFoceValue[i]);
+        }
+        for (int i = 0; i < stoneReinFoecValue.Length; i++)
+        {
+            stoneReinFoecValue[i]=PlayerPrefs.GetInt("StoneReinForceValue" + i, stoneReinFoecValue[i]);
+        }
     }
-    public string FoMatCount(float data)//숫자단위마다 ','을 찍어주는 함수
+    public string FoMatCount(int data)//숫자단위마다 ','을 찍어주는 함수
     {
         return string.Format("{0:#,###0}", data);
     }
 
     public void AssaGoldDeuck()
     {
-        goldCount = PlayerPrefs.GetFloat("Gold", goldCount);
+        goldCount = PlayerPrefs.GetInt("Gold", goldCount);
         goldCount += 100;
         PlayerPrefs.SetFloat("Gold", goldCount);
     }
 
     public void AssaSoulDeuck()
     {
-        soulCount = PlayerPrefs.GetFloat("Soul", soulCount);
+        soulCount = PlayerPrefs.GetInt("Soul", soulCount);
         soulCount += 10;
         PlayerPrefs.SetFloat("Soul", soulCount);
     }

@@ -43,6 +43,7 @@ public class UnitController : MonoBehaviour {
     public GameObject sternEffect;
     private bool doting = false;
     public GameObject poisonFire;
+    public bool wind = false;
 
 
 
@@ -160,7 +161,7 @@ public class UnitController : MonoBehaviour {
                 if (dropSoul != null)
                 {
                     Instantiate(dropSoul, transform.position, transform.rotation);
-                    MoneyManager.inStance.AssaGoldDeuck();
+                    MoneyManager.inStance.AssaSoulDeuck();
                     dropSoul = null;
                 }
 
@@ -205,11 +206,16 @@ public class UnitController : MonoBehaviour {
                     {
                         sternEffect.SetActive(true);
                         stateTime += Time.deltaTime;
+                        if(wind == true)
+                        {
+                            gameObject.transform.Translate(1 * Time.deltaTime, 0, 0);
+                        }
                         if(stateTime>idleStateMaxTime)
                         {
                             stateTime = 0;
                             unitstate = UNITSTATE.IDLE;
                             stun = false;
+                            wind = false;
                         }
 
                     }

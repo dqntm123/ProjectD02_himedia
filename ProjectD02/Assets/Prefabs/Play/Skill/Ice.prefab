@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceball: {fileID: 1149704582394532, guid: 467b5cd3864d5684597c404382e2e67e, type: 2}
+  iceTime: 0
 --- !u!212 &212102038982474182
 SpriteRenderer:
   m_ObjectHideFlags: 1

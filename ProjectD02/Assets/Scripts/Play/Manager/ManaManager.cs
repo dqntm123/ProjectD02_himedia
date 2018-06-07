@@ -34,6 +34,7 @@ public class ManaManager : MonoBehaviour {
         if(manaCount<=0)
         {
             manaCount = 0;
+            manaGauge.transform.localScale += new Vector3(0, 0, 0);
         }
         if (manaCount >= manaMax)//마나카운트와 마나맥스의 값이 커지거나 같아진다면
         {

@@ -77,13 +77,14 @@ public class SkillManager : MonoBehaviour {
 
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT || skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
             {
-                Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
                 if (bm.GetComponent<BeefManager>().beefCount < 90)
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillAtk;
+                    bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
                 }
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills == Bullet.SKILLS.HILL)
@@ -112,13 +113,14 @@ public class SkillManager : MonoBehaviour {
 
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT || skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL )
             {
-                Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
                 if (bm.GetComponent<BeefManager>().beefCount < 90)
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skillAtk;
+                    bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
                 }
             }
 
@@ -149,13 +151,14 @@ public class SkillManager : MonoBehaviour {
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[2] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT || skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL || skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.THUNDERSTORM)
             {
-                Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
                 if (bm.GetComponent<BeefManager>().beefCount < 90)
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skillAtk;
+                    bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
                 }
             }
 

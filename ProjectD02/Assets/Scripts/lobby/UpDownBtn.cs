@@ -10,9 +10,12 @@ public class UpDownBtn : MonoBehaviour {
     public UILabel[] rfuILabel;//강화수치 라벨
     public ButtonManager btmMg;
     public GameObject gdCostLB;
+    public JewelBtnManager jewelBtnMg;
+
     private void Start()
     {
-        btmMg= GameObject.Find("BtnManager").GetComponent<ButtonManager>();
+        btmMg = GameObject.Find("BtnManager").GetComponent<ButtonManager>();
+
     }
 
     void Update()
@@ -30,20 +33,20 @@ public class UpDownBtn : MonoBehaviour {
                 LevelManager.instanCe.lv[i] = 10;
                 btmMg.buttons[i].GetComponent<getButtonIndex>().reinForce = true;
             }
-            if (btmMg.target==btmMg.buttons[i])
-            { 
+            if (btmMg.target == btmMg.buttons[i])
+            {
                 if (LevelManager.instanCe.lv[i] <= 10)
                 {
-                    if (MoneyManager.inStance.reinFoceValue[i] <= MoneyManager.inStance.goldCount && MoneyManager.inStance.goldCount >= 0)
+                    if (MoneyManager.inStance.unitReinFoceValue[i] <= MoneyManager.inStance.goldCount && MoneyManager.inStance.goldCount >= 0)
                     //강화값이 MoneyManager 싱글톤의 골드값보다 작거나 같은경우와 MoneyManager 싱글톤 골드값이 0보다 크거나 같을경우 강화시킨다
                     {
-                        if(btmMg.buttons[i].GetComponent<getButtonIndex>().reinForce==false)
+                        if (btmMg.buttons[i].GetComponent<getButtonIndex>().reinForce == false)
                         {
-                            MoneyManager.inStance.goldCount -= MoneyManager.inStance.reinFoceValue[i];
-                            MoneyManager.inStance.reinFoceValue[i] *= 2;
+                            MoneyManager.inStance.goldCount -= MoneyManager.inStance.unitReinFoceValue[i];
+                            MoneyManager.inStance.unitReinFoceValue[i] *= 2;
                             LevelManager.instanCe.lv[i] += 1;
                         }
-                        gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[i]);
+                        gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.unitReinFoceValue[i]);
                         if (LevelManager.instanCe.lv[i] == 10)
                         {
                             gdCostLB.GetComponent<UILabel>().text = "Max";
@@ -65,6 +68,7 @@ public class UpDownBtn : MonoBehaviour {
 
     }
 
+   
 
 
     public void ReinForceLabel()

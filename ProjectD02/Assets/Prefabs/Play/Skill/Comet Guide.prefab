@@ -113,6 +113,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   player: {fileID: 0}
   hillUnits: []
+  b_skillAtk: 20
   skillAtk: 20
   comet:
   - {fileID: 1621099916980768, guid: 3f464730bf7325e41a03036c640a1fdc, type: 2}
@@ -120,6 +121,7 @@ MonoBehaviour:
   - {fileID: 1552810488709414, guid: 8dcdf595c17bf664e9a006a110be6b3a, type: 2}
   bc: {fileID: 0}
   speed: 5
+  b_stunTime: 0
   stunTime: 0
   numberOfTimes: 0
   skillCost: 0
@@ -128,6 +130,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  lV: 0
   skills: 1
 --- !u!212 &212450611899746370
 SpriteRenderer:

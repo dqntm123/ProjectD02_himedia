@@ -15,6 +15,8 @@ public class SoulStone : MonoBehaviour {
     public int costValue;
     public int firstValue;
     public int soulSkillNumber;
+    public UILabel[] lvLabel;
+
     void Awake()
     {
         jewemanager = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
@@ -23,6 +25,14 @@ public class SoulStone : MonoBehaviour {
     }
     void Start()
     {
+        if (SoulSkillManager.INSTANCE.stoneReinforce[soulSkillNumber] >= 0)
+        {
+            lvLabel[soulSkillNumber].text = "  " + SoulSkillManager.INSTANCE.stoneReinforce[soulSkillNumber].ToString();
+        }
+        if (SoulSkillManager.INSTANCE.stoneReinforce[soulSkillNumber] >= 5)
+        {
+            lvLabel[soulSkillNumber].text = "Max";
+        }
         firstValue = jewemanager.stoneValue[soulSkillNumber];
         if (firstValue==0)
         {

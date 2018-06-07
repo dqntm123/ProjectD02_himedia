@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EquipSlotBtn : MonoBehaviour {
 
     public JewelBtnManager jewelMg;
     public GameObject item;
+    public GameObject soulUpMg;
     public bool soulIn = false;
     public int equipCount;
     public int myNum;
@@ -21,8 +23,19 @@ public class EquipSlotBtn : MonoBehaviour {
         sel = GameObject.Find("Selector");
         selPos = sel.transform.localPosition;
         stoneDetails = GameObject.Find("SoulStoneDetailList").GetComponent<SoulStoneDetailList>().stoneDetailStr;
+        soulUpMg = GameObject.Find("UpgradeManager");
     }
-
+    void Start()
+    {
+        //if (item != null)
+        //{
+        //    item.GetComponent<SoulStone>().lvLabel[item.GetComponent<SoulStone>().soulSkillNumber].text = SoulSkillManager.INSTANCE.stoneReinforce[item.GetComponent<SoulStone>().soulSkillNumber].ToString();
+        //    if(SoulSkillManager.INSTANCE.stoneReinforce[item.GetComponent<SoulStone>().soulSkillNumber]>=5)
+        //    {
+        //        item.GetComponent<SoulStone>().lvLabel[item.GetComponent<SoulStone>().soulSkillNumber].text = "Max";
+        //    }
+        //}
+    }
     void Update()
     {
         if (sel.transform.parent != gameObject.transform)
@@ -62,6 +75,7 @@ public class EquipSlotBtn : MonoBehaviour {
         if (equipCount > 1)
         {
             equipCount = 0;
+            soulUpMg.GetComponent<SoulUpGrade>().ValueChang.SetActive(false);
             sel.transform.parent = jewelMg.transform;
             sel.transform.localPosition = selPos;
             if (gameObject.transform.childCount < 2)
@@ -75,5 +89,20 @@ public class EquipSlotBtn : MonoBehaviour {
         //}
         jewelMg.releaseBtn = gameObject;
         sdL.text = sdStr;
+        soulUpMg.GetComponent<SoulUpGrade>().equipSlot = gameObject;
+        soulUpMg.GetComponent<SoulUpGrade>().targetSlot = null;
+        if(soulUpMg.GetComponent<SoulUpGrade>().equipSlot!=null&&item!=null)
+        {
+            soulUpMg.GetComponent<SoulUpGrade>().ValueChang.SetActive(true);
+            soulUpMg.GetComponent<SoulUpGrade>().soulValue.text = MoneyManager.inStance.stoneReinFoecValue[item.GetComponent<SoulStone>().soulSkillNumber].ToString();
+            if (SoulSkillManager.INSTANCE.stoneReinforce[item.GetComponent<SoulStone>().soulSkillNumber] >= 5)
+            {
+                soulUpMg.GetComponent<SoulUpGrade>().soulValue.text = " Max";
+            }
+        }
+        if (item==null)
+        {
+            soulUpMg.GetComponent<SoulUpGrade>().ValueChang.SetActive(false);
+        }
     }
 }

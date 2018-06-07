@@ -102,13 +102,19 @@ MonoBehaviour:
   enemy: {fileID: 0}
   player: {fileID: 0}
   hillUnits: []
-  skillAtk: 2
-  comet: {fileID: 0}
+  b_skillAtk: 0
+  skillAtk: 0
+  comet:
+  - {fileID: 0}
+  bc: {fileID: 0}
   speed: 2
-  stunTime: 2
+  b_stunTime: 1
+  stunTime: 1
   numberOfTimes: 0
   skillCost: 0
   iceberg: {fileID: 0}
+  aoeTargets: []
+  lV: 0
   skills: 4
 --- !u!212 &212680509100082874
 SpriteRenderer:

@@ -33,6 +33,7 @@ public class BeefManager : MonoBehaviour {
         if(beefCount<=0)
         {
             beefCount = 0;
+            beefGauge.transform.localScale = new Vector3(0, beefGauge.transform.localScale.y, transform.localScale.z);
         }
         if(beefCount>=90)
         {

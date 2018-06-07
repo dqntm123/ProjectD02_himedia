@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 	void Start ()
     {
         mainCamera = GameObject.Find("Main Camera");//시작할때 메인카메라 변수안에 메인카메라 오브젝트를 찾아서 넣는다
+        enemyManager = GameObject.Find("EnemyManaer");
         maxHp = hp;
     }
 	
@@ -152,10 +153,9 @@ public class PlayerController : MonoBehaviour {
     }
     public void DeadProcess()
     {
-        enemyManager = GameObject.Find("EnemyManaer");
         ani.SetBool("Dead", true);
         diecol.enabled = false;
-        Destroy(enemyManager);
+        enemyManager.SetActive(false);
         isDead = true;
     }
 }

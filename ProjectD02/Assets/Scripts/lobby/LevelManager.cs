@@ -18,7 +18,6 @@ public class LevelManager : MonoBehaviour {
         }
     }
     public int[] lv;
-    public int[] soulLv;
     void Start ()
     {
         if (_instanCe == null)
@@ -26,12 +25,12 @@ public class LevelManager : MonoBehaviour {
         else if (_instanCe != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        //LoadedLv();
+        LoadedLv();
 	}
 	
 	void Update ()
     {
-        //SaveLv();
+        SaveLv();
     }
     public void SaveLv()
     {

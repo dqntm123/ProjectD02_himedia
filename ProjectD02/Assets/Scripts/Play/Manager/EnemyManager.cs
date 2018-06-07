@@ -25,7 +25,8 @@ public class EnemyManager : MonoBehaviour {
         {
             coolTime = 0;//쿨타임값을 0으로 되돌리고
             //int a = Random.Range(0, 5);
-            Instantiate(enemys[0], transform.position, transform.rotation);//enemys배열의 0번 오브젝트를 생성한다
+            int b = Random.Range(0, 1);
+            Instantiate(enemys[b], transform.position+=new Vector3(0,Random.Range(-0.005f,0.005f),0), transform.rotation);//enemys배열의 0번 오브젝트를 생성한다
         }
 
 	}

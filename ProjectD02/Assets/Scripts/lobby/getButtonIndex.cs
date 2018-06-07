@@ -40,7 +40,7 @@ public class getButtonIndex : MonoBehaviour {
         bm.upgradeORunlock[1].SetActive(false);
         clickCt = 1;
         bm.target = gameObject;     //누른 버튼을 타겟으로 지정
-        for (int r= 0; r < MoneyManager.inStance.reinFoceValue.Length; r++)
+        for (int r= 0; r < MoneyManager.inStance.unitReinFoceValue.Length; r++)
         {
             if (bm.target == bm.buttons[r])
             {
@@ -52,7 +52,7 @@ public class getButtonIndex : MonoBehaviour {
                 bm.anitarget.transform.parent = bm.target.transform;
                 bm.anitarget.GetComponent<AniTarget>().parentObj = gameObject;
                 bm.unitIdle[r].SetActive(true);
-                udb.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[r]);
+                udb.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.unitReinFoceValue[r]);
                 nameLabel.GetComponent<UILabel>().text = bm.unitName[r];
                 if (LevelManager.instanCe.lv[r] == 10)
                 {

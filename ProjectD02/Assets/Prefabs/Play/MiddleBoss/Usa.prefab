@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311557067455528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 1.48, z: -1}
+  m_LocalPosition: {x: -0.7, y: 2.18, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4233587342199434}
@@ -164,8 +164,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289545833551638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.574444, y: -0.65265036, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.3}
+  m_LocalPosition: {x: 3.3, y: -0.65265036, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.19, z: 0.3}
   m_Children:
   - {fileID: 4502759288833336}
   - {fileID: 4964070900300906}
@@ -181,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1698155723989286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.55, z: 0}
+  m_LocalPosition: {x: 0, y: 2.25, z: 0}
   m_LocalScale: {x: 1.4999999, y: 0.29999998, z: 1}
   m_Children: []
   m_Father: {fileID: 4735365095539034}
@@ -462,8 +462,10 @@ MonoBehaviour:
   posionDMG: 0
   dropGold: {fileID: 0}
   dropSoul: {fileID: 0}
-  mm: {fileID: 0}
+  moneyManager: {fileID: 0}
   sternEffect: {fileID: 0}
+  poisonFire: {fileID: 0}
+  wind: 0
   unit: 3
   unitstate: 0
 --- !u!114 &114980709569472528

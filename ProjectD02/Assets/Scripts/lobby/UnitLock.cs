@@ -69,7 +69,7 @@ public class UnitLock : MonoBehaviour {
         LevelManager.instanCe.lv[unitCount] += 1;
         unitLv.text = Convert.ToString("LV " + LevelManager.instanCe.lv[unitCount]);
         unitLv.color = Color.yellow;
-        udbt.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.reinFoceValue[unitCount]);
+        udbt.gdCostLB.GetComponent<UILabel>().text = MoneyManager.inStance.FoMatCount(MoneyManager.inStance.unitReinFoceValue[unitCount]);
         bmg.target=udbt.btmMg.buttons[unitCount];
         bmg.unitIdle[unitCount].SetActive(true);
         bmg.unitIdle[unitCount].transform.parent= udbt.btmMg.buttons[unitCount].transform;

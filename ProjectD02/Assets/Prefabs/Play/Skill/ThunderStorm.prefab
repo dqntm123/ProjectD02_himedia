@@ -208,14 +208,19 @@ MonoBehaviour:
   enemy: {fileID: 0}
   player: {fileID: 0}
   hillUnits: []
+  b_skillAtk: 0
   skillAtk: 0
-  comet: {fileID: 0}
+  comet:
+  - {fileID: 0}
   bc: {fileID: 0}
   speed: 0
+  b_stunTime: 0
   stunTime: 1.5
   numberOfTimes: 0
   skillCost: 0
   iceberg: {fileID: 0}
+  aoeTargets: []
+  lV: 0
   skills: 5
 --- !u!114 &114982132262343880
 MonoBehaviour:
@@ -231,14 +236,19 @@ MonoBehaviour:
   enemy: {fileID: 0}
   player: {fileID: 0}
   hillUnits: []
+  b_skillAtk: 30
   skillAtk: 30
-  comet: {fileID: 0}
+  comet:
+  - {fileID: 0}
   bc: {fileID: 65620140334653742}
   speed: 0
+  b_stunTime: 0
   stunTime: 1.5
   numberOfTimes: 0
   skillCost: 0
   iceberg: {fileID: 0}
+  aoeTargets: []
+  lV: 0
   skills: 5
 --- !u!198 &198113903073471060
 ParticleSystem:

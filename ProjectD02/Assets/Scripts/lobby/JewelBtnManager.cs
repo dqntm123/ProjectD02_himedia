@@ -9,6 +9,7 @@ public class JewelBtnManager : MonoBehaviour {
     public GameObject[] jewelBtn;
     public GameObject[] equipSlot;
     public GameObject[] equipBtn;
+    public GameObject[] baseSoulsStone;
     public BtnManager btnmg;
     public List<GameObject> soulStoneItem;
     public GameObject clickBtn;
@@ -18,6 +19,13 @@ public class JewelBtnManager : MonoBehaviour {
     public List<int> stoneValue;
     void Awake()
     {
+        for (int i = 0; i < baseSoulsStone.Length; i++)
+        {
+            if (SoulSkillManager.INSTANCE.stoneReinforce[baseSoulsStone[i].GetComponent<SoulStone>().soulSkillNumber] == 1)
+            {
+                baseSoulsStone[i].SetActive(true);
+            }
+        }
         for (int i = 0; i < 3; i++)
         {
             equipslotNum.Add(-1);

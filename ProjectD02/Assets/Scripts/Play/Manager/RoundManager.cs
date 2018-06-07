@@ -20,6 +20,8 @@ public class RoundManager : MonoBehaviour {
     public GameObject boss;
     public bool bossDead = false;
     public GameObject finishChang;
+    public GameObject player;
+    
 
 	void Start ()
     {
@@ -30,6 +32,7 @@ public class RoundManager : MonoBehaviour {
         StartCoroutine(Round());
         bgmmg = GameObject.Find("BGMManager");
         stageCheck = sm.GetComponent<StageManager>().currentStageNum;
+        player = GameObject.Find("Player");
         
 
     }
@@ -41,7 +44,10 @@ public class RoundManager : MonoBehaviour {
             castleBreak = true;
         }
 
-        
+        if(player.GetComponent<PlayerController>().hp<=0)
+        {
+            StartCoroutine(GameOver());
+        }
 
         if(castleBreak==true)
         {
@@ -117,8 +123,20 @@ public class RoundManager : MonoBehaviour {
         }
         gameObject.SetActive(false);
         finishChang.SetActive(true);
-        //StageManager.instance.SaveSataus();
-        //SceneManager.LoadScene(2);
+        finishChang.GetComponent<GameFinishFillAmount>().finishChang[0] = true;
+        StageManager.instance.SaveSataus();
+    }
+    IEnumerator GameOver()
+    {
+        UILabel ul = gameObject.GetComponent<UILabel>();
+        ul.enabled = true;
+        ul.text = "Game Over!";
+        em.gameObject.SetActive(false);
+        yield return new WaitForSecondsRealtime(2.0f);
+        gameObject.SetActive(false);
+        finishChang.SetActive(true);
+        finishChang.GetComponent<GameFinishFillAmount>().finishChang[1] = true;
+        StageManager.instance.SaveSataus();
     }
     public void StageScene()
     {
@@ -127,7 +145,7 @@ public class RoundManager : MonoBehaviour {
         SceneManager.LoadScene(2);
         bgmmg.GetComponent<AudioSource>().clip = MusicManager.instance.bgmClip[1];
         MusicManager.instance.auDios.Play();
-        //MoneyManager.inStance.SaveMoney();
+        MoneyManager.inStance.SaveMoney();
     }
     
 

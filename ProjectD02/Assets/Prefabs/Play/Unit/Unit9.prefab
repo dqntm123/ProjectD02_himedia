@@ -424,9 +424,9 @@ MonoBehaviour:
   look: []
   lv: 1
   stateTime: 0
-  diecol: {fileID: 65792013289713646}
   sensor: {fileID: 1276431314740640}
   attackStateMaxTime: 2.5
+  idleStateMaxTime: 0
   isDead: 0
   dmgcheck:
   - {fileID: 1860960842652400, guid: f258aecc4fbca7c41b11d09b214f7a5d, type: 2}
@@ -438,6 +438,19 @@ MonoBehaviour:
   - {fileID: 1700798143953070}
   - {fileID: 1120665242257720}
   Main: {fileID: 0}
+  somon: []
+  SomonRound: 
+  rm: {fileID: 0}
+  stun: 0
+  skill: {fileID: 0}
+  posionTime: 0
+  posionDMG: 0
+  dropGold: {fileID: 0}
+  dropSoul: {fileID: 0}
+  moneyManager: {fileID: 0}
+  sternEffect: {fileID: 0}
+  poisonFire: {fileID: 0}
+  wind: 0
   unit: 0
   unitstate: 1
 --- !u!114 &114444726107330866
@@ -527,7 +540,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6d5ae517a68a9654299c40218d48f9d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JewelBtn : MonoBehaviour {
 
     public JewelBtnManager jewelManager;
     public GameObject soulItem;
     public GameObject select;
+    public GameObject soulupmg;
     public Vector3 selectPos;
     public bool stoneIn = false;
     public int clickCount;
@@ -15,17 +17,27 @@ public class JewelBtn : MonoBehaviour {
     public string sdStr;        //stone detail string
     public List<GameObject> ssi;        //jewelBtnManager - soul stone item
     public List<string> stoneDetails;
+    public int lV;
+
     void Awake()
     {
         jewelManager = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         select = GameObject.Find("Selector");
         selectPos = select.transform.localPosition;
         stoneDetails = GameObject.Find("SoulStoneDetailList").GetComponent<SoulStoneDetailList>().stoneDetailStr;
+        soulupmg = GameObject.Find("UpgradeManager");
     }
 
     void Start()
     {
-
+       //if(soulItem!=null)
+       // {
+       //     soulItem.GetComponent<SoulStone>().lvLabel[soulItem.GetComponent<SoulStone>().soulSkillNumber].text = SoulSkillManager.INSTANCE.stoneReinforce[soulItem.GetComponent<SoulStone>().soulSkillNumber].ToString();
+       //     if(SoulSkillManager.INSTANCE.stoneReinforce[soulItem.GetComponent<SoulStone>().soulSkillNumber]==5)
+       //     {
+       //         soulItem.GetComponent<SoulStone>().lvLabel[soulItem.GetComponent<SoulStone>().soulSkillNumber].text = "Max";
+       //     }
+       // }
     }
 
     void Update ()
@@ -64,6 +76,7 @@ public class JewelBtn : MonoBehaviour {
         if (clickCount > 1 )
         {
             clickCount = 0;
+            soulupmg.GetComponent<SoulUpGrade>().ValueChang.SetActive(false);
             select.transform.parent = jewelManager.transform;
             select.transform.localPosition = selectPos;
             if (gameObject.transform.childCount < 2)
@@ -73,5 +86,20 @@ public class JewelBtn : MonoBehaviour {
         }
         jewelManager.clickBtn = gameObject;       
         sdL.text = sdStr;
+        soulupmg.GetComponent<SoulUpGrade>().targetSlot = gameObject;
+        soulupmg.GetComponent<SoulUpGrade>().equipSlot = null;
+        if (soulupmg.GetComponent<SoulUpGrade>().targetSlot != null && soulItem != null)
+        {
+            soulupmg.GetComponent<SoulUpGrade>().ValueChang.SetActive(true);
+            soulupmg.GetComponent<SoulUpGrade>().soulValue.text = MoneyManager.inStance.stoneReinFoecValue[soulItem.GetComponent<SoulStone>().soulSkillNumber].ToString();
+            if (SoulSkillManager.INSTANCE.stoneReinforce[soulItem.GetComponent<SoulStone>().soulSkillNumber] >= 5)
+            {
+                soulupmg.GetComponent<SoulUpGrade>().soulValue.text = " Max";
+            }
+        }
+        if (soulItem == null)
+        {
+            soulupmg.GetComponent<SoulUpGrade>().ValueChang.SetActive(false);
+        }
     }
 }
