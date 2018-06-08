@@ -6,6 +6,7 @@ public class CometMove : MonoBehaviour {
 
 
     public GameObject target;
+    public GameObject cast;
     public float cometAtk;
     public float speed = 1;
 
@@ -14,6 +15,8 @@ public class CometMove : MonoBehaviour {
 
     public void Awake()
     {
+
+        cometAtk = cast.GetComponent<Bullet>().skillAtk;
 
         //if(gameObject.name=="Comet0")
         //{
@@ -53,22 +56,24 @@ public class CometMove : MonoBehaviour {
 	void Update ()
     {
 
-        Vector3 dir = target.transform.position - transform.position;
-        dir.Normalize();
-        characterController.SimpleMove(dir * speed);
-       
+        //Vector3 dir = target.transform.position - transform.position;
+        //dir.Normalize();
+        //characterController.SimpleMove(dir * speed);
 
-        gameObject.transform.Translate(3 * Time.deltaTime, -5 * Time.deltaTime, 0);
-        
+
+        gameObject.transform.Translate(3.5f * Time.deltaTime, -5 * Time.deltaTime, 0);
+
 
     }
 
-    public void OnTriggerEneter(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.tag == "Enemy")
         {
             col.gameObject.GetComponent<UnitController>().GetDamage(cometAtk);
-            Destroy(gameObject,1);
+
+
+            Destroy(gameObject, 0.05f);
         }
      
     }

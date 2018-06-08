@@ -21,7 +21,7 @@ public class JewelBtnManager : MonoBehaviour {
     {
         for (int i = 0; i < baseSoulsStone.Length; i++)
         {
-            if (SoulSkillManager.INSTANCE.stoneReinforce[baseSoulsStone[i].GetComponent<SoulStone>().soulSkillNumber] == 1)
+            if (SoulSkillManager.INSTANCE.stoneReinforce[i] == 1)
             {
                 baseSoulsStone[i].SetActive(true);
             }

@@ -12,6 +12,7 @@ public class RoundManager : MonoBehaviour {
     public BoxCollider pauseCol;
     public UISprite pauseSp;
     public GameObject bgmmg;
+    public GameObject information;
     public int[] middleBossStage;
     public int[] bossStage;
     public int stageCheck;
@@ -21,9 +22,13 @@ public class RoundManager : MonoBehaviour {
     public bool bossDead = false;
     public GameObject finishChang;
     public GameObject player;
-    
+    public GameObject[] bloodFog;
+    public GameObject[] enemy;
+    public GameObject[] units;
+    public int[] stageNum;
 
-	void Start ()
+
+    void Start ()
     {
         sm = GameObject.Find("StageManager").GetComponent<StageManager>();
         em = GameObject.Find("EnemyManaer").GetComponent<EnemyManager>();
@@ -55,6 +60,9 @@ public class RoundManager : MonoBehaviour {
             {
                 if (stageCheck == middleBossStage[0])
                 {
+                    bloodFog[0].SetActive(true);
+                    EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
+                    EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[0], em.transform.position, em.transform.rotation);
                     Destroy(em);
                     someon = true;
@@ -63,6 +71,7 @@ public class RoundManager : MonoBehaviour {
 
                 if (stageCheck == middleBossStage[1])
                 {
+                    bloodFog[0].SetActive(true);
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[1], em.transform.position, em.transform.rotation);
                     Destroy(em);
                     someon = true;
@@ -71,6 +80,7 @@ public class RoundManager : MonoBehaviour {
 
                 if (stageCheck == bossStage[0])
                 {
+                    bloodFog[0].SetActive(true);
                     Instantiate(em.GetComponent<EnemyManager>().boss[0], em.transform.position, em.transform.rotation);
                     Destroy(em);
                     someon = true;
@@ -85,6 +95,8 @@ public class RoundManager : MonoBehaviour {
 
             if(bossDead == true)
             {
+                bloodFog[1].SetActive(true);
+                bloodFog[0].SetActive(false);
                 StartCoroutine(RoundEnd());
             }
 
@@ -107,10 +119,36 @@ public class RoundManager : MonoBehaviour {
 
     IEnumerator RoundEnd()
     {
+        em.GetComponent<EnemyManager>().ins = false;
+        //for (int i = 0; i < stageNum.Length; i++)
+        //{
+        //    if (StageManager.instance.currentStageNum == stageNum[i])
+        //    {
+        //        if (SoulSkillManager.INSTANCE.soulskillNunber[i] <= 0 && SoulSkillManager.INSTANCE.soulskillNunber[i] < 1)
+        //        {
+        //            SoulSkillManager.INSTANCE.soulskillNunber[i] = 1;
+        //            SoulSkillManager.INSTANCE.SaveSoulStone();
+        //            information.GetComponent<InforMationValue>().stoneNum = i;
+        //        }
+        //    }
+        //}
         UILabel ul = gameObject.GetComponent<UILabel>();
         ul.enabled = true;
         ul.text = "STAGE CLEAR!";
-        Time.timeScale = 0;
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            enemy[i].GetComponent<UnitController>().DeadProcess();
+        }
+
+        units = GameObject.FindGameObjectsWithTag("Player");
+
+        for (int i = 0; i < units.Length; i++)
+        {
+            units[i].GetComponent<UnitController>().DeadProcess();
+        }
+        player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Win;
         yield return new WaitForSecondsRealtime(2.0f);
         if (StageManager.instance.status[stageCheck - 1] >= 0 && StageManager.instance.status[stageCheck - 1] <3 && StageManager.instance.status[stageCheck] != 4)
         {

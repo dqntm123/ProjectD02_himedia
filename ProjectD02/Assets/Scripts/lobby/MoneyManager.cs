@@ -8,8 +8,8 @@ public class MoneyManager : MonoBehaviour {
 
     public int goldCount;
     public int soulCount;
-    //public float getGold;
-    //public float getSoul;
+    public int getGold;
+    public int getSoul;
     public int[] unitReinFoceValue;
     public int[] stoneReinFoecValue;
     //public float reinFoecUpValue;
@@ -52,28 +52,28 @@ public class MoneyManager : MonoBehaviour {
     }
     public void SaveMoney()
     {
-        PlayerPrefs.SetFloat("Gold", goldCount);
-        PlayerPrefs.SetFloat("Soul", soulCount);
+        PlayerPrefs.SetFloat("GoldValue", goldCount);
+        PlayerPrefs.SetFloat("SoulValue", soulCount);
         for (int i = 0; i < unitReinFoceValue.Length; i++)
         {
-            PlayerPrefs.SetInt("UnitReinForceValue" + i, unitReinFoceValue[i]);
+            PlayerPrefs.SetInt("UnitReinForce" + i, unitReinFoceValue[i]);
         }
         for (int i = 0; i < stoneReinFoecValue.Length; i++)
         {
-            PlayerPrefs.SetInt("StoneReinForceValue" + i, stoneReinFoecValue[i]);
+            PlayerPrefs.SetInt("StoneReinForceValues" + i, stoneReinFoecValue[i]);
         }
     }
     public void LoadedMoney()
     {
-        goldCount = PlayerPrefs.GetInt("Gold", goldCount);
-        soulCount = PlayerPrefs.GetInt("Soul", soulCount);
+        goldCount = PlayerPrefs.GetInt("GoldValue", goldCount);
+        soulCount = PlayerPrefs.GetInt("SoulValue", soulCount);
         for (int i = 0; i < unitReinFoceValue.Length; i++)
         {
-            unitReinFoceValue[i]=PlayerPrefs.GetInt("UnitReinForceValue" + i, unitReinFoceValue[i]);
+            unitReinFoceValue[i]=PlayerPrefs.GetInt("UnitReinForce" + i, unitReinFoceValue[i]);
         }
         for (int i = 0; i < stoneReinFoecValue.Length; i++)
         {
-            stoneReinFoecValue[i]=PlayerPrefs.GetInt("StoneReinForceValue" + i, stoneReinFoecValue[i]);
+            stoneReinFoecValue[i]=PlayerPrefs.GetInt("StoneReinForceValues" + i, stoneReinFoecValue[i]);
         }
     }
     public string FoMatCount(int data)//숫자단위마다 ','을 찍어주는 함수
@@ -84,14 +84,18 @@ public class MoneyManager : MonoBehaviour {
     public void AssaGoldDeuck()
     {
         goldCount = PlayerPrefs.GetInt("Gold", goldCount);
-        goldCount += 100;
+        int goldDeuck = 100;
+        getGold += goldDeuck;
+        goldCount += goldDeuck;
         PlayerPrefs.SetFloat("Gold", goldCount);
     }
 
     public void AssaSoulDeuck()
     {
         soulCount = PlayerPrefs.GetInt("Soul", soulCount);
-        soulCount += 10;
+        int souldeuck = 10;
+        getSoul += souldeuck;
+        soulCount += souldeuck;
         PlayerPrefs.SetFloat("Soul", soulCount);
     }
 }

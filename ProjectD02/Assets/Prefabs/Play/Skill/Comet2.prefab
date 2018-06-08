@@ -96,9 +96,9 @@ BoxCollider:
   m_GameObject: {fileID: 1552810488709414}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114398075945931700
 MonoBehaviour:
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  cast: {fileID: 1978312800766216, guid: 4f1cd53a3c30e69468533c24dbd412f6, type: 2}
   cometAtk: 30
   speed: 1
 --- !u!143 &143434653031312290

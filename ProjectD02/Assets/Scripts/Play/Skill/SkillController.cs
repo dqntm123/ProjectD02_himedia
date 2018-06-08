@@ -59,14 +59,14 @@ public class SkillController : MonoBehaviour {
             if (col.gameObject.tag == "Enemy")
             {
                 target = col.gameObject;
-                target.GetComponent<UnitController>().GetDamage(atk);
+                target.GetComponent<UnitController>().GetDamage(caster.GetComponent<UnitController>().atk);
                 Destroy(gameObject);
             }
 
             if (col.gameObject.tag == "Castle")
             {
                 target = col.gameObject;
-                target.GetComponent<Castle>().hp -= atk;
+                target.GetComponent<Castle>().hp -= caster.GetComponent<UnitController>().atk;
                 Destroy(gameObject);
             }
         }
@@ -84,7 +84,7 @@ public class SkillController : MonoBehaviour {
             if (col.gameObject.tag == "Darking")
             {
                 target = col.gameObject;
-                target.GetComponent<PlayerController>().hp -= atk;
+                target.GetComponent<PlayerController>().hp -= caster.GetComponent<UnitController>().atk;
                 Destroy(gameObject);
             }
         }

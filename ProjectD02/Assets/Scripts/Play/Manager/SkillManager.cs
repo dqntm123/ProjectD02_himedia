@@ -17,6 +17,7 @@ public class SkillManager : MonoBehaviour {
     public bool skillstart = false;
     public Dictionary<int, string> skillIcon;
     public GameObject bm;
+    public GameObject[] moveSlot;
 
 
     void Start ()
@@ -50,17 +51,16 @@ public class SkillManager : MonoBehaviour {
     {
         if(skillstart == true)
         {
-            player.GetComponent<PlayerController>().moveSpeed = 0;
-            maincamera.GetComponent<MainCameraMove>().cameraSpeed = 0;
+            moveSlot[0].GetComponent<BoxCollider>().enabled = false;
+            moveSlot[1].GetComponent<BoxCollider>().enabled = false;
             statetime += Time.deltaTime;
             if (statetime > skillmo)
             {
-             
                 player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.NONE;
                 skillstart = false;
                 statetime = 0;
-                player.GetComponent<PlayerController>().moveSpeed = 0.4f;
-                maincamera.GetComponent<MainCameraMove>().cameraSpeed = 0.4f;
+                moveSlot[0].GetComponent<BoxCollider>().enabled = true;
+                moveSlot[1].GetComponent<BoxCollider>().enabled = true;
             }
         }               
 	}
@@ -69,14 +69,16 @@ public class SkillManager : MonoBehaviour {
     {
         if (manaMG.GetComponent<ManaManager>().manaCount >= SoulSkillManager.INSTANCE.skillCostValue[0])
         {
+           
             EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
             EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[0];
             //manaMG.GetComponent<ManaManager>().manaCount -= skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillCost;
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[0] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
-
-            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT || skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
+            
+            if ( skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
             {
+                player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
                 Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
@@ -85,6 +87,7 @@ public class SkillManager : MonoBehaviour {
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillAtk;
                     bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
+                  
                 }
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills == Bullet.SKILLS.HILL)
@@ -98,6 +101,10 @@ public class SkillManager : MonoBehaviour {
                 EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             }
 
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills == Bullet.SKILLS.COMET)
+            {
+                player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack2;
+            }
             skillstart = true;
         }
     }   
@@ -110,10 +117,11 @@ public class SkillManager : MonoBehaviour {
             EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[1];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[1] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
-
-            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT || skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL )
+            
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL )
             {
                 Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
+                player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
@@ -121,6 +129,7 @@ public class SkillManager : MonoBehaviour {
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skillAtk;
                     bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
+            
                 }
             }
 
@@ -135,8 +144,10 @@ public class SkillManager : MonoBehaviour {
                 EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             }
 
-
-
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills == Bullet.SKILLS.COMET)
+            {
+                player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack2;
+            }
             skillstart = true;
 
         }
@@ -149,9 +160,11 @@ public class SkillManager : MonoBehaviour {
             EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[2];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[2] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
-            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT || skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL || skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.THUNDERSTORM)
+            player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
             {
                 Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
+                player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
@@ -159,6 +172,7 @@ public class SkillManager : MonoBehaviour {
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skillAtk;
                     bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
+                  
                 }
             }
 
@@ -174,7 +188,10 @@ public class SkillManager : MonoBehaviour {
                 EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
             }
 
-
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills == Bullet.SKILLS.COMET)
+            {
+                player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack2;
+            }
             skillstart = true;
         }
     }

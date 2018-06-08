@@ -445,7 +445,8 @@ MonoBehaviour:
   dmgcheck:
   - {fileID: 1860960842652400, guid: f258aecc4fbca7c41b11d09b214f7a5d, type: 2}
   - {fileID: 1458731092689568, guid: 2a524ecf34aa9cf4a95cf68cb46e24c4, type: 2}
-  effect: []
+  effect:
+  - {fileID: 176804, guid: 4889039938a567444827eafcfbc2b267, type: 2}
   Bullets: {fileID: 0}
   lvManager: {fileID: 0}
   hpBar:
@@ -453,8 +454,8 @@ MonoBehaviour:
   - {fileID: 1311557067455528}
   Main: {fileID: 0}
   somon:
-  - {fileID: 1577241950876298, guid: 2518a4f1035d60540bf2939618da196b, type: 2}
-  SomonRound: 0100000000000000
+  - {fileID: 1256411878050562, guid: ba87d3e186e146b43a39960d15d1aec2, type: 2}
+  SomonRound: 000000000c000000
   rm: {fileID: 0}
   stun: 0
   skill: {fileID: 0}

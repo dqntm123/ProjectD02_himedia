@@ -382,6 +382,7 @@ public class UnitController : MonoBehaviour {
 
                             stateTime += Time.deltaTime;
                             anime.SetBool("Attack", true);
+
                             if (sn == SomonRound[0])
                             {
                                 if (stateTime > attackStateMaxTime)
@@ -634,7 +635,7 @@ public class UnitController : MonoBehaviour {
           
         if(gameObject.tag=="Player")
         {
-            //Instantiate(effect[0], transform.position, transform.rotation);
+            Instantiate(effect[0], effect[0].transform.position = new Vector3(transform.position.x, transform.position.y, - 1), transform.rotation);
             GameObject dmgValue = Instantiate(dmgcheck[0]) as GameObject;
             dmgValue.transform.position = transform.position;
             dmgValue.transform.rotation = transform.rotation;
@@ -643,7 +644,7 @@ public class UnitController : MonoBehaviour {
 
         else
         {
-           // Instantiate(effect[1], transform.position, transform.rotation);
+            Instantiate(effect[0], effect[0].transform.position = new Vector3(transform.position.x, transform.position.y, -1), transform.rotation);
             GameObject dmgValue = Instantiate(dmgcheck[1]) as GameObject;
             dmgValue.transform.position = transform.position;
             dmgValue.transform.rotation = transform.rotation;

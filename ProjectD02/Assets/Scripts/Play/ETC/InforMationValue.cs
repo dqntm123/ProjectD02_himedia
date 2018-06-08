@@ -10,6 +10,7 @@ public class InforMationValue : MonoBehaviour {
     public GameObject stone;
     public GameObject skillMg;
     public GameObject gameFinishFill;
+    public int stoneNum;
     void Awake()
     {
         skillMg = GameObject.Find("SkillManager");
@@ -37,15 +38,15 @@ public class InforMationValue : MonoBehaviour {
     {
         ValueLabel[0].text = "Play Time  :  " + stopwatch.GetComponent<StopWatch>().sec.ToString("#,#00.0 sec");
         ValueLabel[1].text = "Get SoulStone  :  ";
-        //stone.GetComponent<UISprite>().spriteName = skillMg.GetComponent<SkillManager>().skillIcon[SoulSkillManager.INSTANCE.soulskillNunber[1]];
+        //stone.GetComponent<UISprite>().spriteName = skillMg.GetComponent<SkillManager>().skillIcon[stoneNum];
         ValueLabel[2].text = "Total Star   :  " + StageManager.instance.status[StageManager.instance.currentStageNum - 1];
-        ValueLabel[3].text = "Total Gold  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.goldCount).ToString() + " Gold";
-        ValueLabel[4].text = "Total Soul  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.soulCount).ToString() + " Soul";
+        ValueLabel[3].text = "Gold  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.getGold).ToString() + " Gold";
+        ValueLabel[4].text = "Soul  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.getSoul).ToString() + " Soul";
     }
     public void GameOverInforMation()
     {
         ValueLabel[0].text = "Play Time  :  " + stopwatch.GetComponent<StopWatch>().sec.ToString("#,#00.0 sec");
-        ValueLabel[3].text = "Total Gold  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.goldCount).ToString() + " Gold";
-        ValueLabel[4].text = "Total Soul  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.soulCount).ToString() + " Soul";
+        ValueLabel[3].text = "Gold  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.getGold).ToString() + " Gold";
+        ValueLabel[4].text = "Soul  :  " + MoneyManager.inStance.FoMatCount(MoneyManager.inStance.getSoul).ToString() + " Soul";
     }
 }

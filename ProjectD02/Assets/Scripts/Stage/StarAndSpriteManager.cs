@@ -18,7 +18,7 @@ public class StarAndSpriteManager : MonoBehaviour {
         {
             if (StageManager.instance.status[i] == 0)
             {
-                stageSprites[i].spriteName = ("stage_frame_nomal");     //스프라이트 이름으로 상태에 맞는 스프라이트를 찾아옴
+                stageSprites[i].spriteName = ("stage_frame_default");     //스프라이트 이름으로 상태에 맞는 스프라이트를 찾아옴
                 stageNum[i].text = Convert.ToString(i + 1);
                 stageSprites[i].gameObject.AddComponent<GoToStage>();
             }
