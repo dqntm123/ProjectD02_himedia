@@ -120,12 +120,12 @@ public class RoundManager : MonoBehaviour {
 
     IEnumerator RoundEnd()
     {
-  
+
         //for (int i = 0; i < stageNum.Length; i++)
         //{
         //    if (StageManager.instance.currentStageNum == stageNum[i])
         //    {
-        //        if (SoulSkillManager.INSTANCE.soulskillNunber[i] <= 0 && SoulSkillManager.INSTANCE.soulskillNunber[i] < 1)
+        //        if (SoulSkillManager.INSTANCE.soulskillNunber[i] == 0 && SoulSkillManager.INSTANCE.soulskillNunber[i] < 1)
         //        {
         //            SoulSkillManager.INSTANCE.soulskillNunber[i] = 1;
         //            SoulSkillManager.INSTANCE.SaveSoulStone();

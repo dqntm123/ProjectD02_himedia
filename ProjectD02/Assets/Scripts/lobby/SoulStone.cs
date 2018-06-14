@@ -19,6 +19,10 @@ public class SoulStone : MonoBehaviour {
 
     void Awake()
     {
+        if(SoulSkillManager.INSTANCE.stoneReinforce[soulSkillNumber] == 0)
+        {
+            gameObject.SetActive(false);
+        }
         jewemanager = GameObject.Find("JewelBtnManager").GetComponent<JewelBtnManager>();
         jewelPN = GameObject.Find("JewelPanel");
         gameObject.transform.parent = jewelPN.transform;
