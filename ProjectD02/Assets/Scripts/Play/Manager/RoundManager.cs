@@ -151,9 +151,16 @@ public class RoundManager : MonoBehaviour {
         }
         player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Win;
         yield return new WaitForSecondsRealtime(2.0f);
-        if (StageManager.instance.status[stageCheck - 1] >= 0 && StageManager.instance.status[stageCheck - 1] <3 && StageManager.instance.status[stageCheck] != 4)
+        if(StageManager.instance.currentStageNum==18 && StageManager.instance.status[17]<3)
         {
-            StageManager.instance.status[stageCheck - 1] += 1;
+            StageManager.instance.status[17] += 1;
+        }
+        if(StageManager.instance.currentStageNum != 18)
+        {
+            if (StageManager.instance.status[stageCheck - 1] >= 0 && StageManager.instance.status[stageCheck - 1] < 3 && StageManager.instance.status[stageCheck] != 4)
+            {
+                StageManager.instance.status[stageCheck - 1] += 1;
+            }
         }
         if (StageManager.instance.status[stageCheck - 1] == 0 && StageManager.instance.status[stageCheck] == 4)
         {
