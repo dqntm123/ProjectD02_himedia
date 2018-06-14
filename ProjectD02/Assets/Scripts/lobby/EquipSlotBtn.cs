@@ -76,6 +76,7 @@ public class EquipSlotBtn : MonoBehaviour {
             soulUpMg.GetComponent<SoulUpGrade>().ValueChang.SetActive(false);
             sel.transform.parent = jewelMg.transform;
             sel.transform.localPosition = selPos;
+            sdStr = "선택된 영혼석이 없어요!";
         }
         jewelMg.releaseBtn = gameObject;
         sdL.text = sdStr;

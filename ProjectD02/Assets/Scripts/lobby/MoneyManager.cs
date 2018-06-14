@@ -35,10 +35,12 @@ public class MoneyManager : MonoBehaviour {
         else if (_inStance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-       LoadedMoney();
     }
-	
-	void Update ()
+    private void Start()
+    {
+        //LoadedMoney();
+    }
+    void Update ()
     {
         Scene sc = SceneManager.GetActiveScene();
         if(sc.buildIndex==1)
@@ -47,33 +49,41 @@ public class MoneyManager : MonoBehaviour {
             soulLabel = GameObject.Find("SoulLabel");
             goldLabel.GetComponent<UILabel>().text = FoMatCount(goldCount);
             soulLabel.GetComponent<UILabel>().text = FoMatCount(soulCount);
+            if (soulCount < 0)
+            {
+                soulCount = 0;
+            }
+            if (goldCount < 0)
+            {
+                goldCount = 0;
+            }
+            //SaveMoney();
         }
-        SaveMoney();
     }
     public void SaveMoney()
     {
-        PlayerPrefs.SetFloat("GoldValue", goldCount);
-        PlayerPrefs.SetFloat("SoulValue", soulCount);
+        PlayerPrefs.SetInt("GoldValuess", goldCount);
+        PlayerPrefs.SetInt("SoulValuess", soulCount);
         for (int i = 0; i < unitReinFoceValue.Length; i++)
         {
-            PlayerPrefs.SetInt("UnitReinForce" + i, unitReinFoceValue[i]);
+            PlayerPrefs.SetInt("UnitReinForces" + i, unitReinFoceValue[i]);
         }
         for (int i = 0; i < stoneReinFoecValue.Length; i++)
         {
-            PlayerPrefs.SetInt("StoneReinForceValues" + i, stoneReinFoecValue[i]);
+            PlayerPrefs.SetInt("StoneReinForceValU" + i, stoneReinFoecValue[i]);
         }
     }
     public void LoadedMoney()
     {
-        goldCount = PlayerPrefs.GetInt("GoldValue", goldCount);
-        soulCount = PlayerPrefs.GetInt("SoulValue", soulCount);
+        goldCount = PlayerPrefs.GetInt("GoldValuess", goldCount);
+        soulCount = PlayerPrefs.GetInt("SoulValuess", soulCount);
         for (int i = 0; i < unitReinFoceValue.Length; i++)
         {
-            unitReinFoceValue[i]=PlayerPrefs.GetInt("UnitReinForce" + i, unitReinFoceValue[i]);
+            unitReinFoceValue[i]=PlayerPrefs.GetInt("UnitReinForces" + i, unitReinFoceValue[i]);
         }
         for (int i = 0; i < stoneReinFoecValue.Length; i++)
         {
-            stoneReinFoecValue[i]=PlayerPrefs.GetInt("StoneReinForceValues" + i, stoneReinFoecValue[i]);
+            stoneReinFoecValue[i]=PlayerPrefs.GetInt("StoneReinForceValU" + i, stoneReinFoecValue[i]);
         }
     }
     public string FoMatCount(int data)//숫자단위마다 ','을 찍어주는 함수

@@ -10645,6 +10645,7 @@ MonoBehaviour:
   iceberg: {fileID: 0}
   aoeTargets: []
   lV: 0
+  hillEffect: {fileID: 0}
   skills: 5
 --- !u!114 &114865450116731782
 MonoBehaviour:

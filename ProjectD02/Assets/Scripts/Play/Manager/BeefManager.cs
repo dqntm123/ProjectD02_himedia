@@ -35,9 +35,9 @@ public class BeefManager : MonoBehaviour {
             beefCount = 0;
             beefGauge.transform.localScale = new Vector3(0, beefGauge.transform.localScale.y, transform.localScale.z);
         }
-        if(beefCount>=90)
+        if(beefCount>=beefMax)
         {
-            beefCount = 90;
+            beefCount = beefMax;
             beefGauge.transform.localScale = new Vector3(360, beefGauge.transform.localScale.y, transform.localScale.z);
         }
         if (beefCount >= beefMax)//비프카운트와 비프맥스의 값이 커지거나 같아진다면

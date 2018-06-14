@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour {
     public GameObject iceberg;
     public List<GameObject> aoeTargets;
     public int lV;
+    public GameObject hillEffect;
 
 
     public enum SKILLS
@@ -115,6 +116,7 @@ public class Bullet : MonoBehaviour {
                 break;
             case SKILLS.FIRE:
                 transform.Translate(speed * Time.deltaTime, 0, 0);
+                Destroy(gameObject, 1.5f);
                 break;
             case SKILLS.WIND:
                 transform.Translate(speed * Time.deltaTime, 0, 0);
@@ -156,7 +158,14 @@ public class Bullet : MonoBehaviour {
                     Destroy(gameObject);
                 }
 
-                
+                if (col.gameObject.tag == "Castle")
+                {
+                    enemy = col.gameObject;
+                    enemy.GetComponent<Castle>().hp -= skillAtk;
+                    Destroy(gameObject);
+                }
+
+
 
                 break;
 
@@ -196,7 +205,7 @@ public class Bullet : MonoBehaviour {
                     if(col.gameObject.GetComponent<UnitController>().hP>=0)
                     {
                        col.gameObject.GetComponent<UnitController>().hP += skillAtk;
-                        
+                        Instantiate(hillEffect, hillEffect.transform.position = new Vector3(col.gameObject.transform.position.x, col.gameObject.transform.position.y, col.gameObject.transform.position.z - 1), transform.rotation);
                     }
                 }
              
@@ -206,11 +215,12 @@ public class Bullet : MonoBehaviour {
 
                 if(col.gameObject.tag=="Enemy")
                 {
-                    if(col.gameObject.GetComponent<UnitController>().hP>0)
-                    {
-                        col.gameObject.GetComponent<UnitController>().GetDamage(skillAtk);
-                        Destroy(gameObject, 1.5f);
-                    }
+                    col.gameObject.GetComponent<UnitController>().GetDamage(skillAtk);   
+                }
+
+                if (col.gameObject.tag == "Castle")
+                {
+                    col.gameObject.GetComponent<Castle>().hp-=skillAtk;
                 }
 
                 break;
@@ -245,6 +255,15 @@ public class Bullet : MonoBehaviour {
                     col.gameObject.GetComponent<UnitController>().idleStateMaxTime = stunTime;
                     col.gameObject.GetComponent<UnitController>().stun = true;
                     col.gameObject.GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.IDLE;
+
+                    Destroy(gameObject, 0.5f);
+                }
+
+                if (col.gameObject.tag == "Castle")
+                {
+
+                    col.gameObject.GetComponent<Castle>().hp -= skillAtk;
+
 
                     Destroy(gameObject, 0.5f);
                 }

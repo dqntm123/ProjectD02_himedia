@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1208068524999570
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4066983125631736
 Transform:
   m_ObjectHideFlags: 1
@@ -177,8 +177,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276431314740640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.54, y: 0.021, z: 0}
-  m_LocalScale: {x: 16.939589, y: 3.5833304, z: 3.333333}
+  m_LocalPosition: {x: 0.65, y: 0.021, z: 0}
+  m_LocalScale: {x: 17.884064, y: 3.5833304, z: 3.333333}
   m_Children: []
   m_Father: {fileID: 4944571157587926}
   m_RootOrder: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   lv: 1
   stateTime: 0
   sensor: {fileID: 1276431314740640}
-  attackStateMaxTime: 2.5
+  attackStateMaxTime: 2
   idleStateMaxTime: 0
   isDead: 0
   dmgcheck:
@@ -433,7 +433,8 @@ MonoBehaviour:
   - {fileID: 1458731092689568, guid: 2a524ecf34aa9cf4a95cf68cb46e24c4, type: 2}
   effect:
   - {fileID: 176804, guid: 4889039938a567444827eafcfbc2b267, type: 2}
-  Bullets: {fileID: 0}
+  - {fileID: 155692, guid: 77d6e8e3fa15a0b419d018e3e16931f6, type: 2}
+  Bullets: {fileID: 1767898500049706, guid: 4efa925ac01d345438b1e3439e1aa468, type: 2}
   lvManager: {fileID: 0}
   hpBar:
   - {fileID: 1700798143953070}
@@ -452,7 +453,7 @@ MonoBehaviour:
   sternEffect: {fileID: 0}
   poisonFire: {fileID: 0}
   wind: 0
-  unit: 0
+  unit: 4
   unitstate: 1
 --- !u!114 &114444726107330866
 MonoBehaviour:

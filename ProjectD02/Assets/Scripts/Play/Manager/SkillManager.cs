@@ -76,18 +76,18 @@ public class SkillManager : MonoBehaviour {
             //manaMG.GetComponent<ManaManager>().manaCount -= skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillCost;
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[0] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
             
-            if ( skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT && skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
             {
                 player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
                 Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
-                if (bm.GetComponent<BeefManager>().beefCount < 90)
+                if (bm.GetComponent<BeefManager>().beefCount < 120)
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillAtk;
                     bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
-                  
+                    Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[0]], new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z), player.transform.rotation);
                 }
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[0]].GetComponent<Bullet>().skills == Bullet.SKILLS.HILL)
@@ -118,18 +118,18 @@ public class SkillManager : MonoBehaviour {
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[1];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[1] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
             
-            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL )
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT && skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL )
             {
                 Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
                 player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
-                if (bm.GetComponent<BeefManager>().beefCount < 90)
+                if (bm.GetComponent<BeefManager>().beefCount < 120)
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skillAtk;
                     bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
-            
+                    Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[1]], new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z), player.transform.rotation);
                 }
             }
 
@@ -161,18 +161,18 @@ public class SkillManager : MonoBehaviour {
             manaMG.GetComponent<ManaManager>().manaCount -= SoulSkillManager.INSTANCE.skillCostValue[2];
             manaMG.GetComponent<ManaManager>().manaGauge.transform.localScale -= new Vector3(SoulSkillManager.INSTANCE.skillCostValue[2] / manaMG.GetComponent<ManaManager>().manaMax * 360, 0, 0);
             player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
-            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
+            if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.CONVERT && skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills != Bullet.SKILLS.HILL)
             {
                 Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]], new Vector3(transform.position.x, transform.position.y, 0.1f), transform.rotation);
                 player.GetComponent<PlayerController>().playstate = PlayerController.PLAYSTATE.Attack1;
             }
             if (skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skills == Bullet.SKILLS.CONVERT)
             {
-                if (bm.GetComponent<BeefManager>().beefCount < 90)
+                if (bm.GetComponent<BeefManager>().beefCount < 120)
                 {
                     bm.GetComponent<BeefManager>().beefCount += skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skillAtk;
                     bm.GetComponent<BeefManager>().beefGauge.transform.localScale += new Vector3(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]].GetComponent<Bullet>().skillAtk / bm.GetComponent<BeefManager>().beefMax * 360, 0, 0);
-                  
+                    Instantiate(skill[SoulSkillManager.INSTANCE.soulskillNunber[2]], new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z), player.transform.rotation);
                 }
             }
 

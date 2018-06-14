@@ -56,5 +56,5 @@ MonoBehaviour:
   beefTime: 0
   beefRespawnTime: 0.6
   beefCount: 0
-  beefMax: 90
+  beefMax: 120
   beefOn: 1

@@ -58,7 +58,7 @@ public class SoulSkillManager : MonoBehaviour {
         }
         for (int i = 0; i < stoneReinforce.Count; i++)
         {
-            PlayerPrefs.SetInt("StoneReinForces" + i,stoneReinforce[i]);
+            PlayerPrefs.SetInt("StoneReinFor" + i,stoneReinforce[i]);
         }
     }
 
@@ -75,7 +75,7 @@ public class SoulSkillManager : MonoBehaviour {
         }
         for (int i = 0; i < stoneReinforce.Count; i++)
         {
-            stoneReinforce[i]=PlayerPrefs.GetInt("StoneReinForces" + i, stoneReinforce[i]);
+            stoneReinforce[i]=PlayerPrefs.GetInt("StoneReinFor" + i, stoneReinforce[i]);
         }
     }
 }

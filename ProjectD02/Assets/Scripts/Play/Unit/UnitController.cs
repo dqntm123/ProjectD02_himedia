@@ -184,7 +184,6 @@ public class UnitController : MonoBehaviour {
             switch (unitstate)
             {
                 case UNITSTATE.IDLE:
-                    
                     if (stun == false)
                     {
                         sternEffect.SetActive(false);
@@ -223,8 +222,9 @@ public class UnitController : MonoBehaviour {
                     break;
 
                 case UNITSTATE.MOVE:
-
-                    switch(unit)
+                    hpBar[0].SetActive(false);
+                    hpBar[1].SetActive(false);
+                    switch (unit)
                     {
                         case UNIT.PLAYER:
                             anime.SetBool("Attack", false);
@@ -299,6 +299,7 @@ public class UnitController : MonoBehaviour {
                                           
                                             stateTime = 0;
                                             look[0].GetComponent<Castle>().hp -= atk;
+                                            Instantiate(effect[1], effect[1].transform.position = new Vector3(look[0].GetComponent<Castle>().transform.position.x, look[0].GetComponent<Castle>().transform.position.y, look[0].GetComponent<Castle>().transform.position.z - 1),transform.rotation);
 
                                         }
                                     }
@@ -343,6 +344,7 @@ public class UnitController : MonoBehaviour {
 
                                             stateTime = 0;
                                             look[0].GetComponent<PlayerController>().hp -= atk;
+                                            Instantiate(effect[0], effect[0].transform.position = new Vector3(look[0].GetComponent<PlayerController>().transform.position.x, look[0].GetComponent<PlayerController>().transform.position.y, look[0].GetComponent<PlayerController>().transform.position.z),transform.rotation );
 
                                             //float distance = Vector3.Distance(sensor.GetComponent<PlayerSensor>().playerPos.position, sensor.transform.position);
 
@@ -472,18 +474,25 @@ public class UnitController : MonoBehaviour {
                                 if (look[0] != null)
                                 {
                                     stateTime += Time.deltaTime;
-                                    anime.SetBool("Attack", true);
+                                   
 
                                     if (look[0].tag == "Enemy")
                                     {
+                                        anime.SetBool("Attack", true);
                                         if (stateTime > attackStateMaxTime)
                                         {
-
                                             stateTime = 0;
-                                         
+                                            
                                             Bullets.GetComponent<SkillController>().atk = atk;
                                             Bullets.GetComponent<SkillController>().lv = lv;
-                                            Instantiate(Bullets, transform.position, transform.rotation);
+                                            if (Bullets.name != "Guardian_Skill")
+                                            {
+                                                Instantiate(Bullets, transform.position, transform.rotation);
+                                            }
+                                            if(Bullets.name== "Guardian_Skill")
+                                            {
+                                                Instantiate(Bullets, Bullets.transform.position=new Vector3(transform.position.x+0.71f,transform.position.y+0.24f,transform.position.z+0.3f), Bullets.transform.rotation);
+                                            }
                                        
                                          
                                          
@@ -527,10 +536,10 @@ public class UnitController : MonoBehaviour {
                                 if (look[0] != null)
                                 {
                                     stateTime += Time.deltaTime;
-                                    anime.SetBool("Attack", true);
 
                                     if (look[0].tag == "Player")
                                     {
+                                        anime.SetBool("Attack", true);
                                         if (stateTime > attackStateMaxTime)
                                         {
                                             stateTime = 0;
@@ -600,13 +609,13 @@ public class UnitController : MonoBehaviour {
         {
             if (isDead == false)
             {
-                hpBar[0].SetActive(true);
-                hpBar[1].SetActive(true);
-                if (hpBar[1].transform.localScale.x < 0)
-                {
-                    hpBar[1].transform.localScale = new Vector3(0, 1, 1);
-                }
-                hpBar[1].transform.localScale = new Vector3(hP / maxHp * 1, 1, 1);
+                //hpBar[0].SetActive(true);
+                //hpBar[1].SetActive(true);
+                //if (hpBar[1].transform.localScale.x < 0)
+                //{
+                //    hpBar[1].transform.localScale = new Vector3(0, 1, 1);
+                //}
+                //hpBar[1].transform.localScale = new Vector3(hP / maxHp * 1, 1, 1);
             }
         }
     }
@@ -632,8 +641,14 @@ public class UnitController : MonoBehaviour {
     public void GetDamage(float dmg)
     {
         hP -= dmg;
-          
-        if(gameObject.tag=="Player")
+        hpBar[0].SetActive(true);
+        hpBar[1].SetActive(true);
+        if (hpBar[1].transform.localScale.x < 0)
+        {
+            hpBar[1].transform.localScale = new Vector3(0, 1, 1);
+        }
+        hpBar[1].transform.localScale = new Vector3(hP / maxHp * 1, 1, 1);
+        if (gameObject.tag=="Player")
         {
             Instantiate(effect[0], effect[0].transform.position = new Vector3(transform.position.x, transform.position.y, - 1), transform.rotation);
             GameObject dmgValue = Instantiate(dmgcheck[0]) as GameObject;

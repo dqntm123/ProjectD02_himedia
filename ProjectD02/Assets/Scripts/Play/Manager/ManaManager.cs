@@ -31,6 +31,10 @@ public class ManaManager : MonoBehaviour {
                 manaGauge.transform.localScale += new Vector3(1 / manaMax * 360, 0, 0);
             }
         }
+        if(manaCount>=manaMax)
+        {
+            manaCount = manaMax;
+        }
         if(manaCount<=0)
         {
             manaCount = 0;

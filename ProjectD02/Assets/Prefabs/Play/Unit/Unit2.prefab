@@ -447,6 +447,7 @@ MonoBehaviour:
   - {fileID: 1458731092689568, guid: 2a524ecf34aa9cf4a95cf68cb46e24c4, type: 2}
   effect:
   - {fileID: 176804, guid: 4889039938a567444827eafcfbc2b267, type: 2}
+  - {fileID: 155692, guid: 77d6e8e3fa15a0b419d018e3e16931f6, type: 2}
   Bullets: {fileID: 1280600020837006, guid: 8bfad56954ea27044ab7481c1323016f, type: 2}
   lvManager: {fileID: 0}
   hpBar:

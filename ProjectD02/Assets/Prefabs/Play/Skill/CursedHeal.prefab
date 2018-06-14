@@ -167,6 +167,7 @@ MonoBehaviour:
   iceberg: {fileID: 0}
   aoeTargets: []
   lV: 0
+  hillEffect: {fileID: 127072, guid: 7f45705f5f30d8a45af0fc2eb8c8998a, type: 2}
   skills: 2
 --- !u!212 &212122429855512144
 SpriteRenderer:

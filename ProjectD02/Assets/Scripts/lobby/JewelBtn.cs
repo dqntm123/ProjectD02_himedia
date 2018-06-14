@@ -78,6 +78,7 @@ public class JewelBtn : MonoBehaviour {
             soulupmg.GetComponent<SoulUpGrade>().ValueChang.SetActive(false);
             select.transform.parent = jewelManager.transform;
             select.transform.localPosition = selectPos;
+            sdStr = "선택된 영혼석이 없어요!";
         }
         jewelManager.clickBtn = gameObject;       
         sdL.text = sdStr;

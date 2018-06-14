@@ -64,7 +64,7 @@ public class RoundManager : MonoBehaviour {
                     EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
                     EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[0], em.transform.position, em.transform.rotation);
-                    Destroy(em);
+                    em.GetComponent<EnemyManager>().ins = false;
                     someon = true;
                     em = null;
                 }
@@ -73,7 +73,7 @@ public class RoundManager : MonoBehaviour {
                 {
                     bloodFog[0].SetActive(true);
                     Instantiate(em.GetComponent<EnemyManager>().middleBoss[1], em.transform.position, em.transform.rotation);
-                    Destroy(em);
+                    em.GetComponent<EnemyManager>().ins = false;
                     someon = true;
                     em = null;
                 }
@@ -82,7 +82,7 @@ public class RoundManager : MonoBehaviour {
                 {
                     bloodFog[0].SetActive(true);
                     Instantiate(em.GetComponent<EnemyManager>().boss[0], em.transform.position, em.transform.rotation);
-                    Destroy(em);
+                    em.GetComponent<EnemyManager>().ins = false;
                     someon = true;
                     em = null;
                 }
@@ -91,8 +91,9 @@ public class RoundManager : MonoBehaviour {
             if (someon == false)
             {
                 StartCoroutine(RoundEnd());
+                em.GetComponent<EnemyManager>().ins = false;
             }
-
+            
             if(bossDead == true)
             {
                 bloodFog[1].SetActive(true);
@@ -119,7 +120,7 @@ public class RoundManager : MonoBehaviour {
 
     IEnumerator RoundEnd()
     {
-        em.GetComponent<EnemyManager>().ins = false;
+  
         //for (int i = 0; i < stageNum.Length; i++)
         //{
         //    if (StageManager.instance.currentStageNum == stageNum[i])
@@ -162,7 +163,7 @@ public class RoundManager : MonoBehaviour {
         gameObject.SetActive(false);
         finishChang.SetActive(true);
         finishChang.GetComponent<GameFinishFillAmount>().finishChang[0] = true;
-        StageManager.instance.SaveSataus();
+        //StageManager.instance.SaveSataus();
     }
     IEnumerator GameOver()
     {
@@ -174,7 +175,7 @@ public class RoundManager : MonoBehaviour {
         gameObject.SetActive(false);
         finishChang.SetActive(true);
         finishChang.GetComponent<GameFinishFillAmount>().finishChang[1] = true;
-        StageManager.instance.SaveSataus();
+        //StageManager.instance.SaveSataus();
     }
     public void StageScene()
     {

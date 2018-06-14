@@ -197,7 +197,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[0];//변수 비프카운터 값에 유닛코스트배열0번의 값을 뺀다
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[0] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             //units[0].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;//units 배열 0번의 오브젝트의 enemystate를 MOVE로 바꿔준다
-            Instantiate(units[0], transform.position += new Vector3(0,Random.Range(-0.007f,0.007f), 0), transform.rotation);//units의 배열0번의 오브젝트 생성   
+            Instantiate(units[0], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);//units의 배열0번의 오브젝트 생성   
         }
     }
     public void Unit2()
@@ -212,7 +212,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[1];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[1] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[1].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[1], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[1], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);
         }
     }
     public void Unit3()
@@ -227,7 +227,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[2];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[2] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[2].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[2], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[2], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);
         }
     }
 
@@ -243,7 +243,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[3];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[3] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[3].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[3], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[3], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);
         }
     }
 
@@ -259,7 +259,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[4];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[4] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[4].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[4], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[4], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);
         }
     }
 
@@ -275,7 +275,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[5];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[5] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[5].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[5], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[5], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);
         }
     }
 
@@ -291,7 +291,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[6];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[6] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[6].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[6], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[6], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);
         }
     }
     public void Unit8()
@@ -306,7 +306,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[7];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[7] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[7].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[7], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[7], transform.position = new Vector3(transform.position.x, Random.Range(-0.12f, -0.08f), transform.position.z), transform.rotation);
         }
     }
     public void Unit9()
@@ -321,7 +321,7 @@ public class UnitManager : MonoBehaviour {
             beefMG.GetComponent<BeefManager>().beefCount -= unitCost[8];
             beefMG.GetComponent<BeefManager>().beefGauge.transform.localScale -= new Vector3(unitCost[8] / beefMG.GetComponent<BeefManager>().beefMax * 360, 0, 0);
             units[8].GetComponent<UnitController>().unitstate = UnitController.UNITSTATE.MOVE;
-            Instantiate(units[8], transform.position += new Vector3(0, Random.Range(-0.007f, 0.007f), 0), transform.rotation);
+            Instantiate(units[8], transform.position = new Vector3(transform.position.x,0.12f, transform.position.z), transform.rotation);
         }
     }
 }

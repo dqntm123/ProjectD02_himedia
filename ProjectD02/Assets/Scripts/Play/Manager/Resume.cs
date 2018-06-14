@@ -5,7 +5,7 @@ using UnityEngine;
 public class Resume : MonoBehaviour {
 
     public GameObject pausePanel;
-    public float originalSpd;
+    public float originalSpd = 1;
 
     void OnClick()
     {
@@ -13,5 +13,9 @@ public class Resume : MonoBehaviour {
         EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
         Time.timeScale = originalSpd;
         pausePanel.SetActive(false);
+    }
+     void Start()
+    {
+        originalSpd = 1;
     }
 }

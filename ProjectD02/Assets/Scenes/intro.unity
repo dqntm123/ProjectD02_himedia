@@ -2782,9 +2782,9 @@ MonoBehaviour:
   bgmController: {fileID: 0}
   optionChang: {fileID: 0}
   bgmClip:
-  - {fileID: 8300000, guid: fd828e01f695e0447bdd9f28fd3421de, type: 3}
+  - {fileID: 8300000, guid: 62091e338c595f343a493212fead828e, type: 3}
   - {fileID: 8300000, guid: b0ab5e8cd57028940b451c452984bd9a, type: 3}
-  - {fileID: 8300000, guid: 0c5b75d8282d4b5488d3110c92291419, type: 3}
+  - {fileID: 8300000, guid: 62091e338c595f343a493212fead828e, type: 3}
   auDios: {fileID: 0}
   sliderValue: 1
   bgmVoulme: 1
@@ -2797,7 +2797,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fd828e01f695e0447bdd9f28fd3421de, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 62091e338c595f343a493212fead828e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

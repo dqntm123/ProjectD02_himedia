@@ -43,7 +43,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1395635852191104
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +433,7 @@ MonoBehaviour:
   - {fileID: 1458731092689568, guid: 2a524ecf34aa9cf4a95cf68cb46e24c4, type: 2}
   effect:
   - {fileID: 176804, guid: 4889039938a567444827eafcfbc2b267, type: 2}
+  - {fileID: 155692, guid: 77d6e8e3fa15a0b419d018e3e16931f6, type: 2}
   Bullets: {fileID: 0}
   lvManager: {fileID: 0}
   hpBar:
