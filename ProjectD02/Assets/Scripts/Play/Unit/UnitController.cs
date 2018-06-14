@@ -420,6 +420,7 @@ public class UnitController : MonoBehaviour {
                                         if (stateTime > attackStateMaxTime)
                                         {
                                             stateTime = 0;
+                                            //anime.SetBool("Attack", true);
                                             look[0].GetComponent<UnitController>().GetDamage(atk);
                                         }
                                     }
@@ -431,6 +432,7 @@ public class UnitController : MonoBehaviour {
                                         {
 
                                             stateTime = 0;
+                                            //anime.SetBool("Attack", true);
                                             look[0].GetComponent<PlayerController>().hp -= atk;
 
                                             //float distance = Vector3.Distance(sensor.GetComponent<PlayerSensor>().playerPos.position, sensor.transform.position);
@@ -474,11 +476,11 @@ public class UnitController : MonoBehaviour {
                                 if (look[0] != null)
                                 {
                                     stateTime += Time.deltaTime;
-                                   
+                                    anime.SetBool("Attack", true);
 
                                     if (look[0].tag == "Enemy")
                                     {
-                                        anime.SetBool("Attack", true);
+                                        //anime.SetBool("Attack", true);
                                         if (stateTime > attackStateMaxTime)
                                         {
                                             stateTime = 0;
@@ -503,10 +505,12 @@ public class UnitController : MonoBehaviour {
 
                                     if (look[0].tag == "Castle")
                                     {
+                                        //anime.SetBool("Attack", true);
                                         if (stateTime > attackStateMaxTime)
                                         {
 
                                             stateTime = 0;
+
                                             Bullets.GetComponent<SkillController>().atk = atk;
                                             Bullets.GetComponent<SkillController>().lv = lv;
                                             Instantiate(Bullets, transform.position, transform.rotation);
@@ -535,11 +539,12 @@ public class UnitController : MonoBehaviour {
                             {
                                 if (look[0] != null)
                                 {
+                                    anime.SetBool("Attack", true);
                                     stateTime += Time.deltaTime;
 
                                     if (look[0].tag == "Player")
                                     {
-                                        anime.SetBool("Attack", true);
+                                        //anime.SetBool("Attack", true);
                                         if (stateTime > attackStateMaxTime)
                                         {
                                             stateTime = 0;
@@ -552,7 +557,7 @@ public class UnitController : MonoBehaviour {
                                     {
                                         if (stateTime > attackStateMaxTime)
                                         {
-
+                                            //anime.SetBool("Attack", true);
                                             stateTime = 0;
                                             Instantiate(Bullets, transform.position, transform.rotation);
 
@@ -696,6 +701,7 @@ public class UnitController : MonoBehaviour {
     {
         StartCoroutine(DotCo());
         doting = true;
+      
     }
 
     public IEnumerator DotCo()

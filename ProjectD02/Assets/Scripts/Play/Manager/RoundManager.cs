@@ -63,7 +63,7 @@ public class RoundManager : MonoBehaviour {
                     bloodFog[0].SetActive(true);
                     EffectSoundManager.iNstance.audios.clip = EffectSoundManager.iNstance.effectClip[0];
                     EffectSoundManager.iNstance.audios.PlayOneShot(EffectSoundManager.iNstance.audios.clip);
-                    Instantiate(em.GetComponent<EnemyManager>().middleBoss[0], em.transform.position, em.transform.rotation);
+                    Instantiate(em.GetComponent<EnemyManager>().middleBoss[0], em.GetComponent<EnemyManager>().middleBoss[0].transform.position, em.transform.rotation);
                     em.GetComponent<EnemyManager>().ins = false;
                     someon = true;
                     em = null;
@@ -72,7 +72,7 @@ public class RoundManager : MonoBehaviour {
                 if (stageCheck == middleBossStage[1])
                 {
                     bloodFog[0].SetActive(true);
-                    Instantiate(em.GetComponent<EnemyManager>().middleBoss[1], em.transform.position, em.transform.rotation);
+                    Instantiate(em.GetComponent<EnemyManager>().middleBoss[1], em.GetComponent<EnemyManager>().middleBoss[1].transform.position, em.transform.rotation);
                     em.GetComponent<EnemyManager>().ins = false;
                     someon = true;
                     em = null;
@@ -81,7 +81,7 @@ public class RoundManager : MonoBehaviour {
                 if (stageCheck == bossStage[0])
                 {
                     bloodFog[0].SetActive(true);
-                    Instantiate(em.GetComponent<EnemyManager>().boss[0], em.transform.position, em.transform.rotation);
+                    Instantiate(em.GetComponent<EnemyManager>().boss[0], em.GetComponent<EnemyManager>().boss[0].transform.position, em.transform.rotation);
                     em.GetComponent<EnemyManager>().ins = false;
                     someon = true;
                     em = null;
@@ -170,7 +170,10 @@ public class RoundManager : MonoBehaviour {
         UILabel ul = gameObject.GetComponent<UILabel>();
         ul.enabled = true;
         ul.text = "Game Over!";
-        em.gameObject.SetActive(false);
+        if(em!=null)
+        {
+            em.gameObject.SetActive(false);
+        }
         yield return new WaitForSecondsRealtime(2.0f);
         gameObject.SetActive(false);
         finishChang.SetActive(true);

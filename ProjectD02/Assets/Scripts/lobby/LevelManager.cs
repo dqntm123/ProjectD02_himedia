@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour {
         else if (_instanCe != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-       // LoadedLv();
+       LoadedLv();
 	}
 	
 	void Update ()
@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour {
         Scene sc = SceneManager.GetActiveScene();
         if(sc.buildIndex==1)
         {
-            //SaveLv();
+            SaveLv();
         }
     }
     public void SaveLv()

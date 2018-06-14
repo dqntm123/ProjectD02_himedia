@@ -41,7 +41,7 @@ public class SoulSkillManager : MonoBehaviour {
         Scene sc = SceneManager.GetActiveScene();
         if(sc.buildIndex==1)
         {
-
+            SaveSoulStone();
         }
     }
 
