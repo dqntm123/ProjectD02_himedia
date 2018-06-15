@@ -71,7 +71,7 @@ public class Login : MonoBehaviour
         Debug.Log(www.text);
         SetMyGameData(www.text);       
         loginBtn.SetActive(false);
-        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
     }
 
     public void SetMyGameData(string data)

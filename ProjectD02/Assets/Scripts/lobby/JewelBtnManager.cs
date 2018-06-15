@@ -85,10 +85,12 @@ public class JewelBtnManager : MonoBehaviour {
                             clickBtn.GetComponent<JewelBtn>().soulItem.transform.position = equipSlot[i].transform.position;
                             equipSlot[i].GetComponent<EquipSlotBtn>().soulIn = true;
                             soulStoneItem.Remove(clickBtn.GetComponent<JewelBtn>().soulItem);
-                            SoulSkillManager.INSTANCE.soulskillNunber.Insert(i, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber);
-                            SoulSkillManager.INSTANCE.soulskillNunber.RemoveAt(3);
-                            SoulSkillManager.INSTANCE.skillCostValue.Insert(i, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().costValue);
-                            SoulSkillManager.INSTANCE.skillCostValue.RemoveAt(3);
+                            SoulSkillManager.INSTANCE.soulskillNunber.RemoveAt(equipSlot[i].GetComponent<EquipSlotBtn>().myNum);
+                            SoulSkillManager.INSTANCE.skillCostValue.RemoveAt(equipSlot[i].GetComponent<EquipSlotBtn>().myNum);
+                            SoulSkillManager.INSTANCE.soulskillNunber.Insert(equipSlot[i].GetComponent<EquipSlotBtn>().myNum, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().soulSkillNumber);
+                            SoulSkillManager.INSTANCE.skillCostValue.Insert(equipSlot[i].GetComponent<EquipSlotBtn>().myNum, clickBtn.GetComponent<JewelBtn>().soulItem.GetComponent<SoulStone>().costValue);
+                            //SoulSkillManager.INSTANCE.soulskillNunber.RemoveAt(3);
+                            //SoulSkillManager.INSTANCE.skillCostValue.RemoveAt(3);
                             SaveValue();
                             SoulSkillManager.INSTANCE.SaveSoulStone();
                         }

@@ -103,9 +103,8 @@ MonoBehaviour:
   caster: {fileID: 1073922991719924, guid: 8b6f3719f2d903445a23717f3fa37663, type: 2}
   lv: 1
   UnitsManager: {fileID: 0}
-  atk: 55
+  atk: 50
   speed: 1
-  aoeTargets: []
   skills: 0
 --- !u!212 &212017319457479376
 SpriteRenderer:

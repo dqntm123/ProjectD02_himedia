@@ -119,8 +119,12 @@ public class UnitController : MonoBehaviour {
 
         if (Main.GetComponent<PlayerController>().hp<=0)
         {
-            isDead = true;
-            DeadProcess();
+            if(unit != UNIT.BOSS && unit != UNIT.MIDDLEBOSS)
+            {
+                isDead = true;
+                DeadProcess();
+            }
+           
         }
 
         if(hP <= 0)
@@ -439,7 +443,7 @@ public class UnitController : MonoBehaviour {
 
                                             float distance = sensor.GetComponent<PlayerSensor>().playerPos.position.x - sensor.transform.position.x;
 
-                                            if (distance < -0.5f)
+                                            if (distance < -1f)
                                             {
                                                 look.RemoveAt(0);
                                                 unitstate = UNITSTATE.MOVE;

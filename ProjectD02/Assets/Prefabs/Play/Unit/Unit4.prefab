@@ -467,7 +467,7 @@ MonoBehaviour:
   lv: 0
   stateTime: 0
   sensor: {fileID: 1144296443764056}
-  attackStateMaxTime: 1
+  attackStateMaxTime: 0.5
   idleStateMaxTime: 0
   isDead: 0
   dmgcheck:

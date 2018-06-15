@@ -34,7 +34,7 @@ public class StageManager : MonoBehaviour {
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        //LoadedSataus();
+        LoadedSataus();
     }
 
     void Update ()
