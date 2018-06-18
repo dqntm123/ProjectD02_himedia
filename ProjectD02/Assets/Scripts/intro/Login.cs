@@ -70,7 +70,7 @@ public class Login : MonoBehaviour
         yield return www;  
         Debug.Log(www.text);
         SetMyGameData(www.text);       
-        loginBtn.SetActive(false);
+        yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(1);
     }
 

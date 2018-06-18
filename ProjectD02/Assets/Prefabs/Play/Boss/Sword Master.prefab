@@ -457,8 +457,8 @@ MonoBehaviour:
   speed: 0.3
   hP: 1000
   b_Hp: 1000
-  atk: 50
-  b_Atk: 50
+  atk: 100
+  b_Atk: 100
   maxHp: 0
   anime: {fileID: 95414819661774708}
   sn: 0

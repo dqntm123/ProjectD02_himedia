@@ -170,7 +170,7 @@ public class RoundManager : MonoBehaviour {
         gameObject.SetActive(false);
         finishChang.SetActive(true);
         finishChang.GetComponent<GameFinishFillAmount>().finishChang[0] = true;
-        //StageManager.instance.SaveSataus();
+        StageManager.instance.SaveSataus();
     }
     IEnumerator GameOver()
     {

@@ -872,7 +872,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 381
   mHeight: 120
-  mDepth: 4
+  mDepth: 5
   mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1648,7 +1648,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 120
   mHeight: 120
-  mDepth: 3
+  mDepth: 4
   mMat: {fileID: 2100000, guid: b741d1330a449eb49bffd931e3a8e43f, type: 3}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 123
   mHeight: 123
-  mDepth: 5
+  mDepth: 6
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -3496,7 +3496,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 817
   mHeight: 708
-  mDepth: 3
+  mDepth: 4
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -3701,7 +3701,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 1280
   mHeight: 300
-  mDepth: 1
+  mDepth: 2
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
@@ -3880,7 +3880,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 100
   mHeight: 100
-  mDepth: 2
+  mDepth: 3
   mMat: {fileID: 0}
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
